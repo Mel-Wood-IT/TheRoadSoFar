@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Screens/HelpScreen.png" type="Texture" id=1]
+[ext_resource path="res://HelpPage.gd" type="Script" id=2]
+
+[node name="HelpPage" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="help_bg" type="Sprite" parent="."]
+position = Vector2( 511.5, 301 )
+scale = Vector2( 0.807031, 0.833333 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BackBtn" type="Button" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 373.0
+margin_top = 526.0
+margin_right = 648.0
+margin_bottom = 569.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[connection signal="pressed" from="BackBtn" to="." method="_on_BackBtn_pressed"]

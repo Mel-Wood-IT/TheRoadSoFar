@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Screens/AboutScreen.png" type="Texture" id=1]
+[ext_resource path="res://AboutPage.gd" type="Script" id=2]
+
+[node name="AboutPage" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="about_bg" type="Sprite" parent="."]
+position = Vector2( 513, 301 )
+scale = Vector2( 0.810938, 0.845833 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="RefBtn" type="Button" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 273.0
+margin_top = 499.0
+margin_right = 502.0
+margin_bottom = 541.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BackBtn" type="Button" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 524.0
+margin_top = 499.0
+margin_right = 753.0
+margin_bottom = 541.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[connection signal="pressed" from="RefBtn" to="." method="_on_RefBtn_pressed"]
+[connection signal="pressed" from="BackBtn" to="." method="_on_BackBtn_pressed"]
