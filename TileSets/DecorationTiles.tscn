@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Sprites/Environment/TerrainSprites/Decorations.png" type="Texture" id=1]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 8.32267
+height = 23.8477
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 11.0
 
 [node name="Decoration" type="Node"]
 
@@ -10,12 +17,27 @@ centered = false
 region_enabled = true
 region_rect = Rect2( 64, 0, 64, 32 )
 
+[node name="StaticBody2D" type="StaticBody2D" parent="1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="1/StaticBody2D"]
+position = Vector2( 31, 17 )
+rotation = 0.98262
+shape = SubResource( 1 )
+
 [node name="2" type="Sprite" parent="."]
 position = Vector2( 80, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 64, 32, 64, 32 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="2"]
+position = Vector2( -80, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="2/StaticBody2D2"]
+position = Vector2( 111, 16 )
+rotation = 0.98262
+shape = SubResource( 1 )
 
 [node name="3" type="Sprite" parent="."]
 position = Vector2( 160, 0 )
@@ -199,6 +221,12 @@ centered = false
 region_enabled = true
 region_rect = Rect2( 160, 128, 32, 32 )
 
+[node name="StaticBody2D" type="StaticBody2D" parent="29"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="29/StaticBody2D"]
+position = Vector2( 15, 16 )
+shape = SubResource( 2 )
+
 [node name="30" type="Sprite" parent="."]
 position = Vector2( 48, 192 )
 texture = ExtResource( 1 )
@@ -206,12 +234,26 @@ centered = false
 region_enabled = true
 region_rect = Rect2( 192, 128, 32, 32 )
 
+[node name="StaticBody2D2" type="StaticBody2D" parent="30"]
+position = Vector2( -48, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="30/StaticBody2D2"]
+position = Vector2( 63, 16 )
+shape = SubResource( 2 )
+
 [node name="31" type="Sprite" parent="."]
 position = Vector2( 96, 192 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 224, 128, 32, 32 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="31"]
+position = Vector2( -96, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="31/StaticBody2D3"]
+position = Vector2( 111, 16 )
+shape = SubResource( 2 )
 
 [node name="7" type="Sprite" parent="."]
 position = Vector2( 304, 0 )

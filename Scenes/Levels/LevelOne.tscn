@@ -1,3 +1,17 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://TileSets/CampsiteDecoration.tres" type="TileSet" id=1]
+[ext_resource path="res://TileSets/ForestFloor.tres" type="TileSet" id=2]
 
 [node name="LevelOne" type="Node"]
+
+[node name="ForestFloor" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+format = 1
+
+[node name="Decor" type="TileMap" parent="."]
+format = 1
+
+[node name="Campsite" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+format = 1
