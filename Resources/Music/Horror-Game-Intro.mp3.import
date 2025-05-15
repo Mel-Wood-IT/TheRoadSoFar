@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Horror-Game-Intro.mp3-93564e59ada5e3338a477542e9d235d4.mp3str"
+
+[deps]
+
+source_file="res://Resources/Music/Horror-Game-Intro.mp3"
+dest_files=[ "res://.import/Horror-Game-Intro.mp3-93564e59ada5e3338a477542e9d235d4.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
