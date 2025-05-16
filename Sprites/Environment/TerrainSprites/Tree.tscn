@@ -42,8 +42,8 @@ radius = 7.0
 [node name="Tree" type="Node2D"]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 3.8147e-06, 0.999985 )
-scale = Vector2( 1.90541, 2.16406 )
+position = Vector2( 0, -0.999996 )
+scale = Vector2( 1.53041, 1.69336 )
 frames = SubResource( 1 )
 animation = "Large Tree"
 playing = true
