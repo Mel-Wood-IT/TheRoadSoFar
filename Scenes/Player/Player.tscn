@@ -1,0 +1,10 @@
+[gd_scene format=2]
+
+[node name="Player" type="KinematicBody2D"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+hframes = 3
+vframes = 4
