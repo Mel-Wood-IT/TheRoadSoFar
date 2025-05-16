@@ -11,6 +11,9 @@ script = ExtResource( 2 )
 position = Vector2( 515, 300.5 )
 scale = Vector2( 0.814063, 0.851389 )
 texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="PlayBtn" type="Button" parent="."]
 self_modulate = Color( 1, 1, 1, 0 )

@@ -8,7 +8,7 @@ func _ready():
 
 # Button to play the game
 func _on_PlayBtn_pressed():
-	get_tree().change_scene("res://Level One.tscn")
+	pass # Replace with function body.
 
 # Button to open about page
 func _on_AboutBtn_pressed():
