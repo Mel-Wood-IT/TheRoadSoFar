@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://TileSets/ForestFloor.tres" type="TileSet" id=1]
 [ext_resource path="res://Sprites/Environment/TerrainSprites/Tent.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://TileSets/ForestDecoration.tres" type="TileSet" id=4]
 [ext_resource path="res://Sprites/Environment/TerrainSprites/Tree.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Sprites/Environment/TerrainSprites/Yerrow Tree.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Resources/Ambience/Game Ambience.wav" type="AudioStream" id=7]
 
 [node name="Level One" type="Node2D"]
 modulate = Color( 0.482353, 0.494118, 0.54902, 1 )
@@ -346,9 +347,6 @@ position = Vector2( -1015, 2264 )
 [node name="Tree66" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
 position = Vector2( -694, 416 )
 
-[node name="Tree67" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
-position = Vector2( -585, 393 )
-
 [node name="Tree68" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
 position = Vector2( -467, 520 )
 
@@ -369,9 +367,6 @@ position = Vector2( -696, 694 )
 
 [node name="Tree74" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
 position = Vector2( -710, 803 )
-
-[node name="Tree75" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
-position = Vector2( -533, 934 )
 
 [node name="Tree76" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
 position = Vector2( -315, 829 )
@@ -412,23 +407,11 @@ position = Vector2( -41, 1063 )
 [node name="Tree88" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
 position = Vector2( -301, 1035 )
 
-[node name="Tree89" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
-position = Vector2( -513, 1158 )
-
-[node name="Tree90" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
-position = Vector2( -189, 1229 )
-
 [node name="Tree91" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
 position = Vector2( 145, 1276 )
 
 [node name="Tree92" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
 position = Vector2( 318, 1292 )
-
-[node name="Tree94" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
-position = Vector2( 4, 1329 )
-
-[node name="Tree95" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
-position = Vector2( -388, 1384 )
 
 [node name="Tree96" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
 position = Vector2( -204, 1397 )
@@ -441,9 +424,6 @@ position = Vector2( 116, 1427 )
 
 [node name="Tree99" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
 position = Vector2( -38, 1498 )
-
-[node name="Tree100" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
-position = Vector2( -168, 1554 )
 
 [node name="Tree101" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
 position = Vector2( -391, 1535 )
@@ -472,12 +452,6 @@ position = Vector2( -532, 1648 )
 [node name="Tree109" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
 position = Vector2( -284, 1755 )
 
-[node name="Tree110" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
-position = Vector2( -40, 1730 )
-
-[node name="Tree111" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
-position = Vector2( 170, 1650 )
-
 [node name="Tree112" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
 position = Vector2( 259, 1874 )
 
@@ -499,32 +473,14 @@ position = Vector2( -431, 1762 )
 [node name="Tree118" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
 position = Vector2( -620, 1733 )
 
-[node name="Tree119" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
-position = Vector2( -547, 1917 )
-
-[node name="Tree120" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
-position = Vector2( -328, 1904 )
-
-[node name="Tree121" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
-position = Vector2( -39, 1921 )
-
-[node name="Tree122" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
-position = Vector2( 168, 1997 )
-
 [node name="Tree123" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
 position = Vector2( 324, 2025 )
-
-[node name="Tree124" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
-position = Vector2( 204, 2150 )
 
 [node name="Tree125" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
 position = Vector2( -31, 2067 )
 
 [node name="Tree126" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
 position = Vector2( -190, 1976 )
-
-[node name="Tree127" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
-position = Vector2( -366, 2028 )
 
 [node name="Tree128" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
 position = Vector2( -630, 2021 )
@@ -538,20 +494,11 @@ position = Vector2( -747, 1820 )
 [node name="Tree131" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
 position = Vector2( -728, 1974 )
 
-[node name="Tree132" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
-position = Vector2( -592, 2256 )
-
 [node name="Tree133" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
 position = Vector2( -697, 2152 )
 
 [node name="Tree134" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
 position = Vector2( -443, 2255 )
-
-[node name="Tree135" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
-position = Vector2( -291, 2175 )
-
-[node name="Tree136" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
-position = Vector2( -155, 2132 )
 
 [node name="Tree137" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
 position = Vector2( 79, 2272 )
@@ -616,3 +563,7 @@ position = Vector2( 1176, -1816 )
 [node name="CampFire" type="Sprite" parent="."]
 position = Vector2( 1474, -1703 )
 texture = ExtResource( 3 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+autoplay = true
