@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Crossbow.png-d995e5ce72d973287a455a9189cb3f6f.stex"
+path="res://.import/stab_back_1.png-8da337a18eacae2c51f4bb373ce5011d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Player/Crossbow.png"
-dest_files=[ "res://.import/Crossbow.png-d995e5ce72d973287a455a9189cb3f6f.stex" ]
+source_file="res://Sprites/Player/Stab/stab_back_1.png"
+dest_files=[ "res://.import/stab_back_1.png-8da337a18eacae2c51f4bb373ce5011d.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
