@@ -148,5 +148,4 @@ __meta__ = {
 [node name="Animated" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "stab_left"
-frame = 2
 playing = true
