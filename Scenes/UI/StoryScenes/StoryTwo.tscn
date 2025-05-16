@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Resources/Screens/StoryScreens/Two.png" type="Texture" id=1]
 [ext_resource path="res://Resources/Fonts/BoldArvo.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Scenes/UI/StoryScenes/TwoNextBtn.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/UI/StoryScenes/Chatbox.gd" type="Script" id=4]
 [ext_resource path="res://Resources/Fonts/Combo.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Resources/Music/Chasing-Villains.mp3" type="AudioStream" id=6]
 
 [node name="StoryTwo" type="Node2D"]
 
@@ -42,5 +43,9 @@ and tried to build a normal life.
 align = 1
 percent_visible = 0.0
 script = ExtResource( 4 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+autoplay = true
 
 [connection signal="pressed" from="NextBtn" to="NextBtn" method="_on_NextBtn_pressed"]

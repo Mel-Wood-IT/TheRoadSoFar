@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Resources/Screens/HelpScreen.png" type="Texture" id=1]
-[ext_resource path="res://HelpPage.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/UI/HelpPage.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Music/Horror-Game-Intro.mp3" type="AudioStream" id=3]
 
 [node name="HelpPage" type="Node2D"]
 script = ExtResource( 2 )
@@ -23,5 +24,9 @@ margin_bottom = 569.0
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
 
 [connection signal="pressed" from="BackBtn" to="." method="_on_BackBtn_pressed"]

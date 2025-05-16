@@ -548,22 +548,26 @@ position = Vector2( -686, 2462 )
 [node name="Tree93" parent="DONT OPEN/Tree6" instance=ExtResource( 5 )]
 position = Vector2( 383, 1055 )
 
-[node name="Tent" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1397, -1815 )
-
-[node name="Tent2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1279, -1800 )
-
-[node name="Tent3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1513, -1829 )
-
-[node name="Tent4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1176, -1816 )
-
 [node name="CampFire" type="Sprite" parent="."]
 position = Vector2( 1474, -1703 )
 texture = ExtResource( 3 )
 
+<<<<<<< HEAD
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
 autoplay = true
+=======
+[node name="Tents" type="Node2D" parent="."]
+
+[node name="Tent" parent="Tents" instance=ExtResource( 2 )]
+position = Vector2( 1397, -1815 )
+
+[node name="Tent2" parent="Tents" instance=ExtResource( 2 )]
+position = Vector2( 1279, -1800 )
+
+[node name="Tent3" parent="Tents" instance=ExtResource( 2 )]
+position = Vector2( 1513, -1829 )
+
+[node name="Tent4" parent="Tents" instance=ExtResource( 2 )]
+position = Vector2( 1176, -1816 )
+>>>>>>> 8d98f9b6c39b3f69fc364e0682a08dd9c060a210
