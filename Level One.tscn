@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://TileSets/ForestFloor.tres" type="TileSet" id=1]
 [ext_resource path="res://Sprites/Environment/TerrainSprites/Tent.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Sprites/Environment/TerrainSprites/CampFire.png" type="Texture" id=3]
 [ext_resource path="res://TileSets/ForestDecoration.tres" type="TileSet" id=4]
+[ext_resource path="res://Sprites/Environment/TerrainSprites/Tree.tscn" type="PackedScene" id=5]
 
 [node name="Level One" type="Node2D"]
 modulate = Color( 0.482353, 0.494118, 0.54902, 1 )
@@ -43,6 +44,462 @@ tile_set = ExtResource( 4 )
 cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( -7274398, 27, 0, -7012284, 19, 0, -7012283, 21, 0, -7012282, 19, 0, -7012281, 20, 0, -7012278, 21, 0, -7012277, 20, 0, -7012276, 19, 0, -7012275, 20, 0, -7012274, 20, 0, -7012273, 19, 0, -6946750, 19, 0, -6946749, 21, 0, -6946748, 20, 0, -6946737, 20, 0, -6946736, 20, 0, -6946735, 21, 0, -6881214, 19, 0, -6881213, 20, 0, -6881198, 20, 0, -6881197, 21, 0, -6881196, 20, 0, -6815678, 20, 0, -6815660, 20, 0, -6815659, 21, 0, -6815658, 19, 0, -6815657, 20, 0, -6750143, 21, 0, -6750142, 19, 0, -6750121, 20, 0, -6750120, 21, 0, -6750118, 19, 0, -6684607, 20, 0, -6684606, 20, 0, -6684583, 19, 0, -6684582, 20, 0, -6684581, 21, 0, -6619071, 21, 0, -6619070, 19, 0, -6619044, 19, 0, -6619043, 20, 0, -6619040, 19, 0, -6553535, 19, 0, -6553534, 21, 0, -6553506, 21, 0, -6553505, 19, 0, -6553504, 20, 0, -6553503, 20, 0, -6553502, 21, 0, -6553500, 19, 0, -6553499, 19, 0, -6488000, 19, 0, -6487999, 20, 0, -6487998, 20, 0, -6487966, 20, 0, -6487965, 19, 0, -6487964, 20, 0, -6487962, 21, 0, -6487961, 20, 0, -6422464, 21, 0, -6422463, 20, 0, -6422462, 19, 0, -6422425, 20, 0, -6422424, 20, 0, -6356927, 20, 0, -6356926, 19, 0, -6356888, 20, 0, -6356887, 19, 0, -6291392, 20, 0, -6291391, 19, 0, -6291352, 21, 0, -6225855, 21, 0, -6225854, 19, 0, -6225816, 20, 0, -6225815, 20, 0, -6160318, 20, 0, -6160317, 21, 0, -6160316, 20, 0, -6160315, 20, 0, -6160281, 20, 0, -6160280, 19, 0, -6160279, 21, 0, -6094781, 19, 0, -6094780, 19, 0, -6094779, 20, 0, -6094778, 21, 0, -6094777, 19, 0, -6094744, 20, 0, -6094743, 20, 0, -6029242, 19, 0, -6029241, 20, 0, -6029240, 20, 0, -6029239, 20, 0, -6029238, 21, 0, -6029237, 19, 0, -6029208, 20, 0, -6029207, 19, 0, -5963704, 20, 0, -5963702, 19, 0, -5963701, 19, 0, -5963700, 19, 0, -5963672, 21, 0, -5898165, 20, 0, -5898164, 21, 0, -5898163, 19, 0, -5898162, 19, 0, -5898161, 20, 0, -5898140, 20, 0, -5898138, 20, 0, -5898137, 20, 0, -5898136, 19, 0, -5832625, 20, 0, -5832624, 21, 0, -5832623, 19, 0, -5832622, 20, 0, -5832621, 19, 0, -5832605, 20, 0, -5832604, 20, 0, -5832603, 21, 0, -5832602, 19, 0, -5832601, 19, 0, -5767086, 19, 0, -5767085, 20, 0, -5767084, 21, 0, -5767083, 19, 0, -5767082, 20, 0, -5767075, 19, 0, -5767074, 21, 0, -5767073, 19, 0, -5767072, 20, 0, -5767071, 19, 0, -5767070, 20, 0, -5767069, 19, 0, -5767068, 19, 0, -5701547, 20, 0, -5701546, 20, 0, -5701545, 21, 0, -5701544, 19, 0, -5701543, 20, 0, -5701542, 20, 0, -5701541, 21, 0, -5701540, 19, 0, -5701539, 20, 0, -5701538, 19, 0, -5701537, 20, 0, -5701535, 21, 0, -5636010, 19, 0, -5636007, 19, 0, -5636004, 19, 0, -5636003, 20, 0, -5636001, 20, 0 )
+
+[node name="Tree" parent="Shrubs" instance=ExtResource( 5 )]
+position = Vector2( 1613, -1979 )
+
+[node name="Tree4" parent="Shrubs" instance=ExtResource( 5 )]
+position = Vector2( 1509, -1971 )
+
+[node name="Tree6" parent="Shrubs" instance=ExtResource( 5 )]
+position = Vector2( 1320, -2008 )
+
+[node name="Tree3" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( 381, -10 )
+
+[node name="Tree2" parent="Shrubs/Tree6/Tree3" instance=ExtResource( 5 )]
+position = Vector2( -719, 372 )
+
+[node name="Tree5" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( 89, 46 )
+
+[node name="Tree6" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -99, -48 )
+
+[node name="Tree7" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -169, -50 )
+
+[node name="Tree8" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -277, -54 )
+
+[node name="Tree9" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -380, -55 )
+
+[node name="Tree10" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -513, -49 )
+
+[node name="Tree11" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -687, -73 )
+
+[node name="Tree14" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -590, -67 )
+
+[node name="Tree12" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -462, -45 )
+
+[node name="Tree13" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -545, -11 )
+
+[node name="Tree15" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -445, 16 )
+
+[node name="Tree16" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -337, -3 )
+
+[node name="Tree17" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -239, 44 )
+
+[node name="Tree18" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -111, 29 )
+
+[node name="Tree19" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( 324, 113 )
+
+[node name="Tree20" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( 411, 131 )
+
+[node name="Tree21" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( 369, 214 )
+
+[node name="Tree22" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( 348, 270 )
+
+[node name="Tree23" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -438, 346 )
+
+[node name="Tree24" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -536, 296 )
+
+[node name="Tree26" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -709, 279 )
+
+[node name="Tree25" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -626, 320 )
+
+[node name="Tree27" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1036, -122 )
+
+[node name="Tree28" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1123, -56 )
+
+[node name="Tree29" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1224, -46 )
+
+[node name="Tree30" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1298, -87 )
+
+[node name="Tree31" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1272, 4 )
+
+[node name="Tree32" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1163, 77 )
+
+[node name="Tree33" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1065, 70 )
+
+[node name="Tree34" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1144, 166 )
+
+[node name="Tree35" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1262, 128 )
+
+[node name="Tree36" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1234, 222 )
+
+[node name="Tree37" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1125, 235 )
+
+[node name="Tree38" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1026, 152 )
+
+[node name="Tree39" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1032, 344 )
+
+[node name="Tree40" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1154, 345 )
+
+[node name="Tree41" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1241, 441 )
+
+[node name="Tree42" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1116, 527 )
+
+[node name="Tree43" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1008, 584 )
+
+[node name="Tree44" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1228, 575 )
+
+[node name="Tree45" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1140, 659 )
+
+[node name="Tree46" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1069, 814 )
+
+[node name="Tree47" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1232, 889 )
+
+[node name="Tree48" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1100, 1037 )
+
+[node name="Tree49" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1234, 1053 )
+
+[node name="Tree50" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1182, 1165 )
+
+[node name="Tree51" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1249, 1331 )
+
+[node name="Tree52" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1166, 1419 )
+
+[node name="Tree53" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1249, 1512 )
+
+[node name="Tree54" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1259, 1657 )
+
+[node name="Tree55" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1154, 1678 )
+
+[node name="Tree56" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1254, 1854 )
+
+[node name="Tree57" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1137, 1921 )
+
+[node name="Tree58" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1256, 2033 )
+
+[node name="Tree59" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1138, 2043 )
+
+[node name="Tree60" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1227, 2190 )
+
+[node name="Tree61" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1062, 2159 )
+
+[node name="Tree62" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1127, 2250 )
+
+[node name="Tree63" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1236, 2321 )
+
+[node name="Tree64" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1115, 2385 )
+
+[node name="Tree65" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -1015, 2264 )
+
+[node name="Tree66" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -694, 416 )
+
+[node name="Tree67" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -585, 393 )
+
+[node name="Tree68" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -467, 520 )
+
+[node name="Tree69" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -360, 506 )
+
+[node name="Tree70" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -160, 663 )
+
+[node name="Tree71" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -402, 708 )
+
+[node name="Tree72" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -593, 630 )
+
+[node name="Tree73" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -696, 694 )
+
+[node name="Tree74" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -710, 803 )
+
+[node name="Tree75" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -543, 931 )
+
+[node name="Tree76" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -315, 829 )
+
+[node name="Tree77" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( 134, 719 )
+
+[node name="Tree78" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -50, 755 )
+
+[node name="Tree79" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -169, 924 )
+
+[node name="Tree80" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( 109, 1002 )
+
+[node name="Tree81" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( 257, 849 )
+
+[node name="Tree82" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( 346, 705 )
+
+[node name="Tree83" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( 407, 384 )
+
+[node name="Tree84" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( 416, 512 )
+
+[node name="Tree85" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( 384, 902 )
+
+[node name="Tree86" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( 245, 1122 )
+
+[node name="Tree87" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -41, 1063 )
+
+[node name="Tree88" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -301, 1035 )
+
+[node name="Tree89" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -513, 1158 )
+
+[node name="Tree90" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -189, 1229 )
+
+[node name="Tree91" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( 145, 1276 )
+
+[node name="Tree92" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( 318, 1292 )
+
+[node name="Tree94" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( 4, 1329 )
+
+[node name="Tree95" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -388, 1384 )
+
+[node name="Tree96" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -204, 1397 )
+
+[node name="Tree97" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( 318, 1468 )
+
+[node name="Tree98" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( 116, 1427 )
+
+[node name="Tree99" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -38, 1498 )
+
+[node name="Tree100" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -168, 1554 )
+
+[node name="Tree101" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -391, 1535 )
+
+[node name="Tree102" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -532, 1504 )
+
+[node name="Tree103" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -551, 1305 )
+
+[node name="Tree104" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -679, 1143 )
+
+[node name="Tree105" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -644, 921 )
+
+[node name="Tree106" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -729, 1363 )
+
+[node name="Tree107" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -696, 1615 )
+
+[node name="Tree108" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -532, 1648 )
+
+[node name="Tree109" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -284, 1755 )
+
+[node name="Tree110" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -40, 1730 )
+
+[node name="Tree111" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( 132, 1647 )
+
+[node name="Tree112" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( 259, 1874 )
+
+[node name="Tree113" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( 371, 1571 )
+
+[node name="Tree114" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( 258, 1580 )
+
+[node name="Tree115" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -134, 1818 )
+
+[node name="Tree116" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( 110, 1813 )
+
+[node name="Tree117" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -431, 1762 )
+
+[node name="Tree118" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -620, 1733 )
+
+[node name="Tree119" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -547, 1917 )
+
+[node name="Tree120" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -328, 1904 )
+
+[node name="Tree121" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -39, 1921 )
+
+[node name="Tree122" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( 144, 1996 )
+
+[node name="Tree123" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( 324, 2025 )
+
+[node name="Tree124" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( 204, 2150 )
+
+[node name="Tree125" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -31, 2067 )
+
+[node name="Tree126" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -190, 1976 )
+
+[node name="Tree127" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -366, 2028 )
+
+[node name="Tree128" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -630, 2021 )
+
+[node name="Tree129" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -483, 2074 )
+
+[node name="Tree130" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -747, 1820 )
+
+[node name="Tree131" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -728, 1974 )
+
+[node name="Tree132" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -592, 2256 )
+
+[node name="Tree133" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -697, 2152 )
+
+[node name="Tree134" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -443, 2255 )
+
+[node name="Tree135" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -291, 2175 )
+
+[node name="Tree136" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -155, 2132 )
+
+[node name="Tree137" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( 79, 2272 )
+
+[node name="Tree138" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -135, 2316 )
+
+[node name="Tree139" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -264, 2360 )
+
+[node name="Tree140" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -450, 2429 )
+
+[node name="Tree141" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -585, 2433 )
+
+[node name="Tree142" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -29, 2460 )
+
+[node name="Tree143" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( 143, 2449 )
+
+[node name="Tree144" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( 260, 2346 )
+
+[node name="Tree145" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( 392, 2225 )
+
+[node name="Tree146" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( 381, 2341 )
+
+[node name="Tree147" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( 316, 2453 )
+
+[node name="Tree148" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -190, 2456 )
+
+[node name="Tree149" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -352, 2465 )
+
+[node name="Tree150" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -686, 2462 )
+
+[node name="Tree151" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( -686, 2462 )
+
+[node name="Tree93" parent="Shrubs/Tree6" instance=ExtResource( 5 )]
+position = Vector2( 383, 1055 )
 
 [node name="Tent" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1397, -1815 )
