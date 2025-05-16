@@ -42,8 +42,8 @@ radius = 6.99274
 [node name="Yerrow Tree" type="Node2D"]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 7.62939e-06, -3.8147e-06 )
-scale = Vector2( 1.87838, 2 )
+position = Vector2( -1.375, 0 )
+scale = Vector2( 1.5777, 1.42188 )
 frames = SubResource( 1 )
 playing = true
 
