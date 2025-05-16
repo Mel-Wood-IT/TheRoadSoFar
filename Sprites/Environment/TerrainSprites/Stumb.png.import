@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Decorations.png-efa8bcc293bca67e54436fb8795c4e5b.stex"
+path="res://.import/Stumb.png-f881c331bfb994d2939fef70effab4d7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Environment/TerrainSprites/Decorations.png"
-dest_files=[ "res://.import/Decorations.png-efa8bcc293bca67e54436fb8795c4e5b.stex" ]
+source_file="res://Sprites/Environment/TerrainSprites/Stumb.png"
+dest_files=[ "res://.import/Stumb.png-f881c331bfb994d2939fef70effab4d7.stex" ]
 
 [params]
 
