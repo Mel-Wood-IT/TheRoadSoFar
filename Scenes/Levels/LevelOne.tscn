@@ -9,7 +9,8 @@
 [ext_resource path="res://Sprites/Environment/TerrainSprites/Tent.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=8]
 
-[node name="LevelOne" type="Node"]
+[node name="LevelOne" type="Node2D"]
+modulate = Color( 0.482353, 0.494118, 0.54902, 1 )
 
 [node name="Base" type="TileMap" parent="."]
 tile_set = ExtResource( 4 )
@@ -552,13 +553,13 @@ position = Vector2( 383, 1055 )
 position = Vector2( 1397, -1815 )
 
 [node name="Tent2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1279, -1800 )
+position = Vector2( 1273, -1805 )
 
 [node name="Tent3" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1513, -1829 )
+position = Vector2( 1522, -1828 )
 
 [node name="Tent4" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1176, -1816 )
+position = Vector2( 1144, -1813 )
 
 [node name="CampFire" type="Sprite" parent="."]
 position = Vector2( 1474, -1703 )
@@ -569,4 +570,5 @@ stream = ExtResource( 2 )
 autoplay = true
 
 [node name="Player" parent="." instance=ExtResource( 8 )]
-position = Vector2( 432, 496 )
+position = Vector2( 1418, -1761 )
+scale = Vector2( 2.28189, 2.13504 )

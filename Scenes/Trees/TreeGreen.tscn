@@ -4,9 +4,11 @@
 [ext_resource path="res://Sprites/Environment/TerrainSprites/greentrunks.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 7.93444, 6.03985 )
+extents = Vector2( 7.91689, 1.34189 )
 
 [node name="TreeGreen" type="Node2D"]
+position = Vector2( 0, 1 )
+scale = Vector2( 1.33977, 1.50057 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -21,7 +23,8 @@ collision_layer = 4
 collision_mask = 56
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="trunk/StaticBody2D"]
-position = Vector2( -1.43538, -0.0398483 )
+position = Vector2( -1.45292, 4.65811 )
+scale = Vector2( 1, 1 )
 shape = SubResource( 1 )
 
 [node name="leaves" type="Sprite" parent="."]

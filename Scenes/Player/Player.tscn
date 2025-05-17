@@ -119,68 +119,69 @@ animations = [ {
 "frames": [ ExtResource( 36 ), ExtResource( 35 ), ExtResource( 27 ), ExtResource( 40 ) ],
 "loop": true,
 "name": "shoot_back",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [ ExtResource( 32 ), ExtResource( 33 ), ExtResource( 30 ), ExtResource( 31 ) ],
 "loop": true,
 "name": "shoot_front",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [ ExtResource( 37 ), ExtResource( 28 ), ExtResource( 38 ), ExtResource( 34 ) ],
 "loop": true,
 "name": "shoot_left",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [ ExtResource( 39 ), ExtResource( 26 ), ExtResource( 25 ), ExtResource( 29 ) ],
 "loop": true,
 "name": "shoot_right",
-"speed": 6.0
+"speed": 8.0
 }, {
 "frames": [ ExtResource( 56 ), ExtResource( 44 ), ExtResource( 46 ), ExtResource( 49 ) ],
 "loop": true,
 "name": "stab_back",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [ ExtResource( 41 ), ExtResource( 52 ), ExtResource( 45 ), ExtResource( 53 ) ],
 "loop": true,
 "name": "stab_front",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [ ExtResource( 54 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 55 ) ],
 "loop": true,
 "name": "stab_left",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [ ExtResource( 48 ), ExtResource( 42 ), ExtResource( 47 ), ExtResource( 43 ) ],
 "loop": true,
 "name": "stab_right",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [ ExtResource( 12 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 17 ) ],
 "loop": true,
 "name": "walk_back",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [ ExtResource( 18 ), ExtResource( 24 ), ExtResource( 10 ), ExtResource( 19 ) ],
 "loop": true,
 "name": "walk_front",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [ ExtResource( 16 ), ExtResource( 9 ), ExtResource( 22 ), ExtResource( 23 ) ],
 "loop": true,
 "name": "walk_left",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [ ExtResource( 11 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
 "loop": true,
 "name": "walk_right",
-"speed": 7.0
+"speed": 8.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 6, 12 )
+extents = Vector2( 5.61165, 1.06543 )
 
 [node name="Player" type="KinematicBody2D"]
+scale = Vector2( 1.4256, 1.40788 )
 collision_layer = 8
 collision_mask = 20
 script = ExtResource( 73 )
@@ -194,7 +195,8 @@ animation = "idle_front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 self_modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 0, 2 )
+position = Vector2( 0.701457, 13.8506 )
+scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
