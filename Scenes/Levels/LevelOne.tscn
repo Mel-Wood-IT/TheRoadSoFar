@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://TileSets/ForestDecoration.tres" type="TileSet" id=1]
 [ext_resource path="res://Sprites/Environment/TerrainSprites/Tent.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Trees/TreeGreen.tscn" type="PackedScene" id=3]
 [ext_resource path="res://TileSets/ForestFloor.tres" type="TileSet" id=4]
 
 [node name="LevelOne" type="Node2D"]
@@ -57,3 +58,1518 @@ tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( -2424867, 4, 0, -2424846, 4, 0, -2490365, 4, 0, -2490348, 4, 0, -2490285, 4, 0, -2359388, 5, 0, -2359381, 4, 0, -2359366, 5, 0, -2424812, 4, 0, -2424800, 4, 0, -2424786, 4, 0, -2424765, 4, 0, -2293832, 4, 0, -2359250, 4, 0, -2293685, 4, 0, -2162782, 4, 0, -2162752, 5, 0, -2162736, 4, 0, -2162729, 5, 0, -2228185, 4, 0, -2228184, 4, 0, -2228166, 4, 0, -2097238, 4, 0, -2097183, 5, 0, -2097162, 4, 0, -2162680, 4, 0, -2031641, 4, 0, -2097149, 5, 0, -2097108, 5, 0, -2097102, 4, 0, -2031590, 4, 0, -2031547, 4, 0, -1900619, 4, 0, -1965999, 4, 0, -1835063, 5, 0, -1835054, 4, 0, -1835053, 4, 0, -1769538, 4, 0, -1769517, 4, 0, -1769387, 4, 0, -1310813, 5, 0, -1179738, 4, 0, -1179734, 5, 0, -1179669, 4, 0, -1114123, 4, 0, -1179595, 4, 0, -1179580, 4, 0, -1048599, 5, 0, -983106, 4, 0, -1048496, 4, 0, -917545, 4, 0, -983010, 4, 0, -852053, 4, 0, -852052, 4, 0, -917468, 4, 0, -917433, 11, 0, -917422, 11, 0, -786465, 4, 0, -851919, 4, 0, -720986, 5, 0, -720972, 5, 0, -786372, 10, 0, -655398, 5, 0, -589897, 4, 0, -655301, 11, 0, -655282, 10, 0, -393268, 4, 0, -393265, 5, 0, -393176, 4, 0, -262236, 4, 0, -327605, 11, 0, -327597, 10, 0, -196690, 4, 0, -196670, 5, 0, -196649, 4, 0, -262079, 11, 0, -131144, 5, 0, -196558, 4, 0, -65608, 5, 0, 131007, 4, 0, 196665, 10, 0, 327638, 5, 0, 393179, 4, 0, 327753, 10, 0, 327757, 11, 0, 327763, 10, 0, 393272, 11, 0, 524196, 4, 0, 524254, 5, 0, 589745, 5, 0, 589763, 5, 0, 589764, 5, 0, 589775, 4, 0, 655287, 4, 0, 720866, 4, 0, 655420, 5, 0, 655435, 5, 0, 720936, 4, 0, 917464, 4, 0, 982995, 5, 0, 917556, 4, 0, 1048545, 5, 0, 1048550, 4, 0, 983092, 4, 0, 1114017, 5, 0, 1048643, 4, 0, 1245103, 4, 0, 1245118, 5, 0, 1310755, 4, 0, 1310779, 4, 0, 1310798, 4, 0, 1441768, 4, 0, 1507273, 4, 0, 1507293, 4, 0, 1507294, 4, 0, 1507383, 5, 0, 1638354, 5, 0, 1572938, 5, 0, 1703845, 4, 0, 1703914, 5, 0, 1769388, 5, 0, 1769406, 4, 0, 1703979, 4, 0, 1834968, 5, 0, 1834990, 4, 0, 1966024, 5, 0, 1900593, 4, 0, 1900594, 4, 0, 1900611, 5, 0, 2097071, 5, 0, 2097127, 4, 0, 2031700, 5, 0, 2162607, 5, 0, 2162619, 5, 0, 2097190, 4, 0, 2228206, 5, 0, 2162759, 4, 0, 2293752, 4, 0, 2228258, 5, 0, 2228259, 5, 0, 2228277, 5, 0, 2359264, 5, 0, 2359273, 4, 0, 2424794, 4, 0, 2424817, 4, 0, 2490309, 4, 0, 2424871, 4, 0, 2555812, 4, 0, 2555854, 5, 0, 2490415, 4, 0, 2621358, 5, 0, 2555932, 4, 0, 2555982, 4, 0, 2686909, 5, 0, 2686992, 4, 0, 2687041, 5, 0, 2687042, 5, 0, 2818006, 5, 0, 2818026, 4, 0, 2818027, 4, 0, 2752518, 4, 0, 2752548, 5, 0, 2883506, 4, 0, 2818076, 4, 0, 2883601, 5, 0, 2949134, 4, 0, 2949169, 5, 0 )
+
+[node name="Trees" type="Node2D" parent="."]
+position = Vector2( -1544, -749 )
+scale = Vector2( 1.33977, 1.50057 )
+
+[node name="TreeGreen" parent="Trees" instance=ExtResource( 3 )]
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen2" parent="Trees" instance=ExtResource( 3 )]
+position = Vector2( 52.9941, 1.99924 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen3" parent="Trees" instance=ExtResource( 3 )]
+position = Vector2( 114.945, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen4" parent="Trees" instance=ExtResource( 3 )]
+position = Vector2( 178.389, 0.666412 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen5" parent="Trees" instance=ExtResource( 3 )]
+position = Vector2( 246.311, 2.66565 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen6" parent="Trees" instance=ExtResource( 3 )]
+position = Vector2( 300.798, 1.99924 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen7" parent="Trees" instance=ExtResource( 3 )]
+position = Vector2( 366.481, 4.66489 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen8" parent="Trees" instance=ExtResource( 3 )]
+position = Vector2( 338.864, 12.6618 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen9" parent="Trees" instance=ExtResource( 3 )]
+position = Vector2( 276.167, 11.9954 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen10" parent="Trees" instance=ExtResource( 3 )]
+position = Vector2( 227.651, 15.9939 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen11" parent="Trees" instance=ExtResource( 3 )]
+position = Vector2( 196.302, 9.99619 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen12" parent="Trees" instance=ExtResource( 3 )]
+position = Vector2( 150.772, 10.6626 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen13" parent="Trees" instance=ExtResource( 3 )]
+position = Vector2( 126.887, 8.66336 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen14" parent="Trees" instance=ExtResource( 3 )]
+position = Vector2( 94.046, 13.9947 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen15" parent="Trees" instance=ExtResource( 3 )]
+position = Vector2( 71.6541, 10.6626 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen16" parent="Trees" instance=ExtResource( 3 )]
+position = Vector2( 30.6023, 7.99698 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen17" parent="Trees" instance=ExtResource( 3 )]
+position = Vector2( 9.70313, 22.6581 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen18" parent="Trees" instance=ExtResource( 3 )]
+position = Vector2( 9.70313, 22.6581 )
+scale = Vector2( 1, 1 )
+
+[node name="Trees2" type="Node2D" parent="."]
+position = Vector2( -1165, -739 )
+scale = Vector2( 1.33977, 1.50057 )
+
+[node name="TreeGreen" parent="Trees2" instance=ExtResource( 3 )]
+position = Vector2( 7.46399, 11.9954 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen2" parent="Trees2" instance=ExtResource( 3 )]
+position = Vector2( 52.9941, 1.99924 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen3" parent="Trees2" instance=ExtResource( 3 )]
+position = Vector2( 114.945, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen4" parent="Trees2" instance=ExtResource( 3 )]
+position = Vector2( 178.389, 0.666412 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen5" parent="Trees2" instance=ExtResource( 3 )]
+position = Vector2( 246.311, 2.66565 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen6" parent="Trees2" instance=ExtResource( 3 )]
+position = Vector2( 300.798, 1.99924 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen7" parent="Trees2" instance=ExtResource( 3 )]
+position = Vector2( 366.481, 4.66489 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen8" parent="Trees2" instance=ExtResource( 3 )]
+position = Vector2( 338.864, 12.6618 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen9" parent="Trees2" instance=ExtResource( 3 )]
+position = Vector2( 276.167, 11.9954 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen10" parent="Trees2" instance=ExtResource( 3 )]
+position = Vector2( 227.651, 15.9939 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen11" parent="Trees2" instance=ExtResource( 3 )]
+position = Vector2( 196.302, 9.99619 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen12" parent="Trees2" instance=ExtResource( 3 )]
+position = Vector2( 150.772, 10.6626 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen13" parent="Trees2" instance=ExtResource( 3 )]
+position = Vector2( 126.887, 8.66336 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen14" parent="Trees2" instance=ExtResource( 3 )]
+position = Vector2( 94.046, 13.9947 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen15" parent="Trees2" instance=ExtResource( 3 )]
+position = Vector2( 71.6541, 10.6626 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen16" parent="Trees2" instance=ExtResource( 3 )]
+position = Vector2( 30.6023, 7.99698 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen17" parent="Trees2" instance=ExtResource( 3 )]
+position = Vector2( 9.70313, 22.6581 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen18" parent="Trees2" instance=ExtResource( 3 )]
+position = Vector2( 9.70313, 22.6581 )
+scale = Vector2( 1, 1 )
+
+[node name="Trees3" type="Node2D" parent="."]
+position = Vector2( -749, -743 )
+scale = Vector2( 1.33977, 1.50057 )
+
+[node name="TreeGreen" parent="Trees3" instance=ExtResource( 3 )]
+position = Vector2( 7.46399, 11.9954 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen2" parent="Trees3" instance=ExtResource( 3 )]
+position = Vector2( 52.9941, 1.99924 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen3" parent="Trees3" instance=ExtResource( 3 )]
+position = Vector2( 114.945, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen4" parent="Trees3" instance=ExtResource( 3 )]
+position = Vector2( 178.389, 0.666412 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen5" parent="Trees3" instance=ExtResource( 3 )]
+position = Vector2( 246.311, 2.66565 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen6" parent="Trees3" instance=ExtResource( 3 )]
+position = Vector2( 300.798, 1.99924 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen7" parent="Trees3" instance=ExtResource( 3 )]
+position = Vector2( 366.481, 4.66489 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen8" parent="Trees3" instance=ExtResource( 3 )]
+position = Vector2( 338.864, 12.6618 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen9" parent="Trees3" instance=ExtResource( 3 )]
+position = Vector2( 276.167, 11.9954 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen10" parent="Trees3" instance=ExtResource( 3 )]
+position = Vector2( 227.651, 15.9939 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen11" parent="Trees3" instance=ExtResource( 3 )]
+position = Vector2( 196.302, 9.99619 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen12" parent="Trees3" instance=ExtResource( 3 )]
+position = Vector2( 150.772, 10.6626 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen13" parent="Trees3" instance=ExtResource( 3 )]
+position = Vector2( 126.887, 8.66336 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen14" parent="Trees3" instance=ExtResource( 3 )]
+position = Vector2( 94.046, 13.9947 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen15" parent="Trees3" instance=ExtResource( 3 )]
+position = Vector2( 71.6541, 10.6626 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen16" parent="Trees3" instance=ExtResource( 3 )]
+position = Vector2( 30.6023, 7.99698 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen17" parent="Trees3" instance=ExtResource( 3 )]
+position = Vector2( 9.70313, 22.6581 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen18" parent="Trees3" instance=ExtResource( 3 )]
+position = Vector2( 9.70313, 22.6581 )
+scale = Vector2( 1, 1 )
+
+[node name="Trees4" type="Node2D" parent="."]
+position = Vector2( -328, -754 )
+scale = Vector2( 1.33977, 1.50057 )
+
+[node name="TreeGreen" parent="Trees4" instance=ExtResource( 3 )]
+position = Vector2( 7.46399, 11.9954 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen2" parent="Trees4" instance=ExtResource( 3 )]
+position = Vector2( 52.9941, 1.99924 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen3" parent="Trees4" instance=ExtResource( 3 )]
+position = Vector2( 114.945, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen4" parent="Trees4" instance=ExtResource( 3 )]
+position = Vector2( 178.389, 0.666412 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen5" parent="Trees4" instance=ExtResource( 3 )]
+position = Vector2( 246.311, 2.66565 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen6" parent="Trees4" instance=ExtResource( 3 )]
+position = Vector2( 300.798, 1.99924 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen7" parent="Trees4" instance=ExtResource( 3 )]
+position = Vector2( 366.481, 4.66489 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen8" parent="Trees4" instance=ExtResource( 3 )]
+position = Vector2( 338.864, 12.6618 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen9" parent="Trees4" instance=ExtResource( 3 )]
+position = Vector2( 276.167, 11.9954 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen10" parent="Trees4" instance=ExtResource( 3 )]
+position = Vector2( 227.651, 15.9939 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen11" parent="Trees4" instance=ExtResource( 3 )]
+position = Vector2( 196.302, 9.99619 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen12" parent="Trees4" instance=ExtResource( 3 )]
+position = Vector2( 150.772, 10.6626 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen13" parent="Trees4" instance=ExtResource( 3 )]
+position = Vector2( 126.887, 8.66336 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen14" parent="Trees4" instance=ExtResource( 3 )]
+position = Vector2( 94.046, 13.9947 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen15" parent="Trees4" instance=ExtResource( 3 )]
+position = Vector2( 71.6541, 10.6626 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen16" parent="Trees4" instance=ExtResource( 3 )]
+position = Vector2( 30.6023, 7.99698 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen17" parent="Trees4" instance=ExtResource( 3 )]
+position = Vector2( 9.70313, 22.6581 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen18" parent="Trees4" instance=ExtResource( 3 )]
+position = Vector2( 9.70313, 22.6581 )
+scale = Vector2( 1, 1 )
+
+[node name="Trees5" type="Node2D" parent="."]
+position = Vector2( 111, -767 )
+scale = Vector2( 1.33977, 1.50057 )
+
+[node name="TreeGreen" parent="Trees5" instance=ExtResource( 3 )]
+position = Vector2( 7.46399, 11.9954 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen2" parent="Trees5" instance=ExtResource( 3 )]
+position = Vector2( 52.9941, 1.99924 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen3" parent="Trees5" instance=ExtResource( 3 )]
+position = Vector2( 114.945, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen4" parent="Trees5" instance=ExtResource( 3 )]
+position = Vector2( 178.389, 0.666412 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen5" parent="Trees5" instance=ExtResource( 3 )]
+position = Vector2( 246.311, 2.66565 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen6" parent="Trees5" instance=ExtResource( 3 )]
+position = Vector2( 300.798, 1.99924 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen7" parent="Trees5" instance=ExtResource( 3 )]
+position = Vector2( 366.481, 4.66489 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen8" parent="Trees5" instance=ExtResource( 3 )]
+position = Vector2( 338.864, 12.6618 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen9" parent="Trees5" instance=ExtResource( 3 )]
+position = Vector2( 276.167, 11.9954 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen10" parent="Trees5" instance=ExtResource( 3 )]
+position = Vector2( 227.651, 15.9939 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen11" parent="Trees5" instance=ExtResource( 3 )]
+position = Vector2( 196.302, 9.99619 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen12" parent="Trees5" instance=ExtResource( 3 )]
+position = Vector2( 150.772, 10.6626 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen13" parent="Trees5" instance=ExtResource( 3 )]
+position = Vector2( 126.887, 8.66336 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen14" parent="Trees5" instance=ExtResource( 3 )]
+position = Vector2( 94.046, 13.9947 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen15" parent="Trees5" instance=ExtResource( 3 )]
+position = Vector2( 71.6541, 10.6626 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen16" parent="Trees5" instance=ExtResource( 3 )]
+position = Vector2( 30.6023, 7.99698 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen17" parent="Trees5" instance=ExtResource( 3 )]
+position = Vector2( 9.70313, 22.6581 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen18" parent="Trees5" instance=ExtResource( 3 )]
+position = Vector2( 9.70313, 22.6581 )
+scale = Vector2( 1, 1 )
+
+[node name="Trees6" type="Node2D" parent="."]
+position = Vector2( 523, -755 )
+scale = Vector2( 1.33977, 1.50057 )
+
+[node name="TreeGreen" parent="Trees6" instance=ExtResource( 3 )]
+position = Vector2( 7.46399, 11.9954 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen2" parent="Trees6" instance=ExtResource( 3 )]
+position = Vector2( 52.9941, 1.99924 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen3" parent="Trees6" instance=ExtResource( 3 )]
+position = Vector2( 114.945, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen4" parent="Trees6" instance=ExtResource( 3 )]
+position = Vector2( 178.389, 0.666412 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen5" parent="Trees6" instance=ExtResource( 3 )]
+position = Vector2( 246.311, 2.66565 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen6" parent="Trees6" instance=ExtResource( 3 )]
+position = Vector2( 300.798, 1.99924 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen7" parent="Trees6" instance=ExtResource( 3 )]
+position = Vector2( 366.481, 4.66489 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen8" parent="Trees6" instance=ExtResource( 3 )]
+position = Vector2( 338.864, 12.6618 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen9" parent="Trees6" instance=ExtResource( 3 )]
+position = Vector2( 276.167, 11.9954 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen10" parent="Trees6" instance=ExtResource( 3 )]
+position = Vector2( 227.651, 15.9939 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen11" parent="Trees6" instance=ExtResource( 3 )]
+position = Vector2( 196.302, 9.99619 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen12" parent="Trees6" instance=ExtResource( 3 )]
+position = Vector2( 150.772, 10.6626 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen13" parent="Trees6" instance=ExtResource( 3 )]
+position = Vector2( 126.887, 8.66336 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen14" parent="Trees6" instance=ExtResource( 3 )]
+position = Vector2( 94.046, 13.9947 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen15" parent="Trees6" instance=ExtResource( 3 )]
+position = Vector2( 71.6541, 10.6626 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen16" parent="Trees6" instance=ExtResource( 3 )]
+position = Vector2( 30.6023, 7.99698 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen17" parent="Trees6" instance=ExtResource( 3 )]
+position = Vector2( 9.70313, 22.6581 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen18" parent="Trees6" instance=ExtResource( 3 )]
+position = Vector2( 9.70313, 22.6581 )
+scale = Vector2( 1, 1 )
+
+[node name="Trees7" type="Node2D" parent="."]
+position = Vector2( 763, -750 )
+scale = Vector2( 1.33977, 1.50057 )
+
+[node name="TreeGreen" parent="Trees7" instance=ExtResource( 3 )]
+position = Vector2( 7.46399, 11.9954 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen2" parent="Trees7" instance=ExtResource( 3 )]
+position = Vector2( 52.9941, 1.99924 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen3" parent="Trees7" instance=ExtResource( 3 )]
+position = Vector2( 114.945, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen4" parent="Trees7" instance=ExtResource( 3 )]
+position = Vector2( 178.389, 0.666412 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen5" parent="Trees7" instance=ExtResource( 3 )]
+position = Vector2( 246.311, 2.66565 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen6" parent="Trees7" instance=ExtResource( 3 )]
+position = Vector2( 300.798, 1.99924 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen7" parent="Trees7" instance=ExtResource( 3 )]
+position = Vector2( 366.481, 4.66489 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen8" parent="Trees7" instance=ExtResource( 3 )]
+position = Vector2( 338.864, 12.6618 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen9" parent="Trees7" instance=ExtResource( 3 )]
+position = Vector2( 276.167, 11.9954 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen10" parent="Trees7" instance=ExtResource( 3 )]
+position = Vector2( 227.651, 15.9939 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen11" parent="Trees7" instance=ExtResource( 3 )]
+position = Vector2( 196.302, 9.99619 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen12" parent="Trees7" instance=ExtResource( 3 )]
+position = Vector2( 150.772, 10.6626 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen13" parent="Trees7" instance=ExtResource( 3 )]
+position = Vector2( 126.887, 8.66336 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen14" parent="Trees7" instance=ExtResource( 3 )]
+position = Vector2( 94.046, 13.9947 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen15" parent="Trees7" instance=ExtResource( 3 )]
+position = Vector2( 71.6541, 10.6626 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen16" parent="Trees7" instance=ExtResource( 3 )]
+position = Vector2( 30.6023, 7.99698 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen17" parent="Trees7" instance=ExtResource( 3 )]
+position = Vector2( 9.70313, 22.6581 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen18" parent="Trees7" instance=ExtResource( 3 )]
+position = Vector2( 9.70313, 22.6581 )
+scale = Vector2( 1, 1 )
+
+[node name="Trees8" type="Node2D" parent="."]
+position = Vector2( 860, -751 )
+scale = Vector2( 1.33977, 1.50057 )
+
+[node name="TreeGreen" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 7.46399, 11.9954 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen2" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 52.9941, 1.99924 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen3" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 114.945, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen4" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 178.389, 0.666412 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen5" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 246.311, 2.66565 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen6" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 300.798, 1.99924 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen7" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 366.481, 4.66489 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen94" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 344.089, 63.9757 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen95" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 370.959, 39.9848 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen96" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 364.988, 83.3017 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen97" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 372.452, 99.2956 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen98" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 344.835, 127.285 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen99" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 370.213, 144.612 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen8" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 338.864, 12.6618 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen19" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 311.247, 21.3252 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen100" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 288.109, 63.9757 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen101" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 314.979, 76.6375 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen102" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 277.66, 117.955 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen103" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 297.066, 147.944 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen104" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 371.706, 286.558 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen105" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 345.582, 291.223 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen112" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 347.074, 323.877 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen113" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 367.974, 339.204 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen106" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 373.198, 336.539 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen107" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 347.074, 345.869 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen108" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 369.466, 379.189 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen109" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 350.806, 396.516 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen110" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 370.213, 421.173 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen111" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 338.864, 439.833 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen114" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 370.959, 465.823 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen115" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 344.835, 470.488 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen116" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 346.328, 503.142 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen117" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 367.227, 518.47 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen118" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 372.452, 515.804 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen119" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 346.328, 525.134 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen120" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 368.72, 558.454 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen121" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 350.06, 575.781 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen122" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 369.466, 600.439 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen123" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 338.118, 619.098 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen124" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 370.959, 629.094 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen125" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 344.835, 633.759 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen126" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 346.328, 666.413 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen127" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 367.227, 681.741 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen128" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 372.452, 679.075 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen129" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 346.328, 688.405 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen130" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 368.72, 721.726 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen131" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 350.06, 739.052 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen132" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 369.466, 763.71 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen133" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 338.118, 782.369 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen134" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 372.452, 799.696 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen135" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 346.328, 804.361 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen136" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 347.821, 837.015 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen137" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 368.72, 852.343 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen138" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 373.945, 849.677 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen139" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 347.821, 859.007 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen140" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 370.213, 892.327 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen141" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 351.553, 909.654 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen142" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 370.959, 934.311 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen143" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 338.118, 936.311 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen144" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 317.965, 946.307 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen145" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 285.87, 928.98 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen146" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 234.369, 930.313 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen147" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 170.178, 928.98 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen148" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 105.242, 931.646 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen149" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 44.7838, 932.979 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen150" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 73.8932, 944.974 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen151" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 141.069, 940.309 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen152" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 203.02, 941.642 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen153" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 259, 944.974 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen154" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 228.397, 947.64 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen155" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 170.178, 948.973 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen156" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 123.902, 947.64 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen157" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 95.5388, 948.973 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen158" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 32.8414, 950.305 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen159" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 2.23923, 935.644 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen160" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -30.6022, 937.644 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen161" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -50.7549, 947.64 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen162" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -82.85, 930.313 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen163" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -134.351, 931.646 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen164" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -198.541, 930.313 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen165" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -263.478, 932.979 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen166" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -323.936, 934.312 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen167" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -294.827, 946.307 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen168" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -227.651, 941.642 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen169" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -165.7, 942.975 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen170" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -109.72, 946.307 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen171" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -140.323, 948.973 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen172" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -198.541, 950.306 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen173" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -244.818, 948.973 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen174" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -273.181, 950.306 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen175" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -335.879, 951.638 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen176" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -370.213, 939.643 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen177" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -403.054, 941.642 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen178" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -423.207, 951.638 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen179" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -455.302, 934.312 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen180" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -506.803, 935.645 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen181" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -570.994, 934.312 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen182" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -635.93, 936.977 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen183" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -696.388, 938.31 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen184" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -667.279, 950.306 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen185" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -600.103, 945.641 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen186" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -538.152, 946.974 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen187" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -482.172, 950.306 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen188" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -512.775, 952.971 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen189" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -570.994, 954.304 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen190" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -617.27, 952.971 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen191" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -645.633, 954.304 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen192" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -708.331, 955.637 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen193" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -722.512, 936.311 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen194" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -755.354, 938.31 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen195" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -775.506, 948.306 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen196" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -807.601, 930.979 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen197" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -859.103, 932.313 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen198" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -923.293, 930.98 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen199" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -988.229, 933.645 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen200" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1048.69, 934.978 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen201" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1019.58, 946.973 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen202" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -952.402, 942.308 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen203" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -890.451, 943.641 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen204" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -834.471, 946.973 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen205" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -865.074, 949.639 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen206" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -923.293, 950.972 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen207" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -969.569, 949.639 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen208" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -997.932, 950.972 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen209" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1060.63, 952.305 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen210" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1094.96, 938.31 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen211" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1127.81, 940.309 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen212" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1147.96, 950.306 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen213" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1180.05, 932.979 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen214" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1231.55, 934.312 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen215" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1295.74, 932.979 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen216" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1360.68, 935.645 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen217" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1421.14, 936.977 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen218" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1392.03, 948.973 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen219" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1324.85, 944.308 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen220" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1262.9, 945.641 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen221" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1206.92, 948.973 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen222" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1237.53, 951.638 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen223" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1295.74, 952.971 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen224" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1342.02, 951.638 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen225" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1370.38, 952.971 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen226" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1433.08, 954.304 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen227" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1426.36, 932.979 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen228" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1459.21, 934.978 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen229" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1479.36, 944.974 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen230" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1511.45, 927.647 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen231" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1562.95, 928.98 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen232" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1627.15, 927.648 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen233" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1692.08, 930.313 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen234" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1752.54, 931.646 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen235" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1723.43, 943.641 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen236" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1656.25, 938.976 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen237" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1594.3, 940.309 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen238" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1538.32, 943.641 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen239" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1568.93, 946.307 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen240" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1627.15, 947.64 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen241" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1673.42, 946.307 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen242" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1701.78, 947.64 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen243" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1764.48, 948.973 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen20" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -25.3775, 28.6558 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen21" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -204.513, 27.9893 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen22" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -281.392, 15.9939 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen23" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -572.486, 23.3245 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen24" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -706.838, 23.9909 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen25" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -835.218, 21.3252 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen26" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -901.647, 31.3214 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen27" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -980.765, 27.3229 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen28" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1034.51, 27.9893 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen29" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1147.21, 30.655 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen30" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1242, 33.3206 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen31" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1339.04, 31.3214 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen32" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1404.72, 34.6535 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen33" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1456.22, 31.9879 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen34" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1556.24, 31.3214 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen35" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1615.2, 25.9901 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen36" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1679.39, 27.323 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen37" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1741.34, 27.9894 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen38" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1804.79, 33.3207 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen39" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1803.29, 57.3116 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen40" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1770.45, 49.3146 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen41" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1776.42, 72.639 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen42" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1736.87, 39.9848 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen43" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1701.78, 50.6474 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen46" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1804.04, 195.926 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen47" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1781.65, 203.256 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen48" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1804.79, 225.248 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen49" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1781.65, 239.242 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen50" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1807.03, 261.234 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen51" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1773.44, 285.225 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen52" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1804.04, 299.886 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen53" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1779.41, 319.212 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen54" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1805.53, 343.869 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen55" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1783.14, 351.2 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen56" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1806.28, 373.191 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen57" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1783.14, 387.186 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen58" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1808.52, 409.178 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen59" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1774.93, 433.169 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen60" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1805.53, 447.83 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen61" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1780.9, 467.156 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen62" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1801.06, 476.486 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen63" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1778.66, 483.816 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen64" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1801.8, 505.808 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen65" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1778.66, 519.802 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen66" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1804.04, 541.794 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen67" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1770.45, 565.785 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen68" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1801.06, 580.446 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen69" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1776.42, 599.772 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen70" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1803.29, 625.096 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen71" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1780.9, 632.426 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen72" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1804.04, 654.418 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen73" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1780.9, 668.413 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen74" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1806.28, 690.404 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen75" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1772.69, 714.395 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen76" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1803.29, 729.056 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen77" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1778.66, 748.382 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen78" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1798.82, 757.046 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen79" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1776.42, 764.376 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen80" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1799.56, 786.368 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen81" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1776.42, 800.362 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen82" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1801.8, 822.354 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen83" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1768.21, 846.345 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen84" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1798.82, 861.006 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen85" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1774.19, 880.332 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen86" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1811.51, 823.687 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen87" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1789.11, 831.018 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen88" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1812.25, 853.009 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen89" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1789.11, 867.004 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen90" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1814.49, 888.995 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen91" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1780.9, 912.986 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen92" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1811.5, 927.648 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen93" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1786.87, 946.973 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen245" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1768.21, 941.642 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen244" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1818.22, 938.31 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen44" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1647.3, 42.6505 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen45" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -1647.3, 42.6505 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen9" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 276.167, 11.9954 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen10" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 227.651, 15.9939 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen11" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 196.302, 9.99619 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen12" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 150.772, 10.6626 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen13" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 126.887, 8.66336 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen14" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 94.046, 13.9947 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen15" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 71.6541, 10.6626 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen16" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 30.6023, 7.99698 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen17" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 9.70313, 22.6581 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen18" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( 9.70313, 22.6581 )
+scale = Vector2( 1, 1 )
