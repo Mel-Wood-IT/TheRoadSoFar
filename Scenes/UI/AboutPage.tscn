@@ -8,8 +8,8 @@
 script = ExtResource( 2 )
 
 [node name="about_bg" type="Sprite" parent="."]
-position = Vector2( 513, 301 )
-scale = Vector2( 0.810938, 0.845833 )
+position = Vector2( 322, 182.75 )
+scale = Vector2( 0.5125, 0.517361 )
 texture = ExtResource( 1 )
 __meta__ = {
 "_edit_lock_": true
@@ -17,20 +17,20 @@ __meta__ = {
 
 [node name="RefBtn" type="Button" parent="."]
 self_modulate = Color( 1, 1, 1, 0 )
-margin_left = 273.0
-margin_top = 499.0
-margin_right = 502.0
-margin_bottom = 541.0
+margin_left = 170.0
+margin_top = 304.0
+margin_right = 316.0
+margin_bottom = 330.0
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="BackBtn" type="Button" parent="."]
 self_modulate = Color( 1, 1, 1, 0 )
-margin_left = 524.0
-margin_top = 499.0
-margin_right = 753.0
-margin_bottom = 541.0
+margin_left = 329.0
+margin_top = 304.0
+margin_right = 475.0
+margin_bottom = 330.0
 __meta__ = {
 "_edit_lock_": true
 }

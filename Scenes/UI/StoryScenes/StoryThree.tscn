@@ -9,34 +9,40 @@
 [node name="StoryThree" type="Node2D"]
 
 [node name="three_bg" type="Sprite" parent="."]
-position = Vector2( 513, 299.5 )
-scale = Vector2( 0.810938, 0.851389 )
+position = Vector2( 319.5, 180 )
+scale = Vector2( 0.508594, 0.519444 )
 texture = ExtResource( 1 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="NextBtn" type="Button" parent="."]
-margin_left = 896.0
-margin_top = 543.0
-margin_right = 998.0
-margin_bottom = 580.0
+margin_left = 522.0
+margin_top = 312.0
+margin_right = 624.0
+margin_bottom = 349.0
 custom_fonts/font = ExtResource( 2 )
 text = "NEXT"
 script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Panel" type="Panel" parent="."]
 self_modulate = Color( 1, 1, 1, 0 )
-margin_left = 11.0
-margin_top = 73.0
-margin_right = 463.0
-margin_bottom = 519.0
+margin_left = 14.0
+margin_top = 70.0
+margin_right = 270.0
+margin_bottom = 290.0
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Chatbox" type="Label" parent="Panel"]
-margin_left = 3.0
-margin_top = 125.0
-margin_right = 443.0
-margin_bottom = 330.0
+margin_left = 12.0
+margin_top = 45.0
+margin_right = 244.0
+margin_bottom = 168.0
 custom_fonts/font = ExtResource( 4 )
 text = "Years later, his brother Kolton visits with grim 
 news: Their father had gone missing during a 
@@ -48,5 +54,8 @@ supernatural forces.
 align = 1
 percent_visible = 0.0
 script = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [connection signal="pressed" from="NextBtn" to="NextBtn" method="_on_NextBtn_pressed"]
