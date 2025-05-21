@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 # Movement speed
-export var speed = 150
+export var speed = 100
 # Health
 export var health = 100
 

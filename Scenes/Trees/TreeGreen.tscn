@@ -47,7 +47,7 @@ scale = Vector2( 1.33977, 1.50057 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
 animation = "Wind"
-frame = 3
+frame = 24
 playing = true
 centered = false
 
