@@ -131,7 +131,7 @@ position = Vector2( -640, 53 )
 rotation = 0.0181101
 
 [node name="TreeGreen359" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( -588, 165 )
+position = Vector2( -592, 144 )
 rotation = 0.0181101
 
 [node name="TreeGreen360" parent="YSort" instance=ExtResource( 4 )]
