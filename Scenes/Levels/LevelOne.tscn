@@ -2289,10 +2289,10 @@ position = Vector2( 1312, -624 )
 position = Vector2( 1216, -624 )
 
 [node name="TreeGreen954" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 1408, 560 )
+position = Vector2( -672, 752 )
 
 [node name="TreeGreen955" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 1424, 624 )
+position = Vector2( 1024, 784 )
 
 [node name="TreeGreen956" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 1344, 624 )
