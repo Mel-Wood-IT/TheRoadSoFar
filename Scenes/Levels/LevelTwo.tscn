@@ -34,9 +34,6 @@ format = 1
 
 [node name="YSort" type="YSort" parent="."]
 
-[node name="Player" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( -1514, 467 )
-
 [node name="TreeGreen" parent="YSort" instance=ExtResource( 4 )]
 position = Vector2( -1460, -649 )
 
@@ -340,7 +337,7 @@ position = Vector2( -190, -30 )
 position = Vector2( -286, 24 )
 
 [node name="TreeGreen316" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( -208, 48 )
+position = Vector2( -200, 62 )
 
 [node name="TreeGreen317" parent="YSort" instance=ExtResource( 4 )]
 position = Vector2( -277, 122 )
@@ -1989,3 +1986,6 @@ position = Vector2( -1291, -321 )
 position = Vector2( -1281, -469 )
 
 [node name="Trees" type="Node2D" parent="YSort"]
+
+[node name="Player" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( -1514, 467 )
