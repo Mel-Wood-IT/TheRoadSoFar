@@ -10,31 +10,40 @@
 [node name="StoryTwo" type="Node2D"]
 
 [node name="two_bg" type="Sprite" parent="."]
-position = Vector2( 511.5, 295.5 )
-scale = Vector2( 0.808594, 0.851389 )
+position = Vector2( 318, 176.5 )
+scale = Vector2( 0.50625, 0.520833 )
 texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="NextBtn" type="Button" parent="."]
-margin_left = 896.0
-margin_top = 543.0
-margin_right = 998.0
-margin_bottom = 580.0
+margin_left = 516.0
+margin_top = 308.0
+margin_right = 618.0
+margin_bottom = 345.0
 custom_fonts/font = ExtResource( 2 )
 text = "NEXT"
 script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Panel" type="Panel" parent="."]
 self_modulate = Color( 1, 1, 1, 0 )
-margin_left = 11.0
-margin_top = 73.0
-margin_right = 463.0
-margin_bottom = 519.0
+margin_left = 9.0
+margin_top = 60.0
+margin_right = 278.0
+margin_bottom = 280.0
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Chatbox" type="Label" parent="Panel"]
-margin_left = -1.0
-margin_top = 156.0
-margin_right = 449.0
-margin_bottom = 273.0
+margin_left = 10.0
+margin_top = 76.0
+margin_right = 259.0
+margin_bottom = 145.0
 custom_fonts/font = ExtResource( 5 )
 text = "Wanting a different future, Dom separated himself 
 from the family business, enrolled in university, 
@@ -43,6 +52,9 @@ and tried to build a normal life.
 align = 1
 percent_visible = 0.0
 script = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )

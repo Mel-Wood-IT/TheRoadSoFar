@@ -10,31 +10,40 @@
 [node name="StoryOne" type="Node2D"]
 
 [node name="one_bg" type="Sprite" parent="."]
-position = Vector2( 508.5, 297.5 )
-scale = Vector2( 0.814844, 0.851389 )
+position = Vector2( 315, 178 )
+scale = Vector2( 0.5125, 0.519444 )
 texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="NextBtn" type="Button" parent="."]
-margin_left = 896.0
-margin_top = 543.0
-margin_right = 998.0
-margin_bottom = 580.0
+margin_left = 519.0
+margin_top = 309.0
+margin_right = 621.0
+margin_bottom = 346.0
 custom_fonts/font = ExtResource( 2 )
 text = "NEXT"
 script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Panel" type="Panel" parent="."]
 self_modulate = Color( 1, 1, 1, 0 )
 margin_left = 11.0
 margin_top = 73.0
-margin_right = 463.0
-margin_bottom = 519.0
+margin_right = 290.0
+margin_bottom = 294.0
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Chatbox" type="Label" parent="Panel"]
-margin_left = -2.0
-margin_top = 113.0
-margin_right = 478.0
-margin_bottom = 342.0
+margin_left = -8.0
+margin_top = 48.0
+margin_right = 293.0
+margin_bottom = 194.0
 custom_fonts/font = ExtResource( 4 )
 text = "Dominic Argent is a third-generation monster hunter 
 from a family known for tracking and eliminating 
@@ -47,6 +56,9 @@ Dedicating his entire life to the pursuit.
 align = 1
 percent_visible = 0.0
 script = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )

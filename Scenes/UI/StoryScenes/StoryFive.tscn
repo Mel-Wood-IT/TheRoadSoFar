@@ -9,34 +9,40 @@
 [node name="StoryFive" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 513, 300.5 )
-scale = Vector2( 0.810938, 0.854167 )
+position = Vector2( 318.5, 178.5 )
+scale = Vector2( 0.507032, 0.515278 )
 texture = ExtResource( 1 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="NextBtn" type="Button" parent="."]
-margin_left = 896.0
-margin_top = 543.0
-margin_right = 998.0
-margin_bottom = 580.0
+margin_left = 527.0
+margin_top = 313.0
+margin_right = 629.0
+margin_bottom = 350.0
 custom_fonts/font = ExtResource( 2 )
 text = "NEXT"
 script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Panel" type="Panel" parent="."]
 self_modulate = Color( 1, 1, 1, 0 )
 margin_left = 11.0
 margin_top = 73.0
-margin_right = 463.0
-margin_bottom = 519.0
+margin_right = 252.0
+margin_bottom = 286.0
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Chatbox" type="Label" parent="Panel"]
-margin_left = -3.0
-margin_top = 172.0
-margin_right = 401.0
-margin_bottom = 285.0
+margin_left = 11.0
+margin_top = 81.0
+margin_right = 233.0
+margin_bottom = 150.0
 custom_fonts/font = ExtResource( 4 )
 text = "Realising that it would be best, the two 
 brothers part ways in search of their missing 
@@ -45,5 +51,8 @@ father, there is no time to waste.
 align = 1
 percent_visible = 0.0
 script = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [connection signal="pressed" from="NextBtn" to="NextBtn" method="_on_NextBtn_pressed"]
