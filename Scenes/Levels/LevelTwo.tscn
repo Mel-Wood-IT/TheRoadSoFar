@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=8 format=2]
+=======
+[gd_scene load_steps=9 format=2]
+>>>>>>> 569941567880ad50246498283fd257b000ae47c6
 
 [ext_resource path="res://TileSets/ForestDecoration.tres" type="TileSet" id=1]
 [ext_resource path="res://TileSets/ForestFloor.tres" type="TileSet" id=2]
@@ -6,7 +10,12 @@
 [ext_resource path="res://Scenes/Trees/TreeGreen.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Levels/Levels.gd" type="Script" id=5]
 [ext_resource path="res://Scenes/Trees/TreeYellow.tscn" type="PackedScene" id=6]
+<<<<<<< HEAD
 [ext_resource path="res://Sprites/Abaddon.tscn" type="PackedScene" id=7]
+=======
+[ext_resource path="res://Scenes/Collectibles/JournalPage.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Resources/Ambience/Game Ambience.wav" type="AudioStream" id=8]
+>>>>>>> 569941567880ad50246498283fd257b000ae47c6
 
 [node name="LevelTwo" type="Node2D"]
 modulate = Color( 0.482353, 0.494118, 0.54902, 1 )
@@ -7364,5 +7373,15 @@ __meta__ = {
 "_edit_group_": true
 }
 
+<<<<<<< HEAD
 [node name="Abaddon" parent="." instance=ExtResource( 7 )]
 position = Vector2( 134, -325 )
+=======
+[node name="JournalPage" parent="." instance=ExtResource( 7 )]
+position = Vector2( 232, -480 )
+rotation = 1.04081
+
+[node name="Ambience" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+autoplay = true
+>>>>>>> 569941567880ad50246498283fd257b000ae47c6
