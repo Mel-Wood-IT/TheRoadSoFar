@@ -84,10 +84,10 @@ collision_layer = 4
 collision_mask = 56
 
 [node name="TopTree" type="AnimatedSprite" parent="."]
-z_index = 1
+z_index = 2
 frames = SubResource( 2 )
 animation = "Wind"
-frame = 9
+frame = 22
 playing = true
 centered = false
 __meta__ = {
@@ -96,9 +96,10 @@ __meta__ = {
 
 [node name="BottomTree" type="AnimatedSprite" parent="."]
 position = Vector2( 25.8841, 67.9847 )
+z_index = 1
 frames = SubResource( 3 )
 animation = "Wind"
-frame = 9
+frame = 22
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -106,6 +107,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 24.9519, 68.0028 )
+z_index = 1
 shape = SubResource( 1 )
 
 [node name="Trunkbase" type="Position2D" parent="."]

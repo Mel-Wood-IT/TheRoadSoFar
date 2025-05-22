@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
 # Movement speed
-export var speed = 150
-#Health
+export var speed = 100
+# Health
 export var health = 100
 
 # Player states
@@ -82,6 +82,7 @@ func die():
 	anim.play("death_" + current_direction)
 	yield(anim, "animation_finished")
 	queue_free() # change to game over screen
+
 
 
 

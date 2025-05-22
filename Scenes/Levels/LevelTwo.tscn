@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-[gd_scene load_steps=8 format=2]
-=======
-[gd_scene load_steps=9 format=2]
->>>>>>> 569941567880ad50246498283fd257b000ae47c6
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://TileSets/ForestDecoration.tres" type="TileSet" id=1]
 [ext_resource path="res://TileSets/ForestFloor.tres" type="TileSet" id=2]
@@ -10,12 +6,10 @@
 [ext_resource path="res://Scenes/Trees/TreeGreen.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Levels/Levels.gd" type="Script" id=5]
 [ext_resource path="res://Scenes/Trees/TreeYellow.tscn" type="PackedScene" id=6]
-<<<<<<< HEAD
-[ext_resource path="res://Sprites/Abaddon.tscn" type="PackedScene" id=7]
-=======
 [ext_resource path="res://Scenes/Collectibles/JournalPage.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Resources/Ambience/Game Ambience.wav" type="AudioStream" id=8]
->>>>>>> 569941567880ad50246498283fd257b000ae47c6
+[ext_resource path="res://Resources/Music/Abaddon.wav" type="AudioStream" id=9]
+[ext_resource path="res://Scenes/Collectibles/SkullWhite.tscn" type="PackedScene" id=10]
 
 [node name="LevelTwo" type="Node2D"]
 modulate = Color( 0.482353, 0.494118, 0.54902, 1 )
@@ -49,7 +43,7 @@ tile_data = PoolIntArray( -458767, 4, 0, -458763, 4, 0, -458762, 13, 0, -458758,
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 28.9999, -25 )
+position = Vector2( -1488, 464 )
 
 [node name="Trees" type="YSort" parent="YSort"]
 
@@ -7373,15 +7367,22 @@ __meta__ = {
 "_edit_group_": true
 }
 
-<<<<<<< HEAD
-[node name="Abaddon" parent="." instance=ExtResource( 7 )]
-position = Vector2( 134, -325 )
-=======
-[node name="JournalPage" parent="." instance=ExtResource( 7 )]
-position = Vector2( 232, -480 )
-rotation = 1.04081
-
 [node name="Ambience" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
 autoplay = true
->>>>>>> 569941567880ad50246498283fd257b000ae47c6
+
+[node name="Abbadon" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 152, -608 )
+stream = ExtResource( 9 )
+autoplay = true
+max_distance = 800.0
+
+[node name="Collectibles" type="Node2D" parent="."]
+
+[node name="JournalPage" parent="Collectibles" instance=ExtResource( 7 )]
+position = Vector2( 224, -480 )
+rotation = 1.04081
+scale = Vector2( 1, 1 )
+
+[node name="SkullWhite" parent="Collectibles" instance=ExtResource( 10 )]
+position = Vector2( 832, -344 )
