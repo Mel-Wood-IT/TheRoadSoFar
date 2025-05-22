@@ -2478,6 +2478,26 @@ scale = Vector2( 1, 1 )
 position = Vector2( -193.317, 829.018 )
 scale = Vector2( 1, 1 )
 
+[node name="TreeGreen669" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -263.478, 808.359 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen670" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -241.833, 849.677 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen671" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -298.559, 842.347 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen672" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -288.856, 875.001 )
+scale = Vector2( 1, 1 )
+
+[node name="TreeGreen673" parent="Trees8" instance=ExtResource( 3 )]
+position = Vector2( -340.357, 881.665 )
+scale = Vector2( 1, 1 )
+
 [node name="TreeGreen574" parent="Trees8" instance=ExtResource( 3 )]
 position = Vector2( -172.418, 872.335 )
 scale = Vector2( 1, 1 )
