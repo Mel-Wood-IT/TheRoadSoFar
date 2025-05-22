@@ -14,6 +14,10 @@ config/name="TheRoadSoFar"
 run/main_scene="res://Scenes/UI/MainMenu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://Scenes/Global.gd"
+
 [display]
 
 window/size/width=640
@@ -69,7 +73,7 @@ interact={
 [layer_names]
 
 2d_physics/layer_1="Environment"
-2d_physics/layer_2="Walls"
+2d_physics/layer_2="Collectables"
 2d_physics/layer_3="Trees"
 2d_physics/layer_4="Player"
 2d_physics/layer_5="Enemies"
