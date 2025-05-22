@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sorcerer attack_Animation 1_3.png-4faf093c0e59a54988ef9bdfefb0da47.stex"
+path="res://.import/sorcerer attack_Animation 1_3.png-05c86c0840a08667be9f784df78b8503.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Abaddon/sorcerer attack_Animation 1_3.png"
-dest_files=[ "res://.import/sorcerer attack_Animation 1_3.png-4faf093c0e59a54988ef9bdfefb0da47.stex" ]
+source_file="res://Sprites/Enemies/Abaddon/sorcerer attack_Animation 1_3.png"
+dest_files=[ "res://.import/sorcerer attack_Animation 1_3.png-05c86c0840a08667be9f784df78b8503.stex" ]
 
 [params]
 

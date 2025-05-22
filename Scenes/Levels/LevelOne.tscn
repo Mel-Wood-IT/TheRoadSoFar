@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://TileSets/ForestDecoration.tres" type="TileSet" id=1]
 [ext_resource path="res://Sprites/Environment/TerrainSprites/Tent.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Scenes/Collectibles/Axe.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Collectibles/JournalPage.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Collectibles/SkullYelBlood.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/UI/Main.tscn" type="PackedScene" id=10]
 
 [node name="LevelOne" type="Node2D"]
 modulate = Color( 0.482353, 0.494118, 0.54902, 1 )
@@ -3672,3 +3673,5 @@ rotation = -1.32167
 
 [node name="SkullYelBlood" parent="Collectables" instance=ExtResource( 9 )]
 position = Vector2( 1257, 344 )
+
+[node name="Main" parent="." instance=ExtResource( 10 )]

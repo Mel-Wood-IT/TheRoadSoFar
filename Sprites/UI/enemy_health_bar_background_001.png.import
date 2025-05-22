@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sorcerer attack_Animation 1_7.png-7c5e41141d073ba9bfe6006dbb9bb0d1.stex"
+path="res://.import/enemy_health_bar_background_001.png-96f69c2f13a47cc2161ade1d749fe605.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Abaddon/sorcerer attack_Animation 1_7.png"
-dest_files=[ "res://.import/sorcerer attack_Animation 1_7.png-7c5e41141d073ba9bfe6006dbb9bb0d1.stex" ]
+source_file="res://Sprites/UI/enemy_health_bar_background_001.png"
+dest_files=[ "res://.import/enemy_health_bar_background_001.png-96f69c2f13a47cc2161ade1d749fe605.stex" ]
 
 [params]
 
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sorcerer villain idle.png-8bd49e4fd35bf2991fd44aea6cff79fd.stex"
+path="res://.import/sorcerer attack_Animation 1_0.png-17aab2f12fed5f7554e7ed939042e524.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Abaddon/sorcerer villain idle.png"
-dest_files=[ "res://.import/sorcerer villain idle.png-8bd49e4fd35bf2991fd44aea6cff79fd.stex" ]
+source_file="res://Sprites/Enemies/Abaddon/sorcerer attack_Animation 1_0.png"
+dest_files=[ "res://.import/sorcerer attack_Animation 1_0.png-17aab2f12fed5f7554e7ed939042e524.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

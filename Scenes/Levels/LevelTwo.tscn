@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://TileSets/ForestDecoration.tres" type="TileSet" id=1]
 [ext_resource path="res://TileSets/ForestFloor.tres" type="TileSet" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Resources/Ambience/Game Ambience.wav" type="AudioStream" id=8]
 [ext_resource path="res://Resources/Music/Abaddon.wav" type="AudioStream" id=9]
 [ext_resource path="res://Scenes/Collectibles/SkullWhite.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/UI/Main.tscn" type="PackedScene" id=11]
 
 [node name="LevelTwo" type="Node2D"]
 modulate = Color( 0.482353, 0.494118, 0.54902, 1 )
@@ -7386,3 +7387,5 @@ scale = Vector2( 1, 1 )
 
 [node name="SkullWhite" parent="Collectibles" instance=ExtResource( 10 )]
 position = Vector2( 832, -344 )
+
+[node name="Main" parent="." instance=ExtResource( 11 )]
