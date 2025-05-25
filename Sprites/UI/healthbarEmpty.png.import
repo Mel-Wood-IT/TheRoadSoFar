@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Stone Axe.png-3ba417ed34a0c924239f28a19a345cfb.stex"
+path="res://.import/healthbarEmpty.png-1e5e2fa051a9e874c849b84d313a93d5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Collectibles/Stone Axe.png"
-dest_files=[ "res://.import/Stone Axe.png-3ba417ed34a0c924239f28a19a345cfb.stex" ]
+source_file="res://Sprites/UI/healthbarEmpty.png"
+dest_files=[ "res://.import/healthbarEmpty.png-1e5e2fa051a9e874c849b84d313a93d5.stex" ]
 
 [params]
 

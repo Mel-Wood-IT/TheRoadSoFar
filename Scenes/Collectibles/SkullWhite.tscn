@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Collectibles/Skulls.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Collectibles/Skulls.webp" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 18.0278
+
+[node name="SkullWhite" type="Area2D"]
+collision_layer = 2
+collision_mask = 8
+script = ExtResource( 1 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( -10, -3 )
+rotation = 0.600924
+scale = Vector2( 0.175321, 0.189188 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 19, 76, 71, 29 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( -1.90735e-06, 6 )
+rotation = -0.189426
+scale = Vector2( 0.249768, 0.219801 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 7, 110, 94, 29 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 5, -1.90735e-06 )
+rotation = -0.408387
+scale = Vector2( 0.252224, 0.242327 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 19, 76, 71, 29 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -2, 3 )
+rotation = 0.689431
+scale = Vector2( 0.344953, 0.314096 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 95, 8, 70, 57 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 1.19209e-07, -9 )
+scale = Vector2( 0.372807, 0.346491 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 26, 8, 57, 57 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -1, -3 )
+rotation = 0.0804194
+shape = SubResource( 1 )
+
+[connection signal="body_entered" from="." to="." method="_on_SkullWhite_body_entered"]
