@@ -7383,7 +7383,6 @@ max_distance = 800.0
 [node name="JournalPage" parent="Collectibles" instance=ExtResource( 7 )]
 position = Vector2( 224, -480 )
 rotation = 1.04081
-scale = Vector2( 1, 1 )
 
 [node name="SkullWhite" parent="Collectibles" instance=ExtResource( 10 )]
 position = Vector2( 832, -344 )
