@@ -4,6 +4,7 @@
 [ext_resource path="res://Scenes/Trees/TreeGreen.tscn" type="PackedScene" id=2]
 
 [node name="LevelThree" type="Node2D"]
+modulate = Color( 0.482353, 0.494118, 0.54902, 1 )
 
 [node name="ForestFloor" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
