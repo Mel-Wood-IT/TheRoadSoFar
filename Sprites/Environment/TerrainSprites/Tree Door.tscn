@@ -1,12 +1,36 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Sprites/Environment/TerrainSprites/Tree door.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Environment/TerrainSprites/TreeDoor.gd" type="Script" id=2]
 
-[node name="Tree Door" type="Node2D"]
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 156.5, 20 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 156.5, 5.5 )
 
-[node name="TreeDoor" type="Sprite" parent="Sprite"]
+[node name="TreeDoor" type="StaticBody2D"]
+z_index = 1
+collision_layer = 4
+collision_mask = 8
+
+[node name="TreeDoor" type="Sprite" parent="."]
 position = Vector2( -1, 0 )
 scale = Vector2( 2.50794, 1.77003 )
 texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -2.5, -9 )
+shape = SubResource( 1 )
+
+[node name="NextLevel" type="Area2D" parent="."]
+z_index = 1
+collision_layer = 64
+collision_mask = 8
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NextLevel"]
+position = Vector2( -2.5, 17.5 )
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="NextLevel" to="NextLevel" method="_on_NextLevel_body_entered"]

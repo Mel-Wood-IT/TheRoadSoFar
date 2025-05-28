@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
 # Movement speed
-export var speed = 150
-#Health
+export var speed = 100
+# Health
 export var health = 100
 
 # Player states
@@ -14,10 +14,14 @@ var is_shooting = false
 
 onready var anim = $Animated
 
+func _ready():
+	Global.set_health(health)
+	Global.update_pages()
+	Global.update_hud()
+
 func _physics_process(delta):
 	if not alive:
 		return
-	
 	handle_input()
 	move_and_slide(motion)
 	update_animation()
@@ -61,6 +65,13 @@ func update_animation():
 func stab():
 	is_attacking = true
 	anim.play("stab_" + current_direction)
+	# Wait for a few frames so the animation is visually synced
+	yield(get_tree().create_timer(0.1), "timeout")
+	# Detect and damage enemies in the stab area
+	for body in $StabArea.get_overlapping_bodies():
+		if body.has_method("take_damage"):
+			body.take_damage(5)
+
 	yield(anim, "animation_finished")
 	is_attacking = false
 	
@@ -70,10 +81,15 @@ func shoot():
 	yield(anim, "animation_finished")
 	is_shooting = false
 
+# If not alive, player takes damage that updates the HUD
 func take_damage(amount):
 	if not alive:
 		return
 	health -= amount
+	health = max(health, 0)
+	
+	Global.set_health(health)
+	
 	if health <= 0:
 		die()
 
@@ -82,6 +98,7 @@ func die():
 	anim.play("death_" + current_direction)
 	yield(anim, "animation_finished")
 	queue_free() # change to game over screen
+
 
 
 
