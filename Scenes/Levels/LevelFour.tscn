@@ -13,7 +13,6 @@ extents = Vector2( 10, 110 )
 
 [node name="LevelFour" type="Node2D"]
 modulate = Color( 0.482353, 0.494118, 0.54902, 1 )
-position = Vector2( 1104, 112 )
 script = ExtResource( 4 )
 
 [node name="Tilesets" type="Node2D" parent="."]
@@ -14214,7 +14213,7 @@ position = Vector2( -192, -941 )
 scale = Vector2( 1, 1 )
 
 [node name="TreeGreen526" parent="YSort/Tree" instance=ExtResource( 2 )]
-position = Vector2( -1559, 393 )
+position = Vector2( -1568, 368 )
 scale = Vector2( 1, 1 )
 
 [node name="TreeGreen1122" parent="YSort/Tree" instance=ExtResource( 2 )]
@@ -14354,11 +14353,11 @@ position = Vector2( -1288, 471 )
 scale = Vector2( 1, 1 )
 
 [node name="TreeGreen1350" parent="YSort/Tree" instance=ExtResource( 2 )]
-position = Vector2( -1563, 405 )
+position = Vector2( -1552, 384 )
 scale = Vector2( 1, 1 )
 
 [node name="TreeGreen1351" parent="YSort/Tree" instance=ExtResource( 2 )]
-position = Vector2( -1560, 446 )
+position = Vector2( -1568, 432 )
 scale = Vector2( 1, 1 )
 
 [node name="TreeGreen1428" parent="YSort/Tree" instance=ExtResource( 2 )]
@@ -22386,6 +22385,10 @@ scale = Vector2( 1, 1 )
 [node name="Pause" type="CanvasLayer" parent="."]
 
 [node name="PauseUI" parent="Pause" instance=ExtResource( 7 )]
+margin_left = -1104.0
+margin_top = -112.0
+margin_right = -1104.0
+margin_bottom = -112.0
 
 [node name="GameOver" type="CanvasLayer" parent="."]
 

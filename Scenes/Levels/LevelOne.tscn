@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://TileSets/ForestDecoration.tres" type="TileSet" id=1]
 [ext_resource path="res://Sprites/Environment/TerrainSprites/Tent.tscn" type="PackedScene" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Scenes/UI/PauseMenu.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/Enemies/Bat.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/UI/GameOverUI.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/Enemies/Demon.tscn" type="PackedScene" id=16]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 110 )
@@ -113,8 +114,20 @@ position = Vector2( -675, -236 )
 [node name="Bat5" parent="YSort/Enemies" instance=ExtResource( 14 )]
 position = Vector2( 1172, -429 )
 
+[node name="Demon" parent="YSort/Enemies" instance=ExtResource( 16 )]
+position = Vector2( 381, 585 )
+
+[node name="Demon2" parent="YSort/Enemies" instance=ExtResource( 16 )]
+position = Vector2( 1263, -333 )
+
+[node name="Demon3" parent="YSort/Enemies" instance=ExtResource( 16 )]
+position = Vector2( 704, -310 )
+
+[node name="Demon4" parent="YSort/Enemies" instance=ExtResource( 16 )]
+position = Vector2( 728, 189 )
+
 [node name="Player" parent="YSort" instance=ExtResource( 5 )]
-position = Vector2( 671, -336 )
+position = Vector2( -315, -417 )
 
 [node name="Tree" type="YSort" parent="YSort"]
 

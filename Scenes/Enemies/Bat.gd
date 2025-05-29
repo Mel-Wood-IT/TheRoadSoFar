@@ -3,7 +3,7 @@ extends KinematicBody2D
 # Bat settings
 export (int) var detect_radius = 100
 export (int) var enemy_health = 10
-export (int) var speed = 50
+export (int) var speed = 80
 
 # Internal state
 var player = null
