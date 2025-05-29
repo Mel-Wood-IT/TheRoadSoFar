@@ -33,7 +33,6 @@ radius = 6.08276
 radius = 99.0
 
 [node name="Bat" type="KinematicBody2D"]
-z_index = 1
 collision_layer = 16
 collision_mask = 108
 script = ExtResource( 12 )
@@ -54,5 +53,9 @@ collision_mask = 8
 [node name="Radius" type="CollisionShape2D" parent="DetectRadius"]
 shape = SubResource( 3 )
 
+[node name="AttackCooldown" type="Timer" parent="."]
+autostart = true
+
 [connection signal="body_entered" from="DetectRadius" to="." method="_on_DetectRadius_body_entered"]
 [connection signal="body_exited" from="DetectRadius" to="." method="_on_DetectRadius_body_exited"]
+[connection signal="timeout" from="AttackCooldown" to="." method="_on_AttackCooldown_timeout"]

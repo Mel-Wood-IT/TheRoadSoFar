@@ -97,6 +97,10 @@ func die():
 	alive = false
 	anim.play("death_" + current_direction)
 	yield(anim, "animation_finished")
+	var game_over = get_tree().get_current_scene().find_node("GameOverUI", true, false)
+	if game_over:
+		game_over.visible = true
+	get_tree().paused = true
 	queue_free() # change to game over screen
 
 

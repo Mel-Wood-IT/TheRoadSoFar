@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://TileSets/ForestDecoration.tres" type="TileSet" id=1]
 [ext_resource path="res://Sprites/Environment/TerrainSprites/Tent.tscn" type="PackedScene" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Scenes/UI/Main.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/UI/PauseMenu.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/Enemies/Bat.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/UI/GameOverUI.tscn" type="PackedScene" id=15]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 110 )
@@ -76,6 +77,41 @@ format = 1
 tile_data = PoolIntArray( -2424867, 4, 0, -2424846, 4, 0, -2490365, 4, 0, -2490348, 4, 0, -2490285, 4, 0, -2359388, 5, 0, -2359381, 4, 0, -2359366, 5, 0, -2424812, 4, 0, -2424800, 4, 0, -2424786, 4, 0, -2424765, 4, 0, -2293832, 4, 0, -2359250, 4, 0, -2293685, 4, 0, -2162782, 4, 0, -2162752, 5, 0, -2162736, 4, 0, -2162729, 5, 0, -2228185, 4, 0, -2228184, 4, 0, -2228166, 4, 0, -2097238, 4, 0, -2097183, 5, 0, -2097162, 4, 0, -2162680, 4, 0, -2031641, 4, 0, -2097149, 5, 0, -2097108, 5, 0, -2097102, 4, 0, -2031590, 4, 0, -2031547, 4, 0, -1900619, 4, 0, -1965999, 4, 0, -1835063, 5, 0, -1835054, 4, 0, -1835053, 4, 0, -1769538, 4, 0, -1769517, 4, 0, -1769387, 4, 0, -1310813, 5, 0, -1179738, 4, 0, -1179734, 5, 0, -1179669, 4, 0, -1114123, 4, 0, -1179595, 4, 0, -1179580, 4, 0, -1048599, 5, 0, -983106, 4, 0, -1048496, 4, 0, -917545, 4, 0, -983010, 4, 0, -852053, 4, 0, -852052, 4, 0, -917468, 4, 0, -917433, 11, 0, -917422, 11, 0, -786465, 4, 0, -851919, 4, 0, -720986, 5, 0, -720972, 5, 0, -786372, 10, 0, -655398, 5, 0, -589897, 4, 0, -655301, 11, 0, -655282, 10, 0, -393268, 4, 0, -393265, 5, 0, -393176, 4, 0, -262236, 4, 0, -327605, 11, 0, -327597, 10, 0, -196690, 4, 0, -196670, 5, 0, -196649, 4, 0, -262079, 11, 0, -131144, 5, 0, -196558, 4, 0, -65608, 5, 0, 131007, 4, 0, 196665, 10, 0, 327638, 5, 0, 393179, 4, 0, 327753, 10, 0, 327757, 11, 0, 327763, 10, 0, 393272, 11, 0, 524196, 4, 0, 524254, 5, 0, 589745, 5, 0, 589763, 5, 0, 589764, 5, 0, 589775, 4, 0, 655287, 4, 0, 720866, 4, 0, 655420, 5, 0, 655435, 5, 0, 720936, 4, 0, 917464, 4, 0, 982995, 5, 0, 917556, 4, 0, 1048545, 5, 0, 1048550, 4, 0, 983092, 4, 0, 1114017, 5, 0, 1048643, 4, 0, 1245103, 4, 0, 1245118, 5, 0, 1310755, 4, 0, 1310779, 4, 0, 1310798, 4, 0, 1441768, 4, 0, 1507273, 4, 0, 1507293, 4, 0, 1507294, 4, 0, 1507383, 5, 0, 1638354, 5, 0, 1572938, 5, 0, 1703845, 4, 0, 1703914, 5, 0, 1769388, 5, 0, 1769406, 4, 0, 1703979, 4, 0, 1834968, 5, 0, 1834990, 4, 0, 1966024, 5, 0, 1900593, 4, 0, 1900594, 4, 0, 1900611, 5, 0, 2097071, 5, 0, 2097127, 4, 0, 2031700, 5, 0, 2162607, 5, 0, 2162619, 5, 0, 2097190, 4, 0, 2228206, 5, 0, 2162759, 4, 0, 2293752, 4, 0, 2228258, 5, 0, 2228259, 5, 0, 2228277, 5, 0, 2359264, 5, 0, 2359273, 4, 0, 2424794, 4, 0, 2424817, 4, 0, 2490309, 4, 0, 2424871, 4, 0, 2555812, 4, 0, 2555854, 5, 0, 2490415, 4, 0, 2621358, 5, 0, 2555932, 4, 0, 2555982, 4, 0, 2686909, 5, 0, 2686992, 4, 0, 2687041, 5, 0, 2687042, 5, 0, 2818006, 5, 0, 2818026, 4, 0, 2818027, 4, 0, 2752518, 4, 0, 2752548, 5, 0, 2883506, 4, 0, 2818076, 4, 0, 2883601, 5, 0, 2949134, 4, 0, 2949169, 5, 0 )
 
 [node name="YSort" type="YSort" parent="."]
+
+[node name="Enemies" type="Node2D" parent="YSort"]
+
+[node name="Bat" parent="YSort/Enemies" instance=ExtResource( 14 )]
+position = Vector2( 1214, 370 )
+
+[node name="Bat9" parent="YSort/Enemies" instance=ExtResource( 14 )]
+position = Vector2( 565, -468 )
+
+[node name="Bat2" parent="YSort/Enemies" instance=ExtResource( 14 )]
+position = Vector2( 966, 616 )
+
+[node name="Bat3" parent="YSort/Enemies" instance=ExtResource( 14 )]
+position = Vector2( 1156, 41 )
+
+[node name="Bat4" parent="YSort/Enemies" instance=ExtResource( 14 )]
+position = Vector2( 1157, -183 )
+
+[node name="Bat6" parent="YSort/Enemies" instance=ExtResource( 14 )]
+position = Vector2( -621, -57 )
+
+[node name="Bat11" parent="YSort/Enemies" instance=ExtResource( 14 )]
+position = Vector2( -796, 334 )
+
+[node name="Bat8" parent="YSort/Enemies" instance=ExtResource( 14 )]
+position = Vector2( -485, 225 )
+
+[node name="Bat7" parent="YSort/Enemies" instance=ExtResource( 14 )]
+position = Vector2( -1189, -23 )
+
+[node name="Bat10" parent="YSort/Enemies" instance=ExtResource( 14 )]
+position = Vector2( -675, -236 )
+
+[node name="Bat5" parent="YSort/Enemies" instance=ExtResource( 14 )]
+position = Vector2( 1172, -429 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( 671, -336 )
@@ -3661,41 +3697,6 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Enemies" type="Node2D" parent="."]
-
-[node name="Bat" parent="Enemies" instance=ExtResource( 14 )]
-position = Vector2( 1214, 370 )
-
-[node name="Bat9" parent="Enemies" instance=ExtResource( 14 )]
-position = Vector2( 565, -468 )
-
-[node name="Bat2" parent="Enemies" instance=ExtResource( 14 )]
-position = Vector2( 966, 616 )
-
-[node name="Bat3" parent="Enemies" instance=ExtResource( 14 )]
-position = Vector2( 1156, 41 )
-
-[node name="Bat4" parent="Enemies" instance=ExtResource( 14 )]
-position = Vector2( 1157, -183 )
-
-[node name="Bat6" parent="Enemies" instance=ExtResource( 14 )]
-position = Vector2( -621, -57 )
-
-[node name="Bat11" parent="Enemies" instance=ExtResource( 14 )]
-position = Vector2( -796, 334 )
-
-[node name="Bat8" parent="Enemies" instance=ExtResource( 14 )]
-position = Vector2( -485, 225 )
-
-[node name="Bat7" parent="Enemies" instance=ExtResource( 14 )]
-position = Vector2( -1189, -23 )
-
-[node name="Bat10" parent="Enemies" instance=ExtResource( 14 )]
-position = Vector2( -675, -236 )
-
-[node name="Bat5" parent="Enemies" instance=ExtResource( 14 )]
-position = Vector2( 1172, -429 )
-
 [node name="Collectibles" type="Node2D" parent="."]
 
 [node name="JournalPage" parent="Collectibles" instance=ExtResource( 6 )]
@@ -3718,3 +3719,7 @@ rotation = 1.52542
 pause_mode = 2
 
 [node name="PauseUI" parent="Pause" instance=ExtResource( 13 )]
+
+[node name="GameOver" type="CanvasLayer" parent="."]
+
+[node name="GameOverUI" parent="GameOver" instance=ExtResource( 15 )]

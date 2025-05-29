@@ -15,35 +15,44 @@ onready var anim = $AnimatedSprite
 func _ready():
 	# Set detection radius
 	$DetectRadius/Radius.shape.radius = detect_radius
-	
-	# Connect signals
-	$DetectRadius.connect("body_entered", self, "_on_body_entered")
-	$DetectRadius.connect("body_exited", self, "_on_body_exited")
 	# Always playing fly
 	anim.play("Fly")
 
 func _physics_process(delta):
 	if not alive:
 		return
-	
-	# Always play flying animation, even idle
-	if not anim.is_playing() or anim.animation != "fly":
-		anim.play("fly")
-	
-	if player != null and is_instance_valid(player):
-		var direction = (player.global_position - global_position).normalized()
-		velocity = direction * speed
-		move_and_slide(velocity)
 
-		# Flip sprite based on horizontal direction
-		if abs(velocity.x) > 0.1:
-			anim.flip_h = velocity.x < 0
-	else:
-		velocity = Vector2.ZERO
+	# Always play flying animation
+	if not anim.is_playing() or anim.animation != "Fly":
+		anim.play("Fly")
+
+	if player != null and is_instance_valid(player):
+		var distance = global_position.distance_to(player.global_position)
+
+		if distance > 20:
+			# Chase the player
+			var direction = (player.global_position - global_position).normalized()
+			velocity = direction * speed
+			move_and_slide(velocity)
+
+			if abs(velocity.x) > 0.1:
+				anim.flip_h = velocity.x < 0
+		else:
+			# stop when close
+			velocity = Vector2.ZERO
+			move_and_slide(velocity)
+
+func _on_AttackCooldown_timeout():
+	if player != null and is_instance_valid(player) and alive:
+		if global_position.distance_to(player.global_position) <= 20:
+			if player.has_method("take_damage"):
+				player.take_damage(1)
+	$AttackCooldown.start()
 
 func _on_DetectRadius_body_entered(body):
 	if body.name == "Player":
 		player = body
+		$AttackCooldown.start()
 
 func _on_DetectRadius_body_exited(body):
 	if body == player:
