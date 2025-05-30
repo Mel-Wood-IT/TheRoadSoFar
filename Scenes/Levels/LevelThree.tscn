@@ -11369,7 +11369,6 @@ scale = Vector2( 1, 1 )
 [node name="Main" parent="." instance=ExtResource( 7 )]
 
 [node name="Pause" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="PauseUI" parent="Pause" instance=ExtResource( 8 )]
 
