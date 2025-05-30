@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://TileSets/ForestFloor.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Trees/TreeGreen.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Scenes/Collectibles/JournalPage.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Collectibles/SkullYelBlood.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/Enemies/Bat.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Testing/TestingPanel.tscn" type="PackedScene" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 110 )
@@ -11379,3 +11380,5 @@ visible = false
 [node name="Ambience" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
 autoplay = true
+
+[node name="TestingPanel" parent="." instance=ExtResource( 14 )]

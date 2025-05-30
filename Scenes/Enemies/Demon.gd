@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 # Exported settings
-export (int) var speed = 100
+export (int) var speed = 110
 export (int) var health = 20
 export (int) var attack_range = 24
 export (int) var damage = 5
@@ -46,10 +46,18 @@ func _physics_process(delta):
 
 	if distance <= attack_range + attack_buffer:
 		move_and_slide(Vector2.ZERO)
-		# Ensure cooldown is started if not already running
-		if cooldown.is_stopped() and not attack_in_progress:
-			cooldown.start()  # <--- ADD THIS LINE
+
+		if attack_in_progress:
+			# Do not change animation, attack animation is playing
+			pass
+		elif cooldown.is_stopped():
+			# Ready to start new attack
+			cooldown.start()
+		else:
+			# Waiting for cooldown
+			anim.play("idle_" + anim_direction)
 	else:
+		# Chase player
 		var move_vec = to_player.normalized() * speed
 		move_and_slide(move_vec)
 		anim.play("walk_" + anim_direction)
@@ -77,9 +85,13 @@ func _on_animation_finished():
 		
 		animation_locked = false
 		attack_in_progress = false
+		cooldown.start()  # Ensure attack loop continues
 
 	elif anim.animation.begins_with("hurt"):
 		animation_locked = false
+		attack_in_progress = false  # ADD THIS LINE
+		# Always restart cooldown after hurt ends
+		cooldown.start()
 
 func _on_DetectRadius_body_entered(body):
 	if body.name == "Player":
@@ -99,8 +111,6 @@ func take_damage(amount):
 	else:
 		animation_locked = true
 		anim.play("hurt_" + anim_direction)
-		yield(anim, "animation_finished")
-		animation_locked = false
 
 func die():
 	alive = false
