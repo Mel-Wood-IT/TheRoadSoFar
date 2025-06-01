@@ -37,20 +37,26 @@ func _on_ResumeBtn_pressed():
 # Restart the level
 func _on_RestartBtn_pressed():
 	get_tree().paused = false
+	# Reset the current level
 	get_tree().reload_current_scene()
 	Global.reset_level()
 
 # Show the help menu
 func _on_HelpBtn_pressed():
+	# When opening the help page change visibility
 	$PauseMenu.visible = false
 	$PauseHelp.visible = true
 
 # Back to main menu
 func _on_MainBtn_pressed():
 	get_tree().paused = false
+	# Reset the game
+	Global.reset_game()
+	# Change scene to main menu
 	get_tree().change_scene("res://Scenes/UI/MainMenu.tscn")
 
 # Back to pause menu from help page
 func _on_BackBtn_pressed():
+	# When closing the help page change visibility
 	$PauseMenu.visible = true
 	$PauseHelp.visible = false

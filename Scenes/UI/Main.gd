@@ -21,10 +21,11 @@ func update_health(value):
 	if hp_bar:
 		hp_bar.value = value
 
+# Updates pageprogress texture when value is changed
 func _on_PageProgress_value_changed(value):
 	if $HUD/ScoreCard.has_node("PageProgress"):
 		$HUD/ScoreCard/PageProgress.value = value
-
+# Updated the amount of pages collected
 func update_pages(value):
 	var page_bar = find_node("PageProgress", true, false)
 	if page_bar:
