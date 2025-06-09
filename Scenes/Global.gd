@@ -16,7 +16,11 @@ const MAX_PAGES := 3
 # Max amount of skulls to collect
 const MAX_SKULL := 3
 
-<<<<<<< HEAD
+var cutscene_abaddon_finished = false
+
+var return_position = Vector2()
+
+
 # Game stats for rewards screen
 var enemies_killed = 0
 var mini_boss_killed = false
@@ -24,12 +28,10 @@ var boss_killed = false
 var journal_pages_collected = []
 var skills_collected = []
 
-func add_score(value := 1):
-=======
+
 func add_score(value = 1):
 	var level_name = get_tree().current_scene.name
 	# Add to total score
->>>>>>> 750b44367ed16c8d1226ee3a2a82481c0573bb91
 	score += value
 	
 	# Add to level score

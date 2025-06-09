@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/abaddon.mp3-df96b23ec95a2b26d54da02d43392ccc.mp3str"
+
+[deps]
+
+source_file="res://Resources/Music/abaddon.mp3"
+dest_files=[ "res://.import/abaddon.mp3-df96b23ec95a2b26d54da02d43392ccc.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

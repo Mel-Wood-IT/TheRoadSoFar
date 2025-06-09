@@ -1,9 +1,20 @@
 extends Node2D
 
 func _ready():
-	StoryMusic.stop_music()
-	set_camera_limits()
+	if Global.cutscene_abaddon_finished:
+		print("Returning from cutscene...")
+		$YSort/Player.global_position = Global.return_position
+
+		var abaddon = $YSort.get_node_or_null("Enemies/Abaddon")
+		if abaddon:
+			print("Abaddon found")
+			abaddon.start_battle()
+		else:
+			print("Abaddon not found")
+
 	
+	set_camera_limits()
+
 
 func set_camera_limits():
 	# Set the camera limits based on base tiles

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://TileSets/ForestDecoration.tres" type="TileSet" id=1]
 [ext_resource path="res://TileSets/ForestFloor.tres" type="TileSet" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Scenes/UI/GameOverUI.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/Levels/NextLevel.gd" type="Script" id=14]
 [ext_resource path="res://Scenes/Enemies/Bat.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/Enemies/Abaddon.tscn" type="PackedScene" id=16]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 110 )
@@ -116,8 +117,11 @@ position = Vector2( -1224, 136 )
 [node name="Bat2" parent="YSort/Enemies" instance=ExtResource( 15 )]
 position = Vector2( -920, -408 )
 
+[node name="Abaddon" parent="YSort/Enemies" instance=ExtResource( 16 )]
+position = Vector2( 135, -306 )
+
 [node name="Player" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( -1488, 464 )
+position = Vector2( 20, -24 )
 
 [node name="Trees" type="YSort" parent="YSort"]
 __meta__ = {
