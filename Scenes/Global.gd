@@ -6,13 +6,17 @@ var skull_found = {}
 var has_axe := false
 # Track pages found
 var pages_found := {}
-# Track player score
-var score := 0
+# Track total player score
+var score = 0
+# Track score per level
+var score_per_level = {}
+
 # Max amount of pages to collect
 const MAX_PAGES := 3
 # Max amount of skulls to collect
 const MAX_SKULL := 3
 
+<<<<<<< HEAD
 # Game stats for rewards screen
 var enemies_killed = 0
 var mini_boss_killed = false
@@ -21,7 +25,18 @@ var journal_pages_collected = []
 var skills_collected = []
 
 func add_score(value := 1):
+=======
+func add_score(value = 1):
+	var level_name = get_tree().current_scene.name
+	# Add to total score
+>>>>>>> 750b44367ed16c8d1226ee3a2a82481c0573bb91
 	score += value
+	
+	# Add to level score
+	if not score_per_level.has(level_name):
+		score_per_level[level_name] = 0
+	score_per_level[level_name] += value
+	
 	update_hud()
 
 func add_page():
@@ -53,13 +68,24 @@ func set_health(value):
 	if hud:
 		hud.update_health(value)
 
-# Reset just the level
+# Reset just the current level
 func reset_level():
 	var current_level = get_tree().current_scene.name
+	# Reset axe
 	has_axe = false
+	# Reset pages
 	pages_found.erase(current_level)
+	# Reset skulls
 	skull_found.erase(current_level)
+	
+	# Reset level score and subtract from total
+	if score_per_level.has(current_level):
+		var level_points = score_per_level[current_level]
+		score -= level_points
+		score = max(score, 0)
+		score_per_level.erase(current_level)
 	update_pages()
+	update_hud()
 
 func award_skull_bonus():
 	var skull_count = skull_found.size()

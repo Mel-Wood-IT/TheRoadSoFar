@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Resources/Screens/StoryScreens/One.png" type="Texture" id=1]
+[ext_resource path="res://Resources/Fonts/BoldArvo.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Scenes/UI/StoryScenesGame/Storyt1BtnGame.gd" type="Script" id=3]
+[ext_resource path="res://Resources/Fonts/Combo.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Scenes/UI/StoryScenes/Chatbox.gd" type="Script" id=5]
+[ext_resource path="res://Scenes/UI/StoryScenesGame/StoryOne.gd" type="Script" id=6]
+
+[node name="StoryOne" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="one_bg" type="Sprite" parent="."]
+position = Vector2( 315, 178 )
+scale = Vector2( 0.5125, 0.519444 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="NextBtn" type="Button" parent="."]
+margin_left = 519.0
+margin_top = 309.0
+margin_right = 621.0
+margin_bottom = 346.0
+custom_fonts/font = ExtResource( 2 )
+text = "NEXT"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 11.0
+margin_top = 73.0
+margin_right = 290.0
+margin_bottom = 294.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Chatbox" type="Label" parent="Panel"]
+margin_left = -8.0
+margin_top = 48.0
+margin_right = 293.0
+margin_bottom = 194.0
+custom_fonts/font = ExtResource( 4 )
+text = "Dominic Argent is a third-generation monster hunter 
+from a family known for tracking and eliminating 
+supernatural threats, such as demons, werewolves, 
+and other dark creatures. When Dom was a child, 
+his father had become obsessed with hunting down 
+the red eyed demon, Azazel, the son of Lucifer. 
+Dedicating his entire life to the pursuit.
+"
+align = 1
+percent_visible = 0.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[connection signal="pressed" from="NextBtn" to="NextBtn" method="_on_NextBtnOne_pressed"]

@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Resources/Screens/StoryScreens/Four.png" type="Texture" id=1]
+[ext_resource path="res://Resources/Fonts/BoldArvo.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Scenes/UI/StoryScenesGame/Story4BtnGame.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/UI/StoryScenes/Chatbox.gd" type="Script" id=4]
+[ext_resource path="res://Resources/Fonts/Combo.tres" type="DynamicFont" id=5]
+
+[node name="StoryFour" type="Node2D"]
+
+[node name="four_bg" type="Sprite" parent="."]
+position = Vector2( 319.5, 180 )
+scale = Vector2( 0.510156, 0.513889 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="NextBtn" type="Button" parent="."]
+margin_left = 527.0
+margin_top = 317.0
+margin_right = 629.0
+margin_bottom = 354.0
+custom_fonts/font = ExtResource( 2 )
+text = "NEXT"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 11.0
+margin_top = 73.0
+margin_right = 252.0
+margin_bottom = 289.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Chatbox" type="Label" parent="Panel"]
+margin_left = 8.0
+margin_top = 62.0
+margin_right = 240.0
+margin_bottom = 149.0
+custom_fonts/font = ExtResource( 5 )
+text = "Reluctantly, Dom returns to the life he had left 
+behind once again with his brother. Not 
+knowing what danger awaits them and if their 
+father is even still alive. 
+"
+align = 1
+percent_visible = 0.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[connection signal="pressed" from="NextBtn" to="NextBtn" method="_on_FourNextBtn_pressed"]

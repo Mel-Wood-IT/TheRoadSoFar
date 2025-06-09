@@ -5,9 +5,10 @@
 [ext_resource path="res://Scenes/UI/StoryScenes/OneNextBtn.gd" type="Script" id=3]
 [ext_resource path="res://Resources/Fonts/Combo.tres" type="DynamicFont" id=4]
 [ext_resource path="res://Scenes/UI/StoryScenes/Chatbox.gd" type="Script" id=5]
-[ext_resource path="res://Resources/Music/Chasing-Villains.mp3" type="AudioStream" id=6]
+[ext_resource path="res://Scenes/UI/StoryScenes/StoryOne.gd" type="Script" id=6]
 
 [node name="StoryOne" type="Node2D"]
+script = ExtResource( 6 )
 
 [node name="one_bg" type="Sprite" parent="."]
 position = Vector2( 315, 178 )
@@ -59,9 +60,5 @@ script = ExtResource( 5 )
 __meta__ = {
 "_edit_lock_": true
 }
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 6 )
-autoplay = true
 
 [connection signal="pressed" from="NextBtn" to="NextBtn" method="_on_NextBtn_pressed"]

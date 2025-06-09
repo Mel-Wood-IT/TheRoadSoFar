@@ -5,10 +5,9 @@ func _ready():
 	OS.set_window_position(OS.get_screen_size()*0.5 - OS.get_window_size()*0.5)
 	pass
 
-
 # Button to play the game
 func _on_PlayBtn_pressed():
-	get_tree().change_scene("res://Scenes/Levels/LevelOne.tscn")
+	get_tree().change_scene("res://Scenes/UI/StoryScenesGame/StoryOne.tscn")
 
 # Button to open about page
 func _on_AboutBtn_pressed():

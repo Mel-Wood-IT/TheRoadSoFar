@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://TileSets/ForestDecoration.tres" type="TileSet" id=1]
 [ext_resource path="res://TileSets/ForestFloor.tres" type="TileSet" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Scenes/Trees/TreeYellow.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Collectibles/JournalPage.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Resources/Ambience/Game Ambience.wav" type="AudioStream" id=8]
+[ext_resource path="res://Scenes/Testing/TestingPanel.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Collectibles/SkullWhite.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/UI/Main.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/UI/PauseMenu.tscn" type="PackedScene" id=12]
@@ -7443,3 +7444,5 @@ pause_mode = 2
 [node name="GameOver" type="CanvasLayer" parent="."]
 
 [node name="GameOverUI" parent="GameOver" instance=ExtResource( 13 )]
+
+[node name="TestingPanel" parent="." instance=ExtResource( 9 )]

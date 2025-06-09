@@ -1,6 +1,7 @@
 extends Node2D
 
 func _ready():
+	StoryMusic.stop_music()
 	set_camera_limits()
 	
 
