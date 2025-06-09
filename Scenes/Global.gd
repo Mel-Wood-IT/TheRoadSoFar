@@ -13,6 +13,13 @@ const MAX_PAGES := 3
 # Max amount of skulls to collect
 const MAX_SKULL := 3
 
+# Game stats for rewards screen
+var enemies_killed = 0
+var mini_boss_killed = false
+var boss_killed = false
+var journal_pages_collected = []
+var skills_collected = []
+
 func add_score(value := 1):
 	score += value
 	update_hud()
