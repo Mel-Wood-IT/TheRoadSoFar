@@ -1,13 +1,14 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://TileSets/ForestFloor.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Trees/TreeGreen.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Levels/Levels.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Levels/LevelFour.gd" type="Script" id=4]
 [ext_resource path="res://Scenes/UI/GameOverUI.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/UI/Main.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/UI/PauseMenu.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Testing/TestingPanel.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Enemies/Dad.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 110 )
@@ -53,7 +54,10 @@ shape = SubResource( 1 )
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( -1504, 309 )
+position = Vector2( -784, 87 )
+
+[node name="Dad" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( -788, -375 )
 
 [node name="Tree" type="YSort" parent="YSort"]
 

@@ -19,8 +19,10 @@ onready var cooldown = $AttackCooldown
 
 func _ready():
 	anim.play("idle_down")
+	$Exorcism.hide()
 	set_physics_process(true)
 	anim.connect("animation_finished", self, "_on_animation_finished")
+
 
 func _physics_process(delta):
 	if not alive or player == null or not is_instance_valid(player):
@@ -118,4 +120,10 @@ func die():
 	anim.play("death_" + anim_direction)
 	Global.add_score(2)
 	yield(anim, "animation_finished")
+
+	anim.hide()  
+	$Exorcism.show()
+	$Exorcism.play("exorcism")
+	yield($Exorcism, "animation_finished")
+
 	queue_free()

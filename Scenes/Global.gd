@@ -17,6 +17,8 @@ const MAX_PAGES := 3
 const MAX_SKULL := 3
 
 var cutscene_abaddon_finished = false
+var azazel_cutscene_played = false
+var cutscene_azazel_finished = false
 
 var return_position = Vector2()
 
