@@ -22,7 +22,6 @@ var return_position = Vector2()
 
 
 # Game stats for rewards screen
-var enemies_killed = 0
 var mini_boss_killed = false
 var boss_killed = false
 var journal_pages_collected = []

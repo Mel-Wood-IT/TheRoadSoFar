@@ -185,7 +185,6 @@ extents = Vector2( 5.61165, 1.06543 )
 extents = Vector2( 13.6785, 14.916 )
 
 [node name="Player" type="KinematicBody2D"]
-position = Vector2( 0, 1 )
 scale = Vector2( 1.4256, 1.40788 )
 z_index = 1
 collision_layer = 8

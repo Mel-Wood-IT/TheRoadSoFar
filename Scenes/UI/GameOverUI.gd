@@ -11,7 +11,7 @@ func _on_RestartBtn_pressed():
 func _on_AchievementsBtn_pressed():
 	get_tree().paused = false
 	# Change to achievements page
-	get_tree().change_scene("res://Scenes/UI/MainMenu.tscn")
+	get_tree().change_scene("res://Scenes/UI/AchievementPage.tscn")
 
 # Play music only when screen is visible
 func _on_GameOverUI_visibility_changed():

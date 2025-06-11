@@ -1,0 +1,61 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Sprites/Enemies/Bat/bat5.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Enemies/Bat/smoke6.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Enemies/Bat/smoke2.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Enemies/Bat/bat2.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Enemies/Bat/bat1.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Enemies/Bat/smoke3.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Enemies/Bat/smoke4.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Enemies/Bat/smoke5.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Enemies/Bat/bat4.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Enemies/Bat/bat3.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Enemies/Bat/smoke1.png" type="Texture" id=11]
+[ext_resource path="res://Scenes/Enemies/BossBats.gd" type="Script" id=12]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 11 ), ExtResource( 3 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "Death",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "Fly",
+"speed": 8.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 6.08276
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 819.274
+
+[node name="BossBats" type="KinematicBody2D"]
+collision_layer = 16
+collision_mask = 108
+script = ExtResource( 12 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 2.38419e-07, 2.38419e-07 )
+frames = SubResource( 1 )
+animation = "Fly"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 1, -1 )
+shape = SubResource( 2 )
+
+[node name="DetectRadius" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 8
+
+[node name="Radius" type="CollisionShape2D" parent="DetectRadius"]
+shape = SubResource( 3 )
+
+[node name="AttackCooldown" type="Timer" parent="."]
+autostart = true
+
+[connection signal="body_entered" from="DetectRadius" to="." method="_on_DetectRadius_body_entered"]
+[connection signal="body_exited" from="DetectRadius" to="." method="_on_DetectRadius_body_exited"]
+[connection signal="timeout" from="AttackCooldown" to="." method="_on_AttackCooldown_timeout"]
