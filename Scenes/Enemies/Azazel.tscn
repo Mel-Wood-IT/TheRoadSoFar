@@ -1,7 +1,7 @@
-[gd_scene load_steps=61 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://Scenes/Enemies/Azazel.gd" type="Script" id=1]
-[ext_resource path="res://Resources/Music/Abaddon.wav" type="AudioStream" id=2]
+[ext_resource path="res://Resources/Music/Azazal Stage 2.wav" type="AudioStream" id=2]
 [ext_resource path="res://Sprites/Enemies/Azazel/Morph2.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Enemies/Azazel/azazel death.png" type="Texture" id=4]
 
@@ -93,38 +93,6 @@ region = Rect2( 512, 128, 128, 128 )
 atlas = ExtResource( 3 )
 region = Rect2( 640, 128, 128, 128 )
 
-[sub_resource type="AtlasTexture" id=32]
-atlas = ExtResource( 3 )
-region = Rect2( 0, 512, 128, 128 )
-
-[sub_resource type="AtlasTexture" id=33]
-atlas = ExtResource( 3 )
-region = Rect2( 128, 512, 128, 128 )
-
-[sub_resource type="AtlasTexture" id=34]
-atlas = ExtResource( 3 )
-region = Rect2( 256, 512, 128, 128 )
-
-[sub_resource type="AtlasTexture" id=35]
-atlas = ExtResource( 3 )
-region = Rect2( 384, 512, 128, 128 )
-
-[sub_resource type="AtlasTexture" id=36]
-atlas = ExtResource( 3 )
-region = Rect2( 512, 512, 128, 128 )
-
-[sub_resource type="AtlasTexture" id=37]
-atlas = ExtResource( 3 )
-region = Rect2( 640, 512, 128, 128 )
-
-[sub_resource type="AtlasTexture" id=38]
-atlas = ExtResource( 3 )
-region = Rect2( 768, 512, 128, 128 )
-
-[sub_resource type="AtlasTexture" id=39]
-atlas = ExtResource( 3 )
-region = Rect2( 896, 512, 128, 128 )
-
 [sub_resource type="AtlasTexture" id=40]
 atlas = ExtResource( 3 )
 region = Rect2( 0, 640, 128, 128 )
@@ -151,13 +119,18 @@ region = Rect2( 640, 640, 128, 128 )
 
 [sub_resource type="SpriteFrames" id=9]
 animations = [ {
-"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
+"frames": [  ],
 "loop": true,
+"name": "New Anim",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
+"loop": false,
 "name": "death",
 "speed": 10.0
 }, {
 "frames": [ SubResource( 18 ), SubResource( 19 ) ],
-"loop": true,
+"loop": false,
 "name": "hurt",
 "speed": 10.0
 }, {
@@ -171,13 +144,8 @@ animations = [ {
 "name": "move",
 "speed": 10.0
 }, {
-"frames": [ SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ) ],
-"loop": true,
-"name": "smoke_attack",
-"speed": 10.0
-}, {
-"frames": [ SubResource( 40 ), SubResource( 41 ), SubResource( 41 ), SubResource( 41 ), SubResource( 41 ), SubResource( 41 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ) ],
-"loop": true,
+"frames": [ SubResource( 40 ), SubResource( 41 ), SubResource( 41 ), SubResource( 41 ), SubResource( 41 ), SubResource( 41 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 41 ), SubResource( 40 ) ],
+"loop": false,
 "name": "spike_attack",
 "speed": 10.0
 } ]
@@ -269,7 +237,7 @@ script = ExtResource( 1 )
 position = Vector2( -667, -95 )
 scale = Vector2( 4.63095, 5.19531 )
 frames = SubResource( 9 )
-animation = "idle"
+animation = "New Anim"
 playing = true
 offset = Vector2( 163.951, 8.13233 )
 
@@ -297,4 +265,8 @@ shape = SubResource( 64 )
 [node name="BossThemePlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
 
-[node name="AttackTimer" type="Timer" parent="."]
+[node name="AttackCooldown" type="Timer" parent="."]
+
+[connection signal="body_entered" from="DetectRadius" to="." method="_on_DetectRadius_body_entered"]
+[connection signal="body_exited" from="DetectRadius" to="." method="_on_DetectRadius_body_exited"]
+[connection signal="timeout" from="AttackCooldown" to="." method="_on_AttackCooldown_timeout"]
