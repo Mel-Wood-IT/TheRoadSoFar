@@ -4,6 +4,8 @@ extends KinematicBody2D
 export var speed = 100
 # Health
 export var health = 100
+# Bullet scene
+export (PackedScene) var BulletScene
 
 # Player states
 var alive = true
@@ -25,12 +27,12 @@ func _physics_process(delta):
 	handle_input()
 	move_and_slide(motion)
 	update_animation()
-	
+
 func handle_input():
 	if is_attacking or is_shooting:
 		motion = Vector2.ZERO
 		return
-	
+
 	motion = Vector2.ZERO
 	if Input.is_action_pressed("move_up"):
 		motion.y -= 1
@@ -44,9 +46,9 @@ func handle_input():
 	elif Input.is_action_pressed("move_right"):
 		motion.x += 1
 		current_direction = "right"
-		
+
 	motion = motion.normalized() * speed
-	
+
 	if Input.is_action_just_pressed("knife"):
 		stab()
 	elif Input.is_action_just_pressed("shoot"):
@@ -65,31 +67,47 @@ func update_animation():
 func stab():
 	is_attacking = true
 	anim.play("stab_" + current_direction)
-	# Wait for a few frames so the animation is visually synced
 	yield(get_tree().create_timer(0.1), "timeout")
-	# Detect and damage enemies in the stab area
+
 	for body in $StabArea.get_overlapping_bodies():
 		if body.has_method("take_damage"):
 			body.take_damage(5)
 
 	yield(anim, "animation_finished")
 	is_attacking = false
-	
+
 func shoot():
 	is_shooting = true
 	anim.play("shoot_" + current_direction)
+
+	# Spawn bullet from correct spawn point
+	var spawn_point: Position2D
+	match current_direction:
+		"up", "back":
+			spawn_point = $BulletSpawn_Up
+		"down", "front":
+			spawn_point = $BulletSpawn_Down
+		"left":
+			spawn_point = $BulletSpawn_Left
+		"right":
+			spawn_point = $BulletSpawn_Right
+
+	var bullet = BulletScene.instance()
+	bullet.global_position = spawn_point.global_position
+	bullet.direction = current_direction
+	get_parent().add_child(bullet)
+
 	yield(anim, "animation_finished")
 	is_shooting = false
 
-# If not alive, player takes damage that updates the HUD
+
 func take_damage(amount):
 	if not alive:
 		return
 	health -= amount
 	health = max(health, 0)
-	
 	Global.set_health(health)
-	
+
 	if health <= 0:
 		die()
 
@@ -101,7 +119,9 @@ func die():
 	if game_over:
 		game_over.visible = true
 	get_tree().paused = true
-	queue_free() # change to game over screen
+	queue_free()
+
+
 
 
 

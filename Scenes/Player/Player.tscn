@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=2]
+[gd_scene load_steps=79 format=2]
 
 [ext_resource path="res://Sprites/Player/Idle/idle_right_0.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/Player/Idle/idle_back_1.png" type="Texture" id=2]
@@ -74,6 +74,7 @@
 [ext_resource path="res://Sprites/Player/Death/death_right_1.png" type="Texture" id=72]
 [ext_resource path="res://Scenes/Player/Player.gd" type="Script" id=73]
 [ext_resource path="res://Scenes/Player/SpeechBubble.tscn" type="PackedScene" id=74]
+[ext_resource path="res://Scenes/Player/Bullet.tscn" type="PackedScene" id=75]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -190,22 +191,26 @@ z_index = 1
 collision_layer = 8
 collision_mask = 86
 script = ExtResource( 73 )
-__meta__ = {
-"_edit_group_": true
-}
+BulletScene = ExtResource( 75 )
 
 [node name="SpeechBubble" parent="." instance=ExtResource( 74 )]
+visible = false
 
 [node name="Animated" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 0.168311 )
+scale = Vector2( 1, 1.01052 )
 frames = SubResource( 1 )
-animation = "idle_front"
+animation = "shoot_back"
+playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 0.701457, 13.8506 )
 shape = SubResource( 2 )
 
 [node name="StabArea" type="Area2D" parent="."]
+visible = false
 z_index = 1
 collision_layer = 8
 collision_mask = 16
@@ -215,4 +220,17 @@ position = Vector2( 1.05219, 3.55145 )
 shape = SubResource( 3 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
+visible = false
 current = true
+
+[node name="BulletSpawn_Up" type="Position2D" parent="."]
+position = Vector2( -3.8147e-06, -12.0749 )
+
+[node name="BulletSpawn_Down" type="Position2D" parent="."]
+position = Vector2( 0.701458, 10.6543 )
+
+[node name="BulletSpawn_Left" type="Position2D" parent="."]
+position = Vector2( -11.2233, 2.13086 )
+
+[node name="BulletSpawn_Right" type="Position2D" parent="."]
+position = Vector2( 12.6263, 2.13086 )

@@ -889,7 +889,7 @@ extents = Vector2( 7, 19.5 )
 [sub_resource type="CircleShape2D" id=185]
 radius = 329.006
 
-[node name="Dad" type="KinematicBody2D"]
+[node name="Dad" type="KinematicBody2D" groups=["Enemy"]]
 collision_layer = 16
 collision_mask = 108
 script = ExtResource( 1 )

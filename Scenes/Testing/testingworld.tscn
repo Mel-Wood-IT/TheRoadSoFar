@@ -3,7 +3,7 @@
 [ext_resource path="res://Scenes/Testing/testingworld.gd" type="Script" id=1]
 [ext_resource path="res://TileSets/ForestFloor.tres" type="TileSet" id=2]
 [ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Enemies/Azazel.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Enemies/Demon.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 110 )
@@ -50,5 +50,5 @@ shape = SubResource( 1 )
 [node name="Player" parent="YSort" instance=ExtResource( 3 )]
 position = Vector2( -801, -13 )
 
-[node name="Azazel" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( -812, -385 )
+[node name="Demon" parent="." instance=ExtResource( 4 )]
+position = Vector2( -741, -562 )

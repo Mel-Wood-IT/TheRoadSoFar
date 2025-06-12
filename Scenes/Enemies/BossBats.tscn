@@ -46,7 +46,7 @@ animation = "Fly"
 position = Vector2( 1, -1 )
 shape = SubResource( 2 )
 
-[node name="DetectRadius" type="Area2D" parent="."]
+[node name="DetectRadius" type="Area2D" parent="." groups=["Enemy"]]
 collision_layer = 16
 collision_mask = 8
 
