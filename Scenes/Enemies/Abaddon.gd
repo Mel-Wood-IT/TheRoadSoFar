@@ -8,17 +8,23 @@ onready var death_anim = $Death
 onready var boss_theme = $BossThemePlayer
 onready var attack_timer = $AttackTimer
 onready var spawn_points = [$SpawnPoint1, $SpawnPoint2, $SpawnPoint3, $SpawnPoint4]
-onready var health_bar = $HealthBarUI/BossHealthBar
 
 
 var cutscene_played = false
 var cutscene_skipped = false
-var alive = true
+var abbadon_alive = true
+
 
 func _ready():
+	# Setup only if returning from cutscene
+	if Global.cutscene_abaddon_finished:
+		print("Returned from cutscene, starting battle...")
+		start_battle()
+		return
+
 	$DetectRadius.connect("body_entered", self, "_on_DetectRadius_body_entered")
 	attack_timer.connect("timeout", self, "_on_AttackTimer_timeout")
-	sprite.play("idle")
+	sprite.play("Idle")
 	death_anim.hide()
 
 
@@ -32,18 +38,13 @@ func _on_DetectRadius_body_entered(body):
 func play_cutscene():
 	var player = get_node("/root/LevelTwo/YSort/Player")
 	Global.return_position = player.global_position
-	get_tree().change_scene("res://Scenes/UI/StoryScenes/AbaddonCutScene.tscn")
+	get_tree().change_scene("res://Scenes/UI/StoryScenes/AbaddonConfrontation/AbaddonCutScene.tscn")
 
 func _on_cutscene_finished():
 	start_battle()
 
 
 func start_battle():
-	if health_bar:
-		health_bar.max_value = health
-		health_bar.value = health
-		$HealthBarUI.visible = true
-	
 	print("STARTING BATTLE...")
 	$BossThemePlayer.play()
 	$AttackTimer.start()
@@ -51,10 +52,8 @@ func start_battle():
 
 	
 
-
-
 func _on_AttackTimer_timeout():
-	if not alive: return
+	if not Global.abaddon_alive: return
 
 	sprite.play("Attack")
 	yield(sprite, "animation_finished")
@@ -72,22 +71,24 @@ func spawn_bat():
 	else:
 		print("bat_scene not assigned!")
 		
+
+		
 func take_damage(amount):
-	if not alive:
+	if not Global.abaddon_alive:
 		return
 
 	health -= amount
-	if health_bar:
-		health_bar.value = health
+	sprite.play("hurt")
+	print("Boss took damage:", amount, "| Remaining:", health)
 
 	if health <= 0:
 		die()
 
 
 func die():
-	if not alive:
+	if not Global.abaddon_alive:
 		return
-	alive = false
+	Global.abaddon_alive = false
 	$AttackTimer.stop()
 	$BossThemePlayer.stop()
 	sprite.hide()

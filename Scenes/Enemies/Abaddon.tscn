@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://Sprites/Enemies/Abaddon/sorcerer attack_Animation 1_7.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/Enemies/Abaddon/villain.png" type="Texture" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://Resources/Music/Abaddon.wav" type="AudioStream" id=14]
 [ext_resource path="res://Scenes/Enemies/BossBats.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Resources/abaddondeath.mp3" type="AudioStream" id=16]
+[ext_resource path="res://Sprites/Enemies/Abaddon/villain hurt.png" type="Texture" id=17]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -28,6 +29,11 @@ animations = [ {
 "loop": true,
 "name": "Idle",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 2 ) ],
+"loop": false,
+"name": "hurt",
+"speed": 10.0
 } ]
 
 [sub_resource type="AtlasTexture" id=2]
@@ -126,8 +132,7 @@ bat_scene = ExtResource( 15 )
 position = Vector2( 26, -1 )
 scale = Vector2( 0.730332, 0.800027 )
 frames = SubResource( 1 )
-animation = "Idle"
-playing = true
+animation = "hurt"
 offset = Vector2( -31, -79 )
 
 [node name="Death" type="AnimatedSprite" parent="."]
@@ -147,7 +152,6 @@ collision_layer = 16
 collision_mask = 8
 
 [node name="Radius" type="CollisionShape2D" parent="DetectRadius"]
-visible = false
 position = Vector2( 0, -20 )
 shape = SubResource( 21 )
 
@@ -167,14 +171,6 @@ position = Vector2( 44, -33 )
 stream = ExtResource( 14 )
 
 [node name="AttackTimer" type="Timer" parent="."]
-
-[node name="BossHealthUI" type="CanvasLayer" parent="."]
-
-[node name="HealthBar" type="TextureProgress" parent="BossHealthUI"]
-margin_left = -150.0
-margin_top = -130.0
-margin_right = 150.0
-margin_bottom = -120.0
 
 [node name="DeathSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 16 )

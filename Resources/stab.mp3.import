@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/stab.mp3-54ad059b03907d02c7d08f55c5ffb70f.mp3str"
+
+[deps]
+
+source_file="res://Resources/stab.mp3"
+dest_files=[ "res://.import/stab.mp3-54ad059b03907d02c7d08f55c5ffb70f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

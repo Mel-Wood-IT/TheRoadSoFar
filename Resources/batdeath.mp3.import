@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/batdeath.mp3-353aa9c6bc9b39696ecf15a144a6245c.mp3str"
+
+[deps]
+
+source_file="res://Resources/batdeath.mp3"
+dest_files=[ "res://.import/batdeath.mp3-353aa9c6bc9b39696ecf15a144a6245c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

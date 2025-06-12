@@ -5,14 +5,6 @@ func _ready():
 		print("Returning from cutscene...")
 		$YSort/Player.global_position = Global.return_position
 
-		var abaddon = $YSort.get_node_or_null("Enemies/Abaddon")
-		if abaddon:
-			print("Abaddon found")
-			abaddon.start_battle()
-		else:
-			print("Abaddon not found")
-
-	
 	set_camera_limits()
 
 

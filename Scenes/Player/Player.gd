@@ -1,15 +1,11 @@
 extends KinematicBody2D
 
-# Movement speed
 export var speed = 100
-# Health
 export var health = 100
-# Bullet scene
 export (PackedScene) var BulletScene
 
-# Player states
 var alive = true
-var current_direction = "front"
+var current_direction = "down"
 var motion = Vector2.ZERO
 var is_attacking = false
 var is_shooting = false
@@ -34,12 +30,14 @@ func handle_input():
 		return
 
 	motion = Vector2.ZERO
+
 	if Input.is_action_pressed("move_up"):
 		motion.y -= 1
-		current_direction = "back"
+		current_direction = "up"
 	elif Input.is_action_pressed("move_down"):
 		motion.y += 1
-		current_direction = "front"
+		current_direction = "down"
+
 	if Input.is_action_pressed("move_left"):
 		motion.x -= 1
 		current_direction = "left"
@@ -66,6 +64,8 @@ func update_animation():
 
 func stab():
 	is_attacking = true
+	$Stab.stream.loop = false
+	$Stab.play()
 	anim.play("stab_" + current_direction)
 	yield(get_tree().create_timer(0.1), "timeout")
 
@@ -78,34 +78,37 @@ func stab():
 
 func shoot():
 	is_shooting = true
+	$Gunshot.stream.loop = false
+	$Gunshot.play()
 	anim.play("shoot_" + current_direction)
 
-	# Spawn bullet from correct spawn point
-	var spawn_point: Position2D
-	match current_direction:
-		"up", "back":
-			spawn_point = $BulletSpawn_Up
-		"down", "front":
-			spawn_point = $BulletSpawn_Down
-		"left":
-			spawn_point = $BulletSpawn_Left
-		"right":
-			spawn_point = $BulletSpawn_Right
+	if BulletScene:
+		var bullet = BulletScene.instance()
 
-	var bullet = BulletScene.instance()
-	bullet.global_position = spawn_point.global_position
-	bullet.direction = current_direction
-	get_parent().add_child(bullet)
+		var shoot_direction = current_direction  # "up", "down", "left", "right"
+		bullet.direction = shoot_direction
+
+		var spawn_node_name = "BulletSpawn_" + shoot_direction.capitalize()
+		if has_node(spawn_node_name):
+			var spawn_point = get_node(spawn_node_name)
+			bullet.global_position = spawn_point.global_position
+		else:
+			print("⚠ Could not find spawn point:", spawn_node_name)
+			bullet.global_position = global_position
+
+		get_parent().add_child(bullet)
 
 	yield(anim, "animation_finished")
 	is_shooting = false
 
 
+	yield(anim, "animation_finished")
+	is_shooting = false
+
 func take_damage(amount):
 	if not alive:
 		return
 	health -= amount
-	health = max(health, 0)
 	Global.set_health(health)
 
 	if health <= 0:
@@ -120,17 +123,3 @@ func die():
 		game_over.visible = true
 	get_tree().paused = true
 	queue_free()
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -4,7 +4,7 @@
 [ext_resource path="res://Scenes/Trees/TreeGreen.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://TileSets/ForestDecoration.tres" type="TileSet" id=4]
-[ext_resource path="res://Scenes/Levels/Levels.gd" type="Script" id=5]
+[ext_resource path="res://Scenes/Levels/LevelThree.gd" type="Script" id=5]
 [ext_resource path="res://Scenes/UI/GameOverUI.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/UI/Main.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/UI/PauseMenu.tscn" type="PackedScene" id=8]
@@ -23,6 +23,7 @@ extents = Vector2( 10, 56 )
 
 [node name="LevelThree" type="Node2D"]
 modulate = Color( 0.482353, 0.494118, 0.54902, 1 )
+position = Vector2( -120, 200 )
 script = ExtResource( 5 )
 
 [node name="Tilesets" type="Node2D" parent="."]
@@ -84,7 +85,8 @@ shape = SubResource( 1 )
 [node name="Collectibles" type="Node2D" parent="."]
 
 [node name="JournalPage" parent="Collectibles" instance=ExtResource( 11 )]
-position = Vector2( -82, -159 )
+position = Vector2( -100, -159 )
+script = null
 
 [node name="SkullYelBlood" parent="Collectibles" instance=ExtResource( 12 )]
 position = Vector2( 209, 476 )
@@ -124,7 +126,7 @@ position = Vector2( 357, -148 )
 position = Vector2( -441, -261 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( -1490, 556 )
+position = Vector2( -1511, 557 )
 
 [node name="Tree" type="YSort" parent="YSort"]
 

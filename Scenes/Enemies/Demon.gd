@@ -118,6 +118,8 @@ func die():
 	alive = false
 	animation_locked = true
 	anim.play("death_" + anim_direction)
+	$DemonDeath.stream.loop = false
+	$DemonDeath.play()
 	Global.add_score(2)
 	yield(anim, "animation_finished")
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://TileSets/ForestFloor.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Trees/TreeGreen.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Scenes/UI/PauseMenu.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Testing/TestingPanel.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Enemies/Dad.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Resources/Ambience/Game Ambience.wav" type="AudioStream" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 110 )
@@ -54,7 +55,7 @@ shape = SubResource( 1 )
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( -784, 87 )
+position = Vector2( -1512, 309 )
 
 [node name="Dad" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( -788, -375 )
@@ -12125,3 +12126,6 @@ visible = false
 [node name="GameOverUI" parent="GameOver" instance=ExtResource( 5 )]
 
 [node name="TestingPanel" parent="." instance=ExtResource( 8 )]
+
+[node name="ambience" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )

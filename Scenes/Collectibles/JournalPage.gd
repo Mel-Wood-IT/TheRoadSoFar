@@ -10,5 +10,5 @@ func _ready():
 func _on_JournalPage_body_entered(body):
 	if body.name == "Player":
 		Global.add_page()
-		Global.journal_pages_collected(1)
+		Global.journal_pages_collected.append(1)
 		queue_free()

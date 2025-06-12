@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/demondeath.mp3-7f57647e6799348b9cb853bef7742d7a.mp3str"
+
+[deps]
+
+source_file="res://Resources/demondeath.mp3"
+dest_files=[ "res://.import/demondeath.mp3-7f57647e6799348b9cb853bef7742d7a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

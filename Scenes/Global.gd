@@ -19,6 +19,7 @@ const MAX_SKULL := 3
 var cutscene_abaddon_finished = false
 var azazel_cutscene_played = false
 var cutscene_azazel_finished = false
+var abaddon_alive = true
 
 var return_position = Vector2()
 
@@ -27,7 +28,7 @@ var return_position = Vector2()
 var mini_boss_killed = false
 var boss_killed = false
 var journal_pages_collected = []
-var skills_collected = []
+var skulls_collected = []
 
 
 func add_score(value = 1):

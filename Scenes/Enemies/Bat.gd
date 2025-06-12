@@ -63,13 +63,16 @@ func take_damage(amount):
 		return
 	
 	enemy_health -= amount
-	
+	$BossBatDeath.stream.loop = false
+	$BossBatDeath.play()
 	if enemy_health <= 0:
 		die()
 
 func die():
 	alive = false
 	anim.play("Death")
+	$BossBatDeath.stream.loop = false
+	$BossBatDeath.play()
 	Global.add_score(1)
 	yield(anim, "animation_finished")
 	queue_free()
