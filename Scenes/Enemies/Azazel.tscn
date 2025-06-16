@@ -1,9 +1,10 @@
-[gd_scene load_steps=54 format=2]
+[gd_scene load_steps=71 format=2]
 
 [ext_resource path="res://Scenes/Enemies/Azazel.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Music/Azazal Stage 2.wav" type="AudioStream" id=2]
 [ext_resource path="res://Sprites/Enemies/Azazel/Morph2.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Enemies/Azazel/azazel death.png" type="Texture" id=4]
+[ext_resource path="res://Resources/AzazelDeath.mp3" type="AudioStream" id=5]
 
 [sub_resource type="AtlasTexture" id=10]
 atlas = ExtResource( 3 )
@@ -36,6 +37,70 @@ region = Rect2( 768, 768, 128, 128 )
 [sub_resource type="AtlasTexture" id=17]
 atlas = ExtResource( 3 )
 region = Rect2( 896, 768, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=66]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 48, 64 )
+
+[sub_resource type="AtlasTexture" id=67]
+atlas = ExtResource( 4 )
+region = Rect2( 48, 0, 48, 64 )
+
+[sub_resource type="AtlasTexture" id=68]
+atlas = ExtResource( 4 )
+region = Rect2( 96, 0, 48, 64 )
+
+[sub_resource type="AtlasTexture" id=69]
+atlas = ExtResource( 4 )
+region = Rect2( 144, 0, 48, 64 )
+
+[sub_resource type="AtlasTexture" id=70]
+atlas = ExtResource( 4 )
+region = Rect2( 192, 0, 48, 64 )
+
+[sub_resource type="AtlasTexture" id=71]
+atlas = ExtResource( 4 )
+region = Rect2( 240, 0, 48, 64 )
+
+[sub_resource type="AtlasTexture" id=72]
+atlas = ExtResource( 4 )
+region = Rect2( 288, 0, 48, 64 )
+
+[sub_resource type="AtlasTexture" id=73]
+atlas = ExtResource( 4 )
+region = Rect2( 336, 0, 48, 64 )
+
+[sub_resource type="AtlasTexture" id=74]
+atlas = ExtResource( 4 )
+region = Rect2( 384, 0, 48, 64 )
+
+[sub_resource type="AtlasTexture" id=75]
+atlas = ExtResource( 4 )
+region = Rect2( 432, 0, 48, 64 )
+
+[sub_resource type="AtlasTexture" id=76]
+atlas = ExtResource( 4 )
+region = Rect2( 480, 0, 48, 64 )
+
+[sub_resource type="AtlasTexture" id=77]
+atlas = ExtResource( 4 )
+region = Rect2( 528, 0, 48, 64 )
+
+[sub_resource type="AtlasTexture" id=78]
+atlas = ExtResource( 4 )
+region = Rect2( 576, 0, 48, 64 )
+
+[sub_resource type="AtlasTexture" id=79]
+atlas = ExtResource( 4 )
+region = Rect2( 624, 0, 48, 64 )
+
+[sub_resource type="AtlasTexture" id=80]
+atlas = ExtResource( 4 )
+region = Rect2( 672, 0, 48, 64 )
+
+[sub_resource type="AtlasTexture" id=81]
+atlas = ExtResource( 4 )
+region = Rect2( 720, 0, 48, 64 )
 
 [sub_resource type="AtlasTexture" id=18]
 atlas = ExtResource( 3 )
@@ -119,7 +184,7 @@ region = Rect2( 640, 640, 128, 128 )
 
 [sub_resource type="SpriteFrames" id=9]
 animations = [ {
-"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
+"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 66 ), SubResource( 67 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ), SubResource( 71 ), SubResource( 72 ), SubResource( 73 ), SubResource( 74 ), SubResource( 75 ), SubResource( 76 ), SubResource( 77 ), SubResource( 78 ), SubResource( 79 ), SubResource( 80 ), SubResource( 81 ) ],
 "loop": false,
 "name": "death",
 "speed": 10.0
@@ -212,7 +277,7 @@ region = Rect2( 720, 0, 48, 64 )
 [sub_resource type="SpriteFrames" id=62]
 animations = [ {
 "frames": [ SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ), SubResource( 60 ), SubResource( 61 ) ],
-"loop": true,
+"loop": false,
 "name": "exorcism",
 "speed": 10.0
 } ]
@@ -226,12 +291,12 @@ radius = 329.006
 [sub_resource type="CircleShape2D" id=65]
 radius = 152.0
 
-[node name="Azazel" type="KinematicBody2D"]
+[node name="Azazel" type="KinematicBody2D" groups=["Enemy"]]
 collision_layer = 16
 collision_mask = 108
 script = ExtResource( 1 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="." groups=["Enemy"]]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -502, -65 )
 scale = Vector2( 3.49322, 3.70117 )
 frames = SubResource( 9 )
@@ -240,7 +305,6 @@ frame = 7
 offset = Vector2( 163.951, 8.13233 )
 
 [node name="Exorcise" type="AnimatedSprite" parent="."]
-visible = false
 position = Vector2( 3.49999, -67.5 )
 scale = Vector2( 2.9375, 3.10938 )
 frames = SubResource( 62 )
@@ -252,7 +316,6 @@ position = Vector2( -1, -23 )
 shape = SubResource( 63 )
 
 [node name="DetectRadius" type="Area2D" parent="."]
-visible = false
 position = Vector2( -1038, -796 )
 collision_layer = 16
 collision_mask = 8
@@ -273,6 +336,9 @@ collision_mask = 8
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRadius"]
 position = Vector2( 4, 0 )
 shape = SubResource( 65 )
+
+[node name="Death" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
 
 [connection signal="body_entered" from="DetectRadius" to="." method="_on_DetectRadius_body_entered"]
 [connection signal="body_exited" from="DetectRadius" to="." method="_on_DetectRadius_body_exited"]

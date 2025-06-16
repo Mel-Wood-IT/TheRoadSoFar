@@ -19,13 +19,13 @@
 [ext_resource path="res://Resources/Ambience/Game Ambience.wav" type="AudioStream" id=17]
 [ext_resource path="res://Scenes/Testing/TestingPanel.tscn" type="PackedScene" id=18]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 10, 110 )
-
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 10, 6.43331 )
 
 [sub_resource type="RectangleShape2D" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10, 110 )
 
 [node name="LevelOne" type="Node2D"]
 modulate = Color( 0.482353, 0.494118, 0.54902, 1 )
@@ -146,6 +146,374 @@ position = Vector2( 728, 189 )
 position = Vector2( -1485, -462 )
 
 [node name="Tree" type="YSort" parent="YSort"]
+
+[node name="Lake Collisions" type="Area2D" parent="YSort/Tree"]
+position = Vector2( 79, 75 )
+collision_layer = 4
+collision_mask = 56
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -490, -74.5 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -472, -61 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -438, -44 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -469, -87 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -421, -115 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -407, -149 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -388, -202 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -305, -220 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -208, -221 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -152, -235 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -121, -247 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -105, -263 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -86, -278 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -67, -318 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -25, -326 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -6, -347 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( 88, -347 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( 105, -332 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( 137, -315 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( 183, -298 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( 217, -283 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( 249, -267 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( 263, -251 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( 279, -235 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( 299, -204 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D26" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( 332, -187 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D27" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( 363, -172 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D28" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( 378, -156 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D29" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( 394, -123 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D30" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( 410, -106 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D31" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( 427, -74 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D32" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( 427, -20 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D33" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( 426, 32 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D34" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( 421, 37 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D35" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( 412, 89 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D36" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( 412, 99 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D37" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( 395, 150 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D38" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( 378, 196 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D39" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( 364, 242 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D40" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( 346, 261 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D41" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( 331, 276 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D42" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( 298, 290 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D43" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( 281, 306 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D44" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( 251, 325 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D45" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( 234, 340 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D46" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( 219, 357 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D47" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( 187, 373 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D48" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( 88, 373 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D49" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( 76, 386 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D50" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( 3, 371 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D51" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -69, 390 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D52" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -134, 371 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D53" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -182, 358 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D54" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -215, 341 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D55" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -229, 306 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D56" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -249, 260 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D57" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -280, 243 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D58" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -294, 229 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D59" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -314, 214 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D60" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -327, 198 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D61" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -344, 181 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D62" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -360, 164 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D63" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -343, 149 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D64" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -329, 97 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D65" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -328, 43 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D66" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -327, -5 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D67" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -344, -27 )
+scale = Vector2( 5.06372, 4.27463 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D68" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -446, -11 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D69" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -462, -10 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D70" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -417, -238 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D71" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -417, -253 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D72" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -397, -254 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D73" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -376, -255 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D74" type="CollisionShape2D" parent="YSort/Tree/Lake Collisions"]
+position = Vector2( -364, -253 )
+shape = SubResource( 3 )
 
 [node name="Trees" type="Node2D" parent="YSort/Tree"]
 position = Vector2( -1544, -749 )
@@ -3760,371 +4128,3 @@ stream = ExtResource( 17 )
 autoplay = true
 
 [node name="TestingPanel" parent="." instance=ExtResource( 18 )]
-
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2( 79, 75 )
-collision_layer = 4
-collision_mask = 56
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -490, -74.5 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -472, -61 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -438, -44 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -469, -87 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -421, -115 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -407, -149 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -388, -202 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -305, -220 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -208, -221 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -152, -235 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D11" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -121, -247 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D12" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -105, -263 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D13" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -86, -278 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D14" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -67, -318 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D15" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -25, -326 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D16" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -6, -347 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D17" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 88, -347 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D18" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 105, -332 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D19" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 137, -315 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D20" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 183, -298 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D21" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 217, -283 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D22" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 249, -267 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D23" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 263, -251 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D24" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 279, -235 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D25" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 299, -204 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D26" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 332, -187 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D27" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 363, -172 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D28" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 378, -156 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D29" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 394, -123 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D30" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 410, -106 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D31" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 427, -74 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D32" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 427, -20 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D33" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 426, 32 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D34" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 421, 37 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D35" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 412, 89 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D36" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 412, 99 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D37" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 395, 150 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D38" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 378, 196 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D39" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 364, 242 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D40" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 346, 261 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D41" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 331, 276 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D42" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 298, 290 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D43" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 281, 306 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D44" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 251, 325 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D45" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 234, 340 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D46" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 219, 357 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D47" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 187, 373 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D48" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 88, 373 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D49" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 76, 386 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D50" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 3, 371 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D51" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -69, 390 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D52" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -134, 371 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D53" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -182, 358 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D54" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -215, 341 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D55" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -229, 306 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D56" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -249, 260 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D57" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -280, 243 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D58" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -294, 229 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D59" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -314, 214 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D60" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -327, 198 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D61" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -344, 181 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D62" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -360, 164 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D63" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -343, 149 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D64" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -329, 97 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D65" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -328, 43 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D66" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -327, -5 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D67" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -344, -27 )
-scale = Vector2( 5.06372, 4.27463 )
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D68" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -446, -11 )
-shape = SubResource( 3 )
-
-[node name="CollisionShape2D69" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -462, -10 )
-shape = SubResource( 3 )
-
-[node name="CollisionShape2D70" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -417, -238 )
-shape = SubResource( 3 )
-
-[node name="CollisionShape2D71" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -417, -253 )
-shape = SubResource( 3 )
-
-[node name="CollisionShape2D72" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -397, -254 )
-shape = SubResource( 3 )
-
-[node name="CollisionShape2D73" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -376, -255 )
-shape = SubResource( 3 )
-
-[node name="CollisionShape2D74" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -364, -253 )
-shape = SubResource( 3 )

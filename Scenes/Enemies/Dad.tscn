@@ -1,4 +1,4 @@
-[gd_scene load_steps=213 format=2]
+[gd_scene load_steps=214 format=2]
 
 [ext_resource path="res://Dad.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Enemies/Dad/Left/Png/NecromancerLeftAttack02.png" type="Texture" id=2]
@@ -27,6 +27,7 @@
 [ext_resource path="res://Sprites/Enemies/Dad/Left/Png/NecromancerLefttIdle.png" type="Texture" id=25]
 [ext_resource path="res://Sprites/Enemies/Dad/Azezel SpriteSheet.png" type="Texture" id=26]
 [ext_resource path="res://Resources/Music/Azazal.wav" type="AudioStream" id=27]
+[ext_resource path="res://Resources/Transformation.mp3" type="AudioStream" id=28]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 10 )
@@ -878,7 +879,7 @@ region = Rect2( 816, 0, 48, 48 )
 [sub_resource type="SpriteFrames" id=183]
 animations = [ {
 "frames": [ SubResource( 170 ), SubResource( 171 ), SubResource( 172 ), SubResource( 173 ), SubResource( 174 ), SubResource( 175 ), SubResource( 174 ), SubResource( 175 ), SubResource( 173 ), SubResource( 174 ), SubResource( 175 ), SubResource( 173 ), SubResource( 175 ), SubResource( 173 ), SubResource( 174 ), SubResource( 174 ), SubResource( 175 ), SubResource( 173 ), SubResource( 176 ), SubResource( 177 ), SubResource( 178 ), SubResource( 179 ), SubResource( 180 ), SubResource( 181 ), SubResource( 182 ) ],
-"loop": true,
+"loop": false,
 "name": "transform",
 "speed": 10.0
 } ]
@@ -907,7 +908,7 @@ position = Vector2( -1, -57 )
 scale = Vector2( 4.32292, 4.84375 )
 frames = SubResource( 183 )
 animation = "transform"
-frame = 3
+playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 1.5 )
@@ -935,6 +936,9 @@ position = Vector2( -46, 22 )
 
 [node name="SpawnPoint3" type="Position2D" parent="."]
 position = Vector2( 0, -51 )
+
+[node name="Transformation" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 28 )
 
 [connection signal="body_entered" from="DetectRadius" to="." method="_on_DetectRadius_body_entered"]
 [connection signal="timeout" from="AttackCooldown" to="." method="_on_AttackCooldown_timeout"]

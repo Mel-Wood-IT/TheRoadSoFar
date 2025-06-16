@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Transformation.mp3-bd0389dc4d28127b832b77830fe1e55f.mp3str"
+
+[deps]
+
+source_file="res://Resources/Transformation.mp3"
+dest_files=[ "res://.import/Transformation.mp3-bd0389dc4d28127b832b77830fe1e55f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
