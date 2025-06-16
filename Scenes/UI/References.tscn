@@ -60,7 +60,7 @@ texture = ExtResource( 4 )
 self_modulate = Color( 1, 1, 1, 0 )
 margin_left = 247.0
 margin_top = 299.0
-margin_right = 393.0
+margin_right = 391.0
 margin_bottom = 325.0
 
 [connection signal="pressed" from="BackBtn" to="." method="_on_BackBtn_pressed"]

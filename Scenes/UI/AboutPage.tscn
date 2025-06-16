@@ -1,40 +1,81 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Resources/Screens/AboutScreen.png" type="Texture" id=1]
+[ext_resource path="res://Resources/Fonts/BoldArvo.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Scenes/UI/AboutPage.gd" type="Script" id=2]
-[ext_resource path="res://Resources/Music/Horror-Game-Intro.mp3" type="AudioStream" id=3]
+[ext_resource path="res://Resources/Screens/ref btn.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Screens/backbtn.png" type="Texture" id=4]
+[ext_resource path="res://Resources/Screens/rewardsbg.png" type="Texture" id=5]
 
 [node name="AboutPage" type="Node2D"]
 script = ExtResource( 2 )
 
-[node name="about_bg" type="Sprite" parent="."]
-position = Vector2( 322, 182.75 )
-scale = Vector2( 0.5125, 0.517361 )
-texture = ExtResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
+[node name="Rewardsbg" type="Sprite" parent="."]
+position = Vector2( 54.9999, 64 )
+scale = Vector2( 0.424479, 0.358398 )
+texture = ExtResource( 5 )
+offset = Vector2( 624.295, 322.267 )
 
-[node name="RefBtn" type="Button" parent="."]
-self_modulate = Color( 1, 1, 1, 0 )
-margin_left = 170.0
-margin_top = 304.0
-margin_right = 316.0
-margin_bottom = 330.0
-__meta__ = {
-"_edit_lock_": true
-}
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 61.0
+margin_top = 20.0
+margin_right = 588.0
+margin_bottom = 336.0
+color = Color( 0, 0, 0, 0.345098 )
+
+[node name="line" type="ColorRect" parent="ColorRect"]
+margin_left = 58.0
+margin_top = 38.0
+margin_right = 458.0
+margin_bottom = 40.0
+
+[node name="Label" type="Label" parent="."]
+margin_left = 283.0
+margin_top = 33.0
+margin_right = 367.0
+margin_bottom = 53.0
+custom_fonts/font = ExtResource( 1 )
+text = "ABOUT US"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 87.0
+margin_top = 74.0
+margin_right = 560.0
+margin_bottom = 322.0
+text = "We are a small team of developers who both have a passion for the role-
+playing game style of gaming. The aim of this game was to make a fun, 
+immersive experince in the world of two great Television series, 
+\"Supernatural\" (Eric Kripke, 2005) and \"Teen Wolf\" (Jeff Davis, 2011). In
+this game you will follow the story of Dominic Argent, a third generation
+monster hunter, as he goes in search of his recently lost father. You'll
+have to fight you way through a wide variety of creatures, from wild bats 
+to the prince of hell himself, Azazel!
+
+Will you help Dom save his father?"
+align = 1
+
+[node name="Backbtn" type="Sprite" parent="."]
+position = Vector2( 417, 312 )
+scale = Vector2( 0.49827, 0.5 )
+texture = ExtResource( 4 )
+
+[node name="RefBtn" type="Sprite" parent="."]
+position = Vector2( 245, 312 )
+scale = Vector2( 0.402235, 0.416667 )
+texture = ExtResource( 3 )
+
+[node name="RefBtn" type="Button" parent="RefBtn"]
+modulate = Color( 0, 0, 0, 0 )
+margin_left = -179.0
+margin_top = -31.0
+margin_right = 179.0
+margin_bottom = 31.0
 
 [node name="BackBtn" type="Button" parent="."]
 self_modulate = Color( 1, 1, 1, 0 )
-margin_left = 329.0
-margin_top = 304.0
-margin_right = 475.0
-margin_bottom = 330.0
+margin_left = 345.0
+margin_top = 299.0
+margin_right = 489.0
+margin_bottom = 325.0
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 3 )
-autoplay = true
-
-[connection signal="pressed" from="RefBtn" to="." method="_on_RefBtn_pressed"]
+[connection signal="pressed" from="RefBtn/RefBtn" to="." method="_on_RefBtn_pressed"]
 [connection signal="pressed" from="BackBtn" to="." method="_on_BackBtn_pressed"]
