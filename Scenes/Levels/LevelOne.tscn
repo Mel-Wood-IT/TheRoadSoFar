@@ -3746,6 +3746,7 @@ rotation = 1.52542
 
 [node name="Pause" type="CanvasLayer" parent="."]
 pause_mode = 2
+visible = false
 
 [node name="PauseUI" parent="Pause" instance=ExtResource( 13 )]
 margin_left = -1.0
@@ -3760,6 +3761,7 @@ stream = ExtResource( 17 )
 autoplay = true
 
 [node name="TestingPanel" parent="." instance=ExtResource( 18 )]
+visible = false
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( 79, 75 )

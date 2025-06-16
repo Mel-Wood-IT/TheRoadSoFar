@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Resources/Fonts/BoldArvo.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scenes/UI/StoryScenes/AbaddonConfrontation/Abaddon.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Music/abaddon.mp3" type="AudioStream" id=3]
+[ext_resource path="res://Scenes/UI/CutSceneUI.gd" type="Script" id=4]
+
+[node name="CutSceneUI" type="CanvasLayer"]
+pause_mode = 2
+script = ExtResource( 4 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 67.0
+texture = ExtResource( 2 )
+
+[node name="NextBtn" type="Button" parent="."]
+pause_mode = 2
+margin_left = 527.0
+margin_top = 313.0
+margin_right = 629.0
+margin_bottom = 350.0
+custom_fonts/font = ExtResource( 1 )
+text = "NEXT"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 3 )
+volume_db = -14.858
+autoplay = true
+
+[connection signal="pressed" from="NextBtn" to="." method="_on_NextBtn_pressed"]

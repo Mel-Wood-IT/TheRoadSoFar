@@ -21,8 +21,6 @@ var azazel_cutscene_played = false
 var cutscene_azazel_finished = false
 var abaddon_alive = true
 
-var return_position = Vector2()
-
 
 # Game stats for rewards screen
 var mini_boss_killed = false
@@ -99,6 +97,7 @@ func award_skull_bonus():
 func reset_game():
 	score = 0
 	has_axe = false
+	cutscene_abaddon_finished = false
 	pages_found.clear()
 	skull_found.clear()
 	reset_level()

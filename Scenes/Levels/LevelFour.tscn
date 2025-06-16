@@ -3,7 +3,7 @@
 [ext_resource path="res://TileSets/ForestFloor.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Trees/TreeGreen.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Levels/LevelFour.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Levels/Levels.gd" type="Script" id=4]
 [ext_resource path="res://Scenes/UI/GameOverUI.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/UI/Main.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/UI/PauseMenu.tscn" type="PackedScene" id=7]
@@ -4850,10 +4850,6 @@ scale = Vector2( 1, 1 )
 position = Vector2( -1141, -18 )
 scale = Vector2( 1, 1 )
 
-[node name="TreeGreen3354" parent="YSort/Tree" instance=ExtResource( 2 )]
-position = Vector2( -1205, -36 )
-scale = Vector2( 1, 1 )
-
 [node name="TreeGreen3355" parent="YSort/Tree" instance=ExtResource( 2 )]
 position = Vector2( -1170, -47 )
 scale = Vector2( 1, 1 )
@@ -4876,10 +4872,6 @@ scale = Vector2( 1, 1 )
 
 [node name="TreeGreen3363" parent="YSort/Tree" instance=ExtResource( 2 )]
 position = Vector2( -1264, -18 )
-scale = Vector2( 1, 1 )
-
-[node name="TreeGreen3364" parent="YSort/Tree" instance=ExtResource( 2 )]
-position = Vector2( -1215, -60 )
 scale = Vector2( 1, 1 )
 
 [node name="TreeGreen3371" parent="YSort/Tree" instance=ExtResource( 2 )]
@@ -5076,14 +5068,6 @@ scale = Vector2( 1, 1 )
 
 [node name="TreeGreen3478" parent="YSort/Tree" instance=ExtResource( 2 )]
 position = Vector2( -1076, -28 )
-scale = Vector2( 1, 1 )
-
-[node name="TreeGreen3479" parent="YSort/Tree" instance=ExtResource( 2 )]
-position = Vector2( -1102, 1 )
-scale = Vector2( 1, 1 )
-
-[node name="TreeGreen3480" parent="YSort/Tree" instance=ExtResource( 2 )]
-position = Vector2( -1076, 9 )
 scale = Vector2( 1, 1 )
 
 [node name="TreeGreen3481" parent="YSort/Tree" instance=ExtResource( 2 )]
@@ -5818,10 +5802,6 @@ scale = Vector2( 1, 1 )
 position = Vector2( -971, 225 )
 scale = Vector2( 1, 1 )
 
-[node name="TreeGreen3783" parent="YSort/Tree" instance=ExtResource( 2 )]
-position = Vector2( -1136, -96 )
-scale = Vector2( 1, 1 )
-
 [node name="TreeGreen3784" parent="YSort/Tree" instance=ExtResource( 2 )]
 position = Vector2( -908, 161 )
 scale = Vector2( 1, 1 )
@@ -6016,10 +5996,6 @@ scale = Vector2( 1, 1 )
 
 [node name="TreeGreen3834" parent="YSort/Tree" instance=ExtResource( 2 )]
 position = Vector2( -971, 225 )
-scale = Vector2( 1, 1 )
-
-[node name="TreeGreen3836" parent="YSort/Tree" instance=ExtResource( 2 )]
-position = Vector2( -928, 160 )
 scale = Vector2( 1, 1 )
 
 [node name="TreeGreen3837" parent="YSort/Tree" instance=ExtResource( 2 )]

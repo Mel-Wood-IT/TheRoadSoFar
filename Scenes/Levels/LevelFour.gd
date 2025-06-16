@@ -14,5 +14,3 @@ func set_camera_limits():
 	$YSort/Player/Camera2D.limit_right = map_limits.end.x * map_cellsize.x
 	$YSort/Player/Camera2D.limit_top = map_limits.position.y * map_cellsize.y
 	$YSort/Player/Camera2D.limit_bottom = map_limits.end.y * map_cellsize.y
-
-

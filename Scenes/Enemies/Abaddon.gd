@@ -16,7 +16,8 @@ var abbadon_alive = true
 
 
 func _ready():
-	# Setup only if returning from cutscene
+	$BossThemePlayer.stop()
+	
 	if Global.cutscene_abaddon_finished:
 		print("Returned from cutscene, starting battle...")
 		start_battle()
@@ -29,16 +30,16 @@ func _ready():
 
 
 func _on_DetectRadius_body_entered(body):
-	if body.name == "Player" and not cutscene_played and not Global.cutscene_abaddon_finished:
-		cutscene_played = true
+	if body.name == "Player" and not Global.cutscene_abaddon_finished and not get_node_or_null("AbaddonCutScene"):
 		play_cutscene()
 
 
 
 func play_cutscene():
-	var player = get_node("/root/LevelTwo/YSort/Player")
-	Global.return_position = player.global_position
-	get_tree().change_scene("res://Scenes/UI/StoryScenes/AbaddonConfrontation/AbaddonCutScene.tscn")
+	var cutscene = preload("res://Scenes/UI/CutSceneUI.tscn").instance()
+	cutscene.connect("cutscene_finished", self, "_on_cutscene_finished")
+	get_tree().get_root().add_child(cutscene)
+	get_tree().paused = true
 
 func _on_cutscene_finished():
 	start_battle()
