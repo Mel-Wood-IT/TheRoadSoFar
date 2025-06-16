@@ -6,6 +6,7 @@ func _ready():
 	pass
 
 func _on_RefBtn_pressed():
+	get_tree().change_scene("res://Scenes/UI/References.tscn")
 	pass
 
 # Back to main menu
