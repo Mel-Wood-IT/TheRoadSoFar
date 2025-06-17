@@ -58,17 +58,10 @@ position = Vector2( 417, 312 )
 scale = Vector2( 0.49827, 0.5 )
 texture = ExtResource( 4 )
 
-[node name="RefBtn" type="Sprite" parent="."]
+[node name="RefBtnImage" type="Sprite" parent="."]
 position = Vector2( 245, 312 )
 scale = Vector2( 0.402235, 0.416667 )
 texture = ExtResource( 3 )
-
-[node name="RefBtn" type="Button" parent="RefBtn"]
-modulate = Color( 0, 0, 0, 0 )
-margin_left = -179.0
-margin_top = -31.0
-margin_right = 179.0
-margin_bottom = 31.0
 
 [node name="BackBtn" type="Button" parent="."]
 self_modulate = Color( 1, 1, 1, 0 )
@@ -77,5 +70,12 @@ margin_top = 299.0
 margin_right = 489.0
 margin_bottom = 325.0
 
-[connection signal="pressed" from="RefBtn/RefBtn" to="." method="_on_RefBtn_pressed"]
+[node name="RefBtn" type="Button" parent="."]
+modulate = Color( 0, 0, 0, 0 )
+margin_left = 174.0
+margin_top = 299.0
+margin_right = 316.0
+margin_bottom = 325.0
+
 [connection signal="pressed" from="BackBtn" to="." method="_on_BackBtn_pressed"]
+[connection signal="pressed" from="RefBtn" to="." method="_on_RefBtn_pressed"]

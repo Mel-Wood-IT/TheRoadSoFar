@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/UI/StoryScenes/AzazelConfrontation/ConfrontationCutsceneUI.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scenes/UI/StoryScenes/AzazelConfrontation/confrontation1.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/UI/StoryScenes/AzazelConfrontation/conflict_dad_1.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/UI/StoryScenes/AzazelConfrontation/Confrontation2UI.tscn" type="PackedScene" id=3]
 
 [node name="ConfrontationCutsceneUI" instance=ExtResource( 1 )]
@@ -10,9 +10,8 @@ next_cutscene = ExtResource( 3 )
 [node name="TextureRect" parent="." index="0"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -64.0
-margin_right = 10.0
-margin_bottom = 9.0
+margin_right = 0.0
+margin_bottom = 0.0
 texture = ExtResource( 2 )
 
 [node name="NextBtn" parent="." index="1"]

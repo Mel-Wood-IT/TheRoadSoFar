@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/confrontation1.png-f61fef9935916b29b2a4fe8945a30455.stex"
+path="res://.import/conflict_dad_2.png-c1c3241fe48d79291e1bcd161931525a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/UI/StoryScenes/AzazelConfrontation/confrontation1.png"
-dest_files=[ "res://.import/confrontation1.png-f61fef9935916b29b2a4fe8945a30455.stex" ]
+source_file="res://Scenes/UI/StoryScenes/AzazelConfrontation/conflict_dad_2.png"
+dest_files=[ "res://.import/conflict_dad_2.png-c1c3241fe48d79291e1bcd161931525a.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
