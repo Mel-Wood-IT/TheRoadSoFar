@@ -1,12 +1,9 @@
 extends Node2D
 
 func _ready():
-	if Global.cutscene_abaddon_finished:
-		print("Returning from cutscene...")
-		$YSort/Player.global_position = Global.return_position
-
+	# Stop story scene music
+	StoryMusic.stop_music()
 	set_camera_limits()
-
 
 func set_camera_limits():
 	# Set the camera limits based on base tiles
@@ -16,5 +13,3 @@ func set_camera_limits():
 	$YSort/Player/Camera2D.limit_right = map_limits.end.x * map_cellsize.x
 	$YSort/Player/Camera2D.limit_top = map_limits.position.y * map_cellsize.y
 	$YSort/Player/Camera2D.limit_bottom = map_limits.end.y * map_cellsize.y
-
-

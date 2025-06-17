@@ -117,6 +117,11 @@ func take_damage(amount):
 func die():
 	alive = false
 	anim.play("death_" + current_direction)
+	
+	var boss_theme = get_tree().get_current_scene().find_node("BossThemePlayer", true, false)
+	if boss_theme and boss_theme is AudioStreamPlayer:
+		boss_theme.stop()
+	
 	yield(anim, "animation_finished")
 	var game_over = get_tree().get_current_scene().find_node("GameOverUI", true, false)
 	if game_over:

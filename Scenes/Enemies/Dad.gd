@@ -196,5 +196,10 @@ func start_retreat():
 	cooldown.start()
 	
 func play_cutscene():
-	Global.return_position = player.global_position
-	get_tree().change_scene("res://Scenes/UI/StoryScenes/AzazelConfrontation/Confrontation1.tscn")
+	var cutscene = preload("res://Scenes/UI/StoryScenes/AzazelConfrontation/Confrontation1UI.tscn").instance()
+	cutscene.connect("cutscene_finished", self, "_on_cutscene_finished")
+	get_tree().get_root().add_child(cutscene)
+
+func _on_cutscene_finished():
+	start_battle()
+

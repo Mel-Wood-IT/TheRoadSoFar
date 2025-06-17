@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dad confrontation 2.png-0148dd4224e395f8fac72e358ea4fed9.stex"
+path="res://.import/confrontation3.png-3d88eec66466e58925cd0161eed10f3e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/UI/StoryScenes/AzazelConfrontation/dad confrontation 2.png"
-dest_files=[ "res://.import/dad confrontation 2.png-0148dd4224e395f8fac72e358ea4fed9.stex" ]
+source_file="res://Scenes/UI/StoryScenes/AzazelConfrontation/confrontation3.png"
+dest_files=[ "res://.import/confrontation3.png-3d88eec66466e58925cd0161eed10f3e.stex" ]
 
 [params]
 
