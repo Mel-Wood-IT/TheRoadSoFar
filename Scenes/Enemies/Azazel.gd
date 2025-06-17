@@ -145,9 +145,6 @@ func die():
 	queue_free()
 
 
-
-
-
 # === SIGNALS ===
 func _on_DetectRadius_body_entered(body):
 	if body.name == "Player":
