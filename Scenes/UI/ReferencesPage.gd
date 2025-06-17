@@ -20,7 +20,16 @@ func _ready():
 		{ "name": "Pixabay – Bat Chirping", "link": "https://pixabay.com/sound-effects/bat-chirping-type-2-355965/" },
 		{ "name": "Pixabay – Demon Pig", "link": "https://pixabay.com/sound-effects/demon-pig-104996/" },
 		{ "name": "Pixabay – Knife Stab", "link": "https://pixabay.com/sound-effects/knife-stab-48222/" },
-		{ "name": "Pixabay – Pistol Shot", "link": "https://pixabay.com/sound-effects/pistol-shot-233473/" }
+		{ "name": "Pixabay – Pistol Shot", "link": "https://pixabay.com/sound-effects/pistol-shot-233473/" },
+		{ "name": "OpenGameArt – Stone Axe with Degradation Progress", "link": "https://opengameart.org/content/stone-axe-with-degradation-progress" },
+		{ "name": "OpenGameArt – Footprint Shoeprint Silhouette", "link": "https://opengameart.org/content/footprint-shoeprint-silhouette" },
+		{ "name": "OpenGameArt – Long Red Health Bar", "link": "https://opengameart.org/content/long-red-health-bar" },
+		{ "name": "OpenGameArt – Enemy Health Bars", "link": "https://opengameart.org/content/enemy-health-bars" },
+		{ "name": "OpenGameArt – Golden UI: Bigger Than Ever Edition (Score Panel)", "link": "https://opengameart.org/content/golden-ui-bigger-than-ever-edition" },
+		{ "name": "OpenGameArt – RPG UI Pack 1 (HUD Elements)", "link": "https://opengameart.org/content/rpg-ui-1" },
+		{ "name": "Google Fonts – Open Source Font Library", "link": "https://fonts.google.com/" },
+		{ "name": "OpenGameArt – Smoke Puff Animation", "link": "https://opengameart.org/content/smoke-puff" }
+
 	]
 
 	var container = $ScrollContainer/VBoxContainer

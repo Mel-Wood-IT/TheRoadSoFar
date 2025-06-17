@@ -19,6 +19,7 @@ var alive = true
 var in_attack = false
 var facing_left = false
 var players_in_attack_radius = []
+var is_hurting = false
 
 # === Constants ===
 const FLIP_THRESHOLD = 5
@@ -103,19 +104,18 @@ func start_attack():
 
 
 
-func _on_AttackCooldown_timeout():
-	# Cooldown finished, but we wait for distance logic to call attack
-	pass
-
-
 # === DAMAGE ===
 func take_damage(amount):
-	if not alive:
+	if not alive or is_hurting:
 		return
 
 	health -= amount
+	is_hurting = true
 	anim.play("hurt")
 	print("Boss took damage:", amount, "| Remaining:", health)
+
+	yield(anim, "animation_finished")
+	is_hurting = false
 
 	if health <= 0:
 		die()
@@ -124,15 +124,23 @@ func take_damage(amount):
 func die():
 	print("Boss: dying now")
 	alive = false
-	anim.hide()
-	anim.play("death")
+
+	$Death.stream.loop = false
+	$Death.play()
+
+	anim.play("death")  # Start the animation BEFORE hiding
 	theme.stop()
 	cooldown.stop()
-	yield(get_tree().create_timer(1.3), "timeout")
 
-	exorcism.show()
-	exorcism.play("exorcism")
-	yield(exorcism, "animation_finished")
+	print("Playing death animation")
+	yield(anim, "animation_finished")
+	print("Death animation finished")
+
+	anim.hide() 
+
+	yield(get_tree().create_timer(3), "timeout")
+	print("Changing scene...")
+	get_tree().change_scene("res://Scenes/UI/StoryScenes/StorySix.tscn")
 
 	queue_free()
 

@@ -161,6 +161,8 @@ func transform():
 	$AnimatedSprite.hide()
 	$Transform.show()
 	$Transform.play("transform")
+	$Transformation.stream.loop = false
+	$Transformation.play()
 
 	# Wait almost to the end (e.g. 1.3 seconds into 1.5 second animation)
 	yield(get_tree().create_timer(1.3), "timeout")

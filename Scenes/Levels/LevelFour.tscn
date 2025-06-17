@@ -12012,3 +12012,4 @@ scale = Vector2( 1, 1 )
 
 [node name="ambience" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
+autoplay = true

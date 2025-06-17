@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/AzazelDeath.mp3-2fd446f83cb8d1dbec4cfd44d864537d.mp3str"
+
+[deps]
+
+source_file="res://Resources/AzazelDeath.mp3"
+dest_files=[ "res://.import/AzazelDeath.mp3-2fd446f83cb8d1dbec4cfd44d864537d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

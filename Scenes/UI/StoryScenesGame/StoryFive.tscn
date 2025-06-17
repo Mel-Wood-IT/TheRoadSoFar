@@ -6,7 +6,7 @@
 [ext_resource path="res://Resources/Fonts/Combo.tres" type="DynamicFont" id=4]
 [ext_resource path="res://Scenes/UI/StoryScenes/Chatbox.gd" type="Script" id=5]
 
-[node name="StoryFive" type="Node2D"]
+[node name="StoryFive2" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 318.5, 178.5 )
