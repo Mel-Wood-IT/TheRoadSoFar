@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Resources/Screens/StoryScreens/Seven.png" type="Texture" id=1]
 [ext_resource path="res://Resources/Fonts/BoldArvo.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Scenes/UI/StoryScenesGame/StorySeven.gd" type="Script" id=3]
+[ext_resource path="res://Resources/Fonts/Combo.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Scenes/UI/StoryScenesGame/Chatbox.gd" type="Script" id=5]
 
 [node name="StorySeven" type="Node2D"]
 script = ExtResource( 3 )
@@ -19,5 +21,29 @@ margin_right = 629.0
 margin_bottom = 341.0
 custom_fonts/font = ExtResource( 2 )
 text = "NEXT"
+
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 5.0
+margin_top = 62.0
+margin_right = 246.0
+margin_bottom = 278.0
+
+[node name="Chatbox" type="Label" parent="Panel"]
+margin_left = 8.0
+margin_top = 62.0
+margin_right = 240.0
+margin_bottom = 149.0
+custom_fonts/font = ExtResource( 4 )
+text = "Your brother, Kolton, finally caught up as the fight ended
+after facing his own demons to make it there. Their father
+was alive. The Azazel was gone. For the first time in years,
+the three of them stood on the same ground again. Late or
+not, Kolton had come through.
+And that was enough.
+"
+align = 1
+percent_visible = 0.0
+script = ExtResource( 5 )
 
 [connection signal="pressed" from="NextBtn" to="." method="_on_NextBtn_pressed"]

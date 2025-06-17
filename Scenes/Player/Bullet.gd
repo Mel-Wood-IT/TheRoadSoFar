@@ -9,6 +9,15 @@ onready var anim = $BulletAnim
 func _ready():
 	set_direction(direction)
 
+	$Timer.wait_time = 0.5
+	$Timer.start()
+
+	if not $Timer.is_connected("timeout", self, "_on_Timer_timeout"):
+		$Timer.connect("timeout", self, "_on_Timer_timeout")
+		print("Connected timer timeout to bullet")
+
+
+
 func set_direction(value):
 	direction = value
 
@@ -47,3 +56,8 @@ func _on_Bullet_body_entered(body):
 		$CollisionShape2D.disabled = true
 		yield(anim, "animation_finished")
 		queue_free()
+
+
+func _on_Timer_timeout():
+	print("Bullet timed out, removing.")
+	queue_free()
