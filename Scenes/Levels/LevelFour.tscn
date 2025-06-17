@@ -12009,6 +12009,8 @@ scale = Vector2( 1, 1 )
 [node name="GameOverUI" parent="GameOver" instance=ExtResource( 5 )]
 
 [node name="TestingPanel" parent="." instance=ExtResource( 8 )]
+visible = false
 
 [node name="ambience" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
+autoplay = true
