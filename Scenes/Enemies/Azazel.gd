@@ -28,16 +28,9 @@ const ATTACK_COOLDOWN_TIME = 3.0
 # === READY ===
 func _ready():
 	print("Boss ready")
-	$DetectRadius.connect("body_entered", self, "_on_DetectRadius_body_entered")
-	$DetectRadius.connect("body_exited", self, "_on_DetectRadius_body_exited")
-	$AttackRadius.connect("body_entered", self, "_on_AttackRadius_body_entered")
-	$AttackRadius.connect("body_exited", self, "_on_AttackRadius_body_exited")
-	cooldown.connect("timeout", self, "_on_AttackCooldown_timeout")
-
 	cooldown.wait_time = 1.5
 	cooldown.one_shot = true
 	cooldown.autostart = false
-
 
 	anim.play("idle")
 	exorcism.hide()
@@ -140,7 +133,7 @@ func die():
 
 	yield(get_tree().create_timer(3), "timeout")
 	print("Changing scene...")
-	get_tree().change_scene("res://Scenes/UI/StoryScenesGame/StorySix.tscn")
+	get_tree().change_scene("res://Scenes/UI/StoryScenes/StorySix.tscn")
 
 	queue_free()
 
