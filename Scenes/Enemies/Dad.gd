@@ -29,8 +29,6 @@ onready var cooldown = $AttackCooldown
 onready var spawn_points = [$SpawnPoint1, $SpawnPoint2, $SpawnPoint3]
 
 func _ready():
-	$DetectRadius.connect("body_entered", self, "_on_DetectRadius_body_entered")
-	cooldown.connect("timeout", self, "_on_AttackCooldown_timeout")
 	sprite.play("idle_down")
 	randomize()
 	set_physics_process(true)
@@ -161,6 +159,9 @@ func transform():
 	$AnimatedSprite.hide()
 	$Transform.show()
 	$Transform.play("transform")
+	
+	if has_node("DadThemePlayer"):
+		$DadThemePlayer.stop()
 
 	# Wait almost to the end (e.g. 1.3 seconds into 1.5 second animation)
 	yield(get_tree().create_timer(1.3), "timeout")
@@ -180,7 +181,7 @@ func start_battle():
 	print("STARTING AZAZEL BATTLE...")
 	if cooldown.is_stopped():
 		cooldown.start()
-	$BossThemePlayer.play()
+	$DadThemePlayer.play()
 
 
 func start_retreat():
@@ -194,10 +195,15 @@ func start_retreat():
 	cooldown.start()
 	
 func play_cutscene():
+	$DadThemePlayer.play()
 	var cutscene = preload("res://Scenes/UI/StoryScenes/AzazelConfrontation/Confrontation1UI.tscn").instance()
 	cutscene.connect("cutscene_finished", self, "_on_cutscene_finished")
 	get_tree().get_root().add_child(cutscene)
 
 func _on_cutscene_finished():
 	start_battle()
+	
+func _exit_tree():
+	if has_node("DadThemePlayer"):
+		$DadThemePlayer.stop()
 

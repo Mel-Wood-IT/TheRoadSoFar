@@ -72,20 +72,32 @@ func set_health(value):
 
 # Reset just the current level
 func reset_level():
-	var current_level = get_tree().current_scene.name
+	var current_scene = get_tree().current_scene
+
+	# Stop DadThemePlayer if it exists
+	var dad = current_scene.find_node("Dad", true, false)
+	if dad and dad.has_node("DadThemePlayer"):
+		dad.get_node("DadThemePlayer").stop()
+
+	# Also stop Abaddon music if it exists
+	var abaddon = current_scene.find_node("Abaddon", true, false)
+	if abaddon and abaddon.has_node("BossThemePlayer"):
+		abaddon.get_node("BossThemePlayer").stop()
+
 	# Reset axe
 	has_axe = false
 	# Reset pages
-	pages_found.erase(current_level)
-	# Reset skulls
-	skull_found.erase(current_level)
-	
+	var level_name = current_scene.name
+	pages_found.erase(level_name)
+	skull_found.erase(level_name)
+
 	# Reset level score and subtract from total
-	if score_per_level.has(current_level):
-		var level_points = score_per_level[current_level]
+	if score_per_level.has(level_name):
+		var level_points = score_per_level[level_name]
 		score -= level_points
 		score = max(score, 0)
-		score_per_level.erase(current_level)
+		score_per_level.erase(level_name)
+
 	update_pages()
 	update_hud()
 
