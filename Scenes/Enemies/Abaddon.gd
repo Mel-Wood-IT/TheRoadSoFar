@@ -11,6 +11,9 @@ onready var boss_theme = $MiniBossThemePlayer
 onready var attack_timer = $AttackTimer
 onready var spawn_points = [$SpawnPoint1, $SpawnPoint2, $SpawnPoint3, $SpawnPoint4]
 
+# Set variables for healthbar
+onready var health_bar = $HealthBar
+var max_health = 75
 
 var cutscene_played = false
 var cutscene_skipped = false
@@ -18,8 +21,9 @@ var cutscene_skipped = false
 
 # Ready func that loads boss theme, code behind cut scene spawning, detection radius and, some anims
 func _ready():
-	# Reset health on level reload
-	health = 75  
+	max_health = health
+	health_bar.max_value = max_health
+	health_bar.value = health
 	$MiniBossThemePlayer.stop()
 	
 	if Global.cutscene_abaddon_finished:
@@ -89,6 +93,7 @@ func take_damage(amount):
 		return
 
 	health -= amount
+	health_bar.value = health
 	sprite.play("hurt")
 	print("Boss took damage:", amount, "| Remaining:", health)
 
@@ -104,6 +109,7 @@ func die():
 	Global.mini_boss_killed = true
 	$AttackTimer.stop()
 	$MiniBossThemePlayer.stop()
+	health_bar.hide()
 	sprite.hide()
 	death_anim.show()
 

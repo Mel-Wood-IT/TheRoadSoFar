@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Resources/Fonts/BoldArvo.tres" type="DynamicFont" id=1]
-[ext_resource path="res://Scenes/UI/StoryScenes/AbaddonConfrontation/Abaddon.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/UI/StoryScenes/abaddon.png" type="Texture" id=2]
 [ext_resource path="res://Resources/Music/abaddon.mp3" type="AudioStream" id=3]
 [ext_resource path="res://Scenes/UI/CutSceneUI.gd" type="Script" id=4]
 
@@ -13,8 +13,42 @@ script = ExtResource( 4 )
 pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_bottom = 67.0
 texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="TextureRect"]
+margin_left = 10.0
+margin_top = 18.0
+margin_right = 50.0
+margin_bottom = 32.0
+text = "ABADDON: (her voice cracking like splintered bone)
+\"You were hoping for your father, child...
+
+*She peers over Dom, breath like ash*
+
+\"What led you here, boy.\"
+\"Was it guilt?\"
+
+\"...guilt? or the rotting scent
+of your Daddy's corpse?\""
+
+[node name="Label2" type="Label" parent="TextureRect"]
+margin_left = 430.0
+margin_top = 168.0
+margin_right = 619.0
+margin_bottom = 229.0
+text = "DOM: (With heroic confiedence)
+
+\"Im not afraid of you!\""
+
+[node name="Label3" type="Label" parent="TextureRect"]
+margin_left = 10.0
+margin_top = 274.0
+margin_right = 223.0
+margin_bottom = 344.0
+text = "ABADDON: (foaming with glee)
+
+\"Ill snap your jaw open and drink 
+you last scream, boy!\""
 
 [node name="NextBtn" type="Button" parent="."]
 pause_mode = 2

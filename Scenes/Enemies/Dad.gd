@@ -4,7 +4,7 @@ var UnconsciousDadScene = preload("res://Scenes/Enemies/UnconsciousDad.tscn")
 
 # Exported settings
 export (int) var speed = 100
-export (int) var health = 20
+export (int) var health = 100
 export (int) var attack_range = 24
 export (int) var damage = 10
 export (int) var attack_buffer = 4
@@ -199,6 +199,8 @@ func start_battle():
 
 
 func start_retreat():
+	if not alive:
+		return
 	retreating = true
 	cooldown.stop()
 	yield(get_tree().create_timer(retreat_time), "timeout")

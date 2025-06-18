@@ -7,8 +7,11 @@ export (int) var damage = 25
 # Triggers spike attack when player in range
 export (int) var attack_trigger_range = 96  
 # Range of attack
-export (int) var attack_radius_range = 48  
+export (int) var attack_radius_range = 48
 
+# Healthbar variables
+onready var health_bar = $HealthBar
+var max_health = 100
 
 onready var anim = $AnimatedSprite
 onready var cooldown = $AttackCooldown
@@ -33,6 +36,11 @@ func _ready():
 	cooldown.wait_time = 1.5
 	cooldown.one_shot = true
 	cooldown.autostart = false
+	
+	# Set the max value
+	max_health = health
+	health_bar.max_value = max_health
+	health_bar.value = health
 
 	anim.play("idle")
 	exorcism.hide()
@@ -104,6 +112,7 @@ func take_damage(amount):
 		return
 
 	health -= amount
+	health_bar.value = health 
 	is_hurting = true
 	anim.play("hurt")
 	print("Boss took damage:", amount, "| Remaining:", health)
@@ -119,6 +128,7 @@ func die():
 	print("Boss: dying now")
 	alive = false
 	Global.boss_killed = true
+	health_bar.hide()
 	$Death.stream.loop = false
 	$Death.play()
 

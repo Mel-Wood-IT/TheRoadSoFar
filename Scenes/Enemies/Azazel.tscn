@@ -1,10 +1,13 @@
-[gd_scene load_steps=71 format=2]
+[gd_scene load_steps=74 format=2]
 
 [ext_resource path="res://Scenes/Enemies/Azazel.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Music/Azazal Stage 2.wav" type="AudioStream" id=2]
 [ext_resource path="res://Sprites/Enemies/Azazel/Morph2.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Enemies/Azazel/azazel death.png" type="Texture" id=4]
 [ext_resource path="res://Resources/AzazelDeath.mp3" type="AudioStream" id=5]
+[ext_resource path="res://Sprites/UI/enemy_health_red.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/UI/enemy_health_cover.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/UI/enemy_health_empty.png" type="Texture" id=8]
 
 [sub_resource type="AtlasTexture" id=10]
 flags = 4
@@ -370,6 +373,16 @@ shape = SubResource( 65 )
 
 [node name="Death" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
+
+[node name="HealthBar" type="TextureProgress" parent="."]
+margin_left = -64.0
+margin_top = -96.0
+margin_right = 64.0
+margin_bottom = -80.0
+value = 100.0
+texture_under = ExtResource( 8 )
+texture_over = ExtResource( 7 )
+texture_progress = ExtResource( 6 )
 
 [connection signal="body_entered" from="DetectRadius" to="." method="_on_DetectRadius_body_entered"]
 [connection signal="body_exited" from="DetectRadius" to="." method="_on_DetectRadius_body_exited"]

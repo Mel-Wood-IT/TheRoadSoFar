@@ -57,10 +57,10 @@ texture_under = ExtResource( 5 )
 texture_progress = ExtResource( 6 )
 
 [node name="Score" type="Label" parent="HUD/ScoreCard"]
-margin_left = 101.0
-margin_top = 18.0
-margin_right = 117.0
-margin_bottom = 32.0
+margin_left = 91.0
+margin_top = 17.0
+margin_right = 107.0
+margin_bottom = 31.0
 text = "0"
 
 [connection signal="value_changed" from="HUD/HealthProgress" to="." method="_on_HealthProgress_value_changed"]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/abaddon.png-0faa96b8fcb122a671f385023ff5291d.stex"
+path="res://.import/abaddon.png-c8ca61957f0644651b688575a02b52ad.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://abaddon.png"
-dest_files=[ "res://.import/abaddon.png-0faa96b8fcb122a671f385023ff5291d.stex" ]
+source_file="res://Scenes/UI/StoryScenes/abaddon.png"
+dest_files=[ "res://.import/abaddon.png-c8ca61957f0644651b688575a02b52ad.stex" ]
 
 [params]
 
