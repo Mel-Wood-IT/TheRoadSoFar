@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 export(PackedScene) var bat_scene
-export (int) var health = 75
+export (int) var health = 100
 
 onready var sprite = $AnimatedSprite
 onready var death_anim = $Death

@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 # === Exported Variables ===
 export (int) var speed = 50
-export (int) var health = 15
+export (int) var health = 80
 export (int) var damage = 20
 export (int) var attack_trigger_range = 96  # Triggers attack logic when player is this close
 export (int) var attack_radius_range = 48   # Physical AoE radius for hitting player

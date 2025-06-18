@@ -22,6 +22,10 @@ func _ready():
 	print(name, "DetectRadius actual radius:", $DetectRadiusBossBat/RadiusBossBat.shape.radius)
 	anim.play("Fly")
 	
+	$AttackCooldown.wait_time = 0.5  # Attack roughly 5x per second
+	$AttackCooldown.one_shot = false
+	
+	
 
 func _physics_process(delta):
 	if not alive:
@@ -43,9 +47,13 @@ func _physics_process(delta):
 			if abs(velocity.x) > 0.1:
 				anim.flip_h = velocity.x < 0
 		else:
-			# Stop near player
 			velocity = Vector2.ZERO
 			move_and_slide(velocity)
+
+			if not attack_timer.is_stopped():
+				return  # Already attacking
+
+			attack_timer.start()
 
 func _on_AttackCooldown_timeout():
 	if alive and player != null and is_instance_valid(player):
