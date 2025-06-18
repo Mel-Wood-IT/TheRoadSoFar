@@ -4,7 +4,7 @@ extends KinematicBody2D
 export (int) var speed = 110
 export (int) var health = 20
 export (int) var attack_range = 24
-export (int) var damage = 5
+export (int) var damage = 10
 export (int) var attack_buffer = 4
 
 # Internal state
@@ -91,9 +91,12 @@ func _on_animation_finished():
 
 	elif anim.animation.begins_with("hurt"):
 		animation_locked = false
-		attack_in_progress = false  # ADD THIS LINE
-		# Always restart cooldown after hurt ends
-		cooldown.start()
+		attack_in_progress = false
+		if player and is_instance_valid(player):
+			cooldown.start()
+		else:
+			anim.play("idle_" + anim_direction)
+
 
 func _on_DetectRadius_body_entered(body):
 	if body.name == "Player":

@@ -1,4 +1,4 @@
-[gd_scene load_steps=168 format=2]
+[gd_scene load_steps=162 format=2]
 
 [ext_resource path="res://Sprites/Enemies/Demon/Left/Idle/IdleLeft2.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/Enemies/Demon/Right/Idle/IdleRight1.png" type="Texture" id=2]
@@ -44,19 +44,15 @@
 [ext_resource path="res://Sprites/Enemies/Demon/Up/Atk/AtkUp3.png" type="Texture" id=42]
 [ext_resource path="res://Sprites/Enemies/Demon/Up/Atk/AtkUp2.png" type="Texture" id=43]
 [ext_resource path="res://Sprites/Enemies/Demon/Down/Hurt/HurtDown4.png" type="Texture" id=44]
-[ext_resource path="res://Sprites/Enemies/Demon/Down/Atk/AtkDown2.png" type="Texture" id=45]
-[ext_resource path="res://Sprites/Enemies/Demon/Down/Atk/AtkDown4.png" type="Texture" id=46]
 [ext_resource path="res://Sprites/Enemies/Demon/Down/Atk/AtkDown1.png" type="Texture" id=47]
 [ext_resource path="res://Sprites/Enemies/Demon/Down/Death/DeathDown5.png" type="Texture" id=48]
 [ext_resource path="res://Sprites/Enemies/Demon/Down/Atk/AtkDown8.png" type="Texture" id=49]
 [ext_resource path="res://Sprites/Enemies/Demon/Down/Death/DeathDown3.png" type="Texture" id=50]
 [ext_resource path="res://Sprites/Enemies/Demon/Down/Death/DeathDown2.png" type="Texture" id=51]
 [ext_resource path="res://Sprites/Enemies/Demon/Down/Atk/AtkDown10.png" type="Texture" id=52]
-[ext_resource path="res://Sprites/Enemies/Demon/Down/Atk/AtkDown6.png" type="Texture" id=53]
 [ext_resource path="res://Sprites/Enemies/Demon/Down/Death/DeathDown4.png" type="Texture" id=54]
 [ext_resource path="res://Sprites/Enemies/Demon/Down/Death/DeathDown8.png" type="Texture" id=55]
 [ext_resource path="res://Sprites/Enemies/Demon/Down/Death/DeathDown9.png" type="Texture" id=56]
-[ext_resource path="res://Sprites/Enemies/Demon/Down/Atk/AtkDown5.png" type="Texture" id=57]
 [ext_resource path="res://Sprites/Enemies/Demon/Down/Death/DeathDown1.png" type="Texture" id=58]
 [ext_resource path="res://Sprites/Enemies/Demon/Down/Death/DeathDown7.png" type="Texture" id=59]
 [ext_resource path="res://Sprites/Enemies/Demon/Down/Death/DeathDown10.png" type="Texture" id=60]
@@ -64,8 +60,6 @@
 [ext_resource path="res://Sprites/Enemies/Demon/Down/Hurt/HurtDown1.png" type="Texture" id=62]
 [ext_resource path="res://Sprites/Enemies/Demon/Down/Hurt/HurtDown2.png" type="Texture" id=63]
 [ext_resource path="res://Sprites/Enemies/Demon/Down/Hurt/HurtDown3.png" type="Texture" id=64]
-[ext_resource path="res://Sprites/Enemies/Demon/Down/Atk/AtkDown3.png" type="Texture" id=65]
-[ext_resource path="res://Sprites/Enemies/Demon/Down/Atk/AtkDown7.png" type="Texture" id=66]
 [ext_resource path="res://Sprites/Enemies/Demon/Down/Atk/AtkDown9.png" type="Texture" id=67]
 [ext_resource path="res://Sprites/Enemies/Demon/Down/Atk/AtkDown11.png" type="Texture" id=68]
 [ext_resource path="res://Sprites/Enemies/Demon/Down/Idle/IdleDown2.png" type="Texture" id=69]
@@ -150,7 +144,7 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 47 ), ExtResource( 45 ), ExtResource( 65 ), ExtResource( 46 ), ExtResource( 57 ), ExtResource( 53 ), ExtResource( 66 ), ExtResource( 49 ), ExtResource( 67 ), ExtResource( 52 ), ExtResource( 68 ) ],
+"frames": [ ExtResource( 47 ), ExtResource( 49 ), ExtResource( 67 ), ExtResource( 52 ), ExtResource( 68 ) ],
 "loop": true,
 "name": "attack_down",
 "speed": 8.0
