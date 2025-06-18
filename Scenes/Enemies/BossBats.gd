@@ -60,7 +60,7 @@ func _on_AttackCooldown_timeout():
 	if alive and player != null and is_instance_valid(player):
 		if global_position.distance_to(player.global_position) <= 20:
 			if player.has_method("take_damage"):
-				player.take_damage(10)
+				player.take_damage(5)
 	attack_timer.start()
 
 
