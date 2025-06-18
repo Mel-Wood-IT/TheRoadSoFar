@@ -5,7 +5,7 @@ export (int) var detect_radius = 100
 export (int) var enemy_health = 10
 export (int) var speed = 80
 
-# Internal state
+# variables
 var player = null
 var alive = true
 var velocity = Vector2.ZERO
@@ -49,15 +49,18 @@ func _on_AttackCooldown_timeout():
 				player.take_damage(1)
 	$AttackCooldown.start()
 
+# Signal
 func _on_DetectRadius_body_entered(body):
 	if body.name == "Player":
 		player = body
 		$AttackCooldown.start()
 
+#Signal
 func _on_DetectRadius_body_exited(body):
 	if body == player:
 		player == null
 
+# Make sure the death/hurt sound doesnt loop
 func take_damage(amount):
 	if not alive:
 		return
@@ -68,6 +71,7 @@ func take_damage(amount):
 	if enemy_health <= 0:
 		die()
 
+# Make sure the death/hurt sound doesnt loop
 func die():
 	alive = false
 	anim.play("Death")

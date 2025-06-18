@@ -6,6 +6,7 @@ var velocity = Vector2.ZERO
 
 onready var anim = $BulletAnim
 
+# This is where the timeer func is laid out and also some debugging and directional shit
 func _ready():
 	set_direction(direction)
 
@@ -20,6 +21,7 @@ func _ready():
 	print("Bullet animation playing:", anim.animation)
 
 
+# Settin direction for which way that the bullet travels
 func set_direction(value):
 	direction = value
 
@@ -44,7 +46,7 @@ func set_direction(value):
 func _physics_process(delta):
 	position += velocity * speed * delta
 
-
+# Hold the contitions to play the impact animation and ignore the player so i dont shoot myself
 func _on_Bullet_body_entered(body):
 	print("Bullet collided with:", body.name)
 
@@ -69,7 +71,7 @@ func _on_Bullet_body_entered(body):
 	else:
 		print("Bullet hit something that is not a damageable enemy.")
 
-
+# Remove the bullet after .5 seconds
 func _on_Timer_timeout():
 	print("Bullet timed out, removing.")
 	queue_free()

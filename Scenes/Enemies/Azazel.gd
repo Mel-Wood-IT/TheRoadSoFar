@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-# === Exported Variables ===
+# Exported Variables 
 export (int) var speed = 50
 export (int) var health = 100
 export (int) var damage = 25
@@ -23,11 +23,11 @@ var facing_left = false
 var players_in_attack_radius = []
 var is_hurting = false
 
-# === Constants ===
+# Constants 
 const FLIP_THRESHOLD = 5
 const ATTACK_COOLDOWN_TIME = 3.0
 
-# === READY ===
+# Ready func for attack cooldowns and what not
 func _ready():
 	print("Boss ready")
 	cooldown.wait_time = 1.5
@@ -39,7 +39,8 @@ func _ready():
 	theme.play()
 
 
-# === PHYSICS ===
+# Chatgpts work, only had a one directional sprite and it was off center so couldnt 
+# actually flip the image because it would teleport the sprite 
 func _physics_process(delta):
 	if not alive or in_attack or player == null or not is_instance_valid(player):
 		return
@@ -72,7 +73,7 @@ func _physics_process(delta):
 		if not in_attack and cooldown.is_stopped():
 			start_attack()
 
-
+# This is for the attack radius so when the spike anim is called, it hurts anything within the radius
 func start_attack():
 	print("Boss: starting spike_attack")
 	print("Players in range:", players_in_attack_radius.size())
@@ -88,8 +89,6 @@ func start_attack():
 			p.take_damage(damage)
 
 
-
-
 	in_attack = false
 	anim.play("idle")
 
@@ -99,7 +98,7 @@ func start_attack():
 
 
 
-# === DAMAGE ===
+# Damage, what to do when hit/when theres no health left
 func take_damage(amount):
 	if not alive or is_hurting:
 		return
@@ -115,7 +114,7 @@ func take_damage(amount):
 	if health <= 0:
 		die()
 
-
+# Die func, here controls the animations, changing scenes to the end of the game, and also controls audio for boss fight ect
 func die():
 	print("Boss: dying now")
 	alive = false
@@ -123,7 +122,7 @@ func die():
 	$Death.stream.loop = false
 	$Death.play()
 
-	anim.play("death")  # Start the animation BEFORE hiding
+	anim.play("death")  
 	theme.stop()
 	cooldown.stop()
 
@@ -140,7 +139,7 @@ func die():
 	queue_free()
 
 
-# === SIGNALS ===
+# Signals
 func _on_DetectRadius_body_entered(body):
 	if body.name == "Player":
 		print("DetectRadius: Player entered")
