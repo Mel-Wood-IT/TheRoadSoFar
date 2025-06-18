@@ -127,6 +127,8 @@ func take_damage(amount):
 func die():
 	print("Boss: dying now")
 	alive = false
+	Global.azazel_score()
+
 	Global.boss_killed = true
 	health_bar.hide()
 	$Death.stream.loop = false

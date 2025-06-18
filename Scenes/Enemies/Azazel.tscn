@@ -10,42 +10,34 @@
 [ext_resource path="res://Sprites/UI/enemy_health_empty.png" type="Texture" id=8]
 
 [sub_resource type="AtlasTexture" id=10]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 0, 768, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=11]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 128, 768, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=12]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 256, 768, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=13]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 384, 768, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=14]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 512, 768, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=15]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 640, 768, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=16]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 768, 768, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=17]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 896, 768, 128, 128 )
 
@@ -114,102 +106,82 @@ atlas = ExtResource( 4 )
 region = Rect2( 720, 0, 48, 64 )
 
 [sub_resource type="AtlasTexture" id=18]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 0, 256, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=19]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 128, 256, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=20]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 0, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=21]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 128, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=22]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 256, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=23]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 384, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=24]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 512, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=25]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 640, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=26]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 0, 128, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=27]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 128, 128, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=28]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 256, 128, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=29]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 384, 128, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=30]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 512, 128, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=31]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 640, 128, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=40]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 0, 640, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=41]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 128, 640, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=42]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 256, 640, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=43]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 384, 640, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=44]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 512, 640, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=45]
-flags = 4
 atlas = ExtResource( 3 )
 region = Rect2( 640, 640, 128, 128 )
 
@@ -341,7 +313,6 @@ position = Vector2( 3.49999, -67.5 )
 scale = Vector2( 2.9375, 3.10938 )
 frames = SubResource( 62 )
 animation = "exorcism"
-frame = 15
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

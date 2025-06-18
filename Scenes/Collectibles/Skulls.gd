@@ -14,6 +14,7 @@ func _on_SkullWhite_body_entered(body):
 			Global.skull_found[level_name] = true
 			
 		Global.skulls_collected.append(1)
+		Global.skull_score()
 		queue_free()
 
 func _on_SkullYelBlood_body_entered(body):
@@ -24,6 +25,7 @@ func _on_SkullYelBlood_body_entered(body):
 			Global.skull_found[level_name] = true
 		
 		Global.skulls_collected.append(1)
+		Global.skull_score()
 		queue_free()
 
 func _on_SkullWhiBlood_body_entered(body):
@@ -34,4 +36,5 @@ func _on_SkullWhiBlood_body_entered(body):
 			Global.skull_found[level_name] = true
 			
 		Global.skulls_collected.append(1)
+		Global.skull_score()
 		queue_free()
