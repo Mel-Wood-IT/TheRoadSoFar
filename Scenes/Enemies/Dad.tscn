@@ -1067,7 +1067,7 @@ position = Vector2( 0, -1 )
 scale = Vector2( 1.33333, 1.375 )
 frames = SubResource( 169 )
 animation = "idle_down"
-frame = 3
+frame = 2
 playing = true
 
 [node name="Transform" type="AnimatedSprite" parent="."]
@@ -1088,12 +1088,13 @@ collision_layer = 16
 collision_mask = 8
 
 [node name="Radius" type="CollisionShape2D" parent="DetectRadius"]
-position = Vector2( 1040, 796 )
+position = Vector2( 1047, 797 )
 shape = SubResource( 185 )
 
 [node name="DadThemePlayer" type="AudioStreamPlayer" parent="."]
 pause_mode = 2
 stream = ExtResource( 27 )
+volume_db = -8.0
 
 [node name="AttackCooldown" type="Timer" parent="."]
 

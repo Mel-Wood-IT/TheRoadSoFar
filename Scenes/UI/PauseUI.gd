@@ -37,9 +37,13 @@ func _on_ResumeBtn_pressed():
 # Restart the level
 func _on_RestartBtn_pressed():
 	get_tree().paused = false
+	
+	# Reset flags
 	Global.cutscene_abaddon_finished = false
 	Global.abaddon_alive = true
 	Global.reset_level()
+	
+	# Reload the scene
 	get_tree().reload_current_scene()
 
 # Show the help menu
