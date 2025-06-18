@@ -1,29 +1,23 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Resources/Screens/HelpScreen.png" type="Texture" id=1]
+[ext_resource path="res://Resources/Screens/Help.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/UI/HelpPage.gd" type="Script" id=2]
 [ext_resource path="res://Resources/Music/Horror-Game-Intro.mp3" type="AudioStream" id=3]
 
 [node name="HelpPage" type="Node2D"]
 script = ExtResource( 2 )
 
-[node name="help_bg" type="Sprite" parent="."]
-position = Vector2( 321, 182 )
-scale = Vector2( 0.504687, 0.502778 )
+[node name="Help" type="Sprite" parent="."]
+position = Vector2( 319.5, 178.5 )
+scale = Vector2( 0.507031, 0.5125 )
 texture = ExtResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="BackBtn" type="Button" parent="."]
 self_modulate = Color( 1, 1, 1, 0 )
-margin_left = 235.0
-margin_top = 318.0
-margin_right = 407.0
-margin_bottom = 344.0
-__meta__ = {
-"_edit_lock_": true
-}
+margin_left = 234.0
+margin_top = 306.0
+margin_right = 406.0
+margin_bottom = 332.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
