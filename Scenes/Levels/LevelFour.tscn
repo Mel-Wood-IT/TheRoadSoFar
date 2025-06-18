@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://TileSets/ForestFloor.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Trees/TreeGreen.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Scenes/Testing/TestingPanel.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Enemies/Dad.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Resources/Ambience/Game Ambience.wav" type="AudioStream" id=10]
+[ext_resource path="res://Scenes/Enemies/Bat.tscn" type="PackedScene" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 110 )
@@ -54,11 +55,25 @@ shape = SubResource( 1 )
 
 [node name="YSort" type="YSort" parent="."]
 
-[node name="Player" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( -1512, 309 )
+[node name="Enemies" type="Node2D" parent="YSort"]
+
+[node name="Bat" parent="YSort/Enemies" instance=ExtResource( 11 )]
+position = Vector2( -864, 320 )
+
+[node name="Bat2" parent="YSort/Enemies" instance=ExtResource( 11 )]
+position = Vector2( -624, 304 )
+
+[node name="Bat3" parent="YSort/Enemies" instance=ExtResource( 11 )]
+position = Vector2( -768, 160 )
+
+[node name="Bat4" parent="YSort/Enemies" instance=ExtResource( 11 )]
+position = Vector2( -608, 144 )
 
 [node name="Dad" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( -788, -375 )
+
+[node name="Player" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( -1512, 309 )
 
 [node name="Tree" type="YSort" parent="YSort"]
 

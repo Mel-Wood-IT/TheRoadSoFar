@@ -7517,5 +7517,6 @@ pause_mode = 2
 [node name="GameOverUI" parent="GameOver" instance=ExtResource( 13 )]
 
 [node name="TestingPanel" parent="." instance=ExtResource( 9 )]
+visible = false
 
 [connection signal="body_entered" from="NextLevel" to="." method="_on_NextLevel_body_entered"]
