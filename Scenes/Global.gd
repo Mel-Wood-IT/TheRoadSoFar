@@ -73,6 +73,7 @@ func set_health(value):
 # Reset just the current level
 func reset_level():
 	var current_scene = get_tree().current_scene
+	var level_name = current_scene.name
 
 	# Stop DadThemePlayer if it exists
 	var dad = current_scene.find_node("Dad", true, false)
@@ -80,19 +81,22 @@ func reset_level():
 		dad.get_node("DadThemePlayer").stop()
 		
 	# Stop Azazel music if exists
-	var azl = get_tree().get_current_scene().find_node("Azazel", true, false)
-	if azl and azl.has_node("BoosThemePlayer"):
+	var azl = current_scene.find_node("Azazel", true, false)
+	if azl and azl.has_node("BossThemePlayer"):
 		azl.get_node("BossThemePlayer").stop()
 
 	# Stop Abaddon music if it exists
 	var abaddon = current_scene.find_node("Abaddon", true, false)
-	if abaddon and abaddon.has_node("BossThemePlayer"):
-		abaddon.get_node("BossThemePlayer").stop()
+	if abaddon and abaddon.has_node("MiniBossThemePlayer"):
+		abaddon.get_node("MiniBossThemePlayer").stop()
+
+	# Reset abaddon on level 2
+	if level_name == "LevelTwo":
+		Global.abaddon_alive = true
 
 	# Reset axe
 	has_axe = false
 	# Reset pages
-	var level_name = current_scene.name
 	pages_found.erase(level_name)
 	skull_found.erase(level_name)
 	cutscene_azazel_finished = false
@@ -106,6 +110,11 @@ func reset_level():
 
 	update_pages()
 	update_hud()
+
+func restart_level():
+	var path = get_tree().current_scene.filename
+	Global.reset_level()
+	get_tree().change_scene(path)
 
 func award_skull_bonus():
 	var skull_count = skull_found.size()

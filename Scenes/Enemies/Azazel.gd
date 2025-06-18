@@ -119,7 +119,7 @@ func take_damage(amount):
 func die():
 	print("Boss: dying now")
 	alive = false
-
+	Global.boss_killed = true
 	$Death.stream.loop = false
 	$Death.play()
 
@@ -135,7 +135,7 @@ func die():
 
 	yield(get_tree().create_timer(3), "timeout")
 	print("Changing scene...")
-	get_tree().change_scene("res://Scenes/UI/StoryScenes/StorySix.tscn")
+	get_tree().change_scene("res://Scenes/UI/StoryScenesGame/StorySix.tscn")
 
 	queue_free()
 

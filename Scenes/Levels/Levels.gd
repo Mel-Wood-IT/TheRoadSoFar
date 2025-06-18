@@ -3,6 +3,9 @@ extends Node2D
 func _ready():
 	# Stop story scene music
 	StoryMusic.stop_music()
+	# Start ambience
+	StoryMusic.play_ambience()
+	
 	set_camera_limits()
 
 func set_camera_limits():

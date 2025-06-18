@@ -127,8 +127,5 @@ func die():
 	yield(anim, "animation_finished")
 
 	anim.hide()  
-	$Exorcism.show()
-	$Exorcism.play("exorcism")
-	yield($Exorcism, "animation_finished")
 
 	queue_free()

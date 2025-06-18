@@ -6,9 +6,8 @@
 radius = 185.468
 height = 915.414
 
-[node name="UnconsciousDad" type="Area2D"]
-z_index = 1
-collision_layer = 4
+[node name="UnconsciousDad" type="StaticBody2D"]
+collision_layer = 128
 collision_mask = 24
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -20,4 +19,5 @@ texture = ExtResource( 1 )
 position = Vector2( -0.0525868, 0.859507 )
 rotation = -1.52719
 scale = Vector2( 0.0444464, 0.053212 )
+z_index = 1
 shape = SubResource( 1 )
