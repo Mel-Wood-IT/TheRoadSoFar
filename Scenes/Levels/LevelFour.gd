@@ -1,6 +1,7 @@
 extends Node2D
 
 func _ready():
+	#Returns player to the previous position
 	var player = get_node("YSort/Player")
 	if Global.return_position != Vector2.ZERO:
 		player.global_position = Global.return_position

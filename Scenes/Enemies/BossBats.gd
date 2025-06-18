@@ -6,21 +6,25 @@ export (int) var enemy_health = 10
 export (int) var speed = 150
 
 
-# -- Internal State --
 var player = null
 var alive = true
 var velocity = Vector2.ZERO
 
-# -- Nodes --
+
 onready var anim = $AnimatedSprite
 onready var detect_area = $DetectRadiusBossBat/RadiusBossBat
 onready var attack_timer = $AttackCooldown
 
 func _ready():
+	#Detection radius shit as it was a pain to debug
 	detect_radius = 284  
 	$DetectRadiusBossBat/RadiusBossBat.shape.radius = detect_radius
 	print(name, "DetectRadius actual radius:", $DetectRadiusBossBat/RadiusBossBat.shape.radius)
 	anim.play("Fly")
+	
+	$AttackCooldown.wait_time = 0.5  # Attack roughly 2x per second
+	$AttackCooldown.one_shot = false
+	
 	
 
 func _physics_process(delta):
@@ -43,16 +47,22 @@ func _physics_process(delta):
 			if abs(velocity.x) > 0.1:
 				anim.flip_h = velocity.x < 0
 		else:
-			# Stop near player
 			velocity = Vector2.ZERO
 			move_and_slide(velocity)
 
+			if not attack_timer.is_stopped():
+				return  # Already attacking
+
+			attack_timer.start()
+
+#Determining how much damage to deal and also how frequently to attack
 func _on_AttackCooldown_timeout():
 	if alive and player != null and is_instance_valid(player):
 		if global_position.distance_to(player.global_position) <= 20:
 			if player.has_method("take_damage"):
 				player.take_damage(10)
 	attack_timer.start()
+
 
 func _on_DetectRadiusBossBat_body_entered(body):
 	if body.name == "Player":
@@ -65,6 +75,7 @@ func _on_DetectRadiusBossBat_body_exited(body):
 	if body == player:
 		player = null  
 
+# Debuging
 func take_damage(amount):
 	if not alive:
 		print("Already dead")
@@ -77,6 +88,7 @@ func take_damage(amount):
 		print("Bat died")
 		die()
 
+# What to do when you diem things like play hurt/death sound, add a score of 5 to the total tally, and  play death anim
 func die():
 	alive = false
 	anim.play("Death")

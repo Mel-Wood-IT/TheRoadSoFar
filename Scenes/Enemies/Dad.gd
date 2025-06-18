@@ -10,7 +10,7 @@ export (int) var damage = 10
 export (int) var attack_buffer = 4
 export (int) var transform_stage = 10
 
-# Internal state
+# variables
 var player = null
 var alive = true
 var anim_direction = "down"

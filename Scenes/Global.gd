@@ -116,6 +116,7 @@ func restart_level():
 	Global.reset_level()
 	get_tree().change_scene(path)
 
+# how many points per skull you collect
 func award_skull_bonus():
 	var skull_count = skull_found.size()
 	add_score(skull_count * 20)

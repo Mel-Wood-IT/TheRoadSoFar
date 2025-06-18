@@ -1,5 +1,6 @@
 extends Control
 
+# Connecting the next button and itll clear once clicked
 func _ready():
 	$NextBtn.connect("pressed", self, "_on_NextBtn_pressed")
 
