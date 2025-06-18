@@ -14,7 +14,6 @@ onready var spawn_points = [$SpawnPoint1, $SpawnPoint2, $SpawnPoint3, $SpawnPoin
 
 var cutscene_played = false
 var cutscene_skipped = false
-var abbadon_alive = true
 
 
 # Ready func that loads boss theme, code behind cut scene spawning, detection radius and, some anims
@@ -119,7 +118,3 @@ func die():
 	$DeathSound.stop()
 
 	queue_free()
-
-
-
-

@@ -92,7 +92,8 @@ func reset_level():
 
 	# Reset abaddon on level 2
 	if level_name == "LevelTwo":
-		Global.abaddon_alive = true
+		abaddon_alive = true
+		cutscene_abaddon_finished = false
 
 	# Reset axe
 	has_axe = false
