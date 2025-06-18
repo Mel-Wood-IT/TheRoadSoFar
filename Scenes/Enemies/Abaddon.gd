@@ -106,7 +106,7 @@ func die():
 	$DeathSound.stream.loop = false
 	$DeathSound.play()
 	death_anim.play("Death")
-	Global.add_score(50)
+	Global.abaddon_score()
 
 	yield(death_anim, "animation_finished")
 	death_anim.stop()
