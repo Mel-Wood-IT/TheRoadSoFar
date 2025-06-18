@@ -2,12 +2,8 @@ extends KinematicBody2D
 
 # === Exported Variables ===
 export (int) var speed = 50
-<<<<<<< HEAD
-export (int) var health = 80
-=======
 export (int) var health = 100
->>>>>>> 86592b2e79505145543b5318801efd41fee578c6
-export (int) var damage = 20
+export (int) var damage = 25
 # Triggers spike attack when player in range
 export (int) var attack_trigger_range = 96  
 # Range of attack

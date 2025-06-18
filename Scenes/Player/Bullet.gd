@@ -16,6 +16,8 @@ func _ready():
 		$Timer.connect("timeout", self, "_on_Timer_timeout")
 		print("Connected timer timeout to bullet")
 
+	print("Bullet READY at position:", global_position)
+	print("Bullet animation playing:", anim.animation)
 
 
 func set_direction(value):
@@ -34,16 +36,24 @@ func set_direction(value):
 		"right":
 			velocity = Vector2(1, 0)
 			anim.play("bullet_right")
-			
-			
+
+	print("Bullet direction set to:", direction)
+	print("Velocity:", velocity)
+
+
 func _physics_process(delta):
 	position += velocity * speed * delta
 
+
 func _on_Bullet_body_entered(body):
+	print("Bullet collided with:", body.name)
+
 	if body.name == "Player":
+		print("Hit player — ignored.")
 		return
 
 	if body.is_in_group("Enemy") and body.has_method("take_damage"):
+		print("Bullet damaging enemy.")
 		body.take_damage(10)
 
 		match direction:
@@ -56,6 +66,8 @@ func _on_Bullet_body_entered(body):
 		$CollisionShape2D.disabled = true
 		yield(anim, "animation_finished")
 		queue_free()
+	else:
+		print("Bullet hit something that is not a damageable enemy.")
 
 
 func _on_Timer_timeout():
