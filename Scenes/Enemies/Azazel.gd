@@ -2,18 +2,20 @@ extends KinematicBody2D
 
 # === Exported Variables ===
 export (int) var speed = 50
-export (int) var health = 15
+export (int) var health = 100
 export (int) var damage = 20
-export (int) var attack_trigger_range = 96  # Triggers attack logic when player is this close
-export (int) var attack_radius_range = 48   # Physical AoE radius for hitting player
+# Triggers spike attack when player in range
+export (int) var attack_trigger_range = 96  
+# Range of attack
+export (int) var attack_radius_range = 48  
 
-# === Nodes ===
+
 onready var anim = $AnimatedSprite
 onready var cooldown = $AttackCooldown
 onready var theme = $BossThemePlayer
 onready var exorcism = $Exorcise
 
-# === State ===
+
 var player = null
 var alive = true
 var in_attack = false
@@ -156,3 +158,6 @@ func _on_AttackRadius_body_entered(body):
 func _on_AttackRadius_body_exited(body):
 	if body.name == "Player":
 		players_in_attack_radius.erase(body)
+		
+func _on_AttackCooldown_timeout():
+	print("Cooldown Complete")

@@ -78,8 +78,13 @@ func reset_level():
 	var dad = current_scene.find_node("Dad", true, false)
 	if dad and dad.has_node("DadThemePlayer"):
 		dad.get_node("DadThemePlayer").stop()
+		
+	# Stop Azazel music if exists
+	var azl = get_tree().get_current_scene().find_node("Azazel", true, false)
+	if azl and azl.has_node("BoosThemePlayer"):
+		azl.get_node("BossThemePlayer").stop()
 
-	# Also stop Abaddon music if it exists
+	# Stop Abaddon music if it exists
 	var abaddon = current_scene.find_node("Abaddon", true, false)
 	if abaddon and abaddon.has_node("BossThemePlayer"):
 		abaddon.get_node("BossThemePlayer").stop()
@@ -90,6 +95,7 @@ func reset_level():
 	var level_name = current_scene.name
 	pages_found.erase(level_name)
 	skull_found.erase(level_name)
+	cutscene_azazel_finished = false
 
 	# Reset level score and subtract from total
 	if score_per_level.has(level_name):
@@ -110,6 +116,7 @@ func reset_game():
 	score = 0
 	has_axe = false
 	cutscene_abaddon_finished = false
+	cutscene_azazel_finished = false
 	pages_found.clear()
 	skull_found.clear()
 	reset_level()

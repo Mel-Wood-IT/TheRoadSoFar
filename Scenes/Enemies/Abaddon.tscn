@@ -169,6 +169,7 @@ position = Vector2( 44, -33 )
 
 [node name="BossThemePlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 14 )
+volume_db = -8.0
 
 [node name="AttackTimer" type="Timer" parent="."]
 

@@ -1,12 +1,14 @@
 extends KinematicBody2D
 
+var UnconsciousDadScene = preload("res://Scenes/Enemies/UnconsciousDad.tscn")
+
 # Exported settings
 export (int) var speed = 100
-export (int) var health = 1
+export (int) var health = 100
 export (int) var attack_range = 24
 export (int) var damage = 10
 export (int) var attack_buffer = 4
-export (int) var transform_stage = 100
+export (int) var transform_stage = 10
 
 # Internal state
 var player = null
@@ -33,6 +35,9 @@ func _ready():
 	randomize()
 	set_physics_process(true)
 	sprite.connect("animation_finished", self, "_on_animation_finished")
+	
+	if not cooldown.is_connected("timeout", self, "_on_AttackCooldown_timeout"):
+		cooldown.connect("timeout", self, "_on_AttackCooldown_timeout")
 
 	# Check for cutscene finish and trigger battle
 	if Global.cutscene_azazel_finished:
@@ -53,10 +58,10 @@ func _physics_process(delta):
 		move_and_slide(away * 200)  # retreat speed
 		sprite.play("run_" + anim_direction)
 		return
-
+	
 	var to_player = player.global_position - global_position
 	var distance = to_player.length()
-
+	
 	# Determine direction
 	if abs(to_player.x) > abs(to_player.y):
 		anim_direction = "right" if to_player.x > 0 else "left"
@@ -69,6 +74,9 @@ func _physics_process(delta):
 	else:
 		move_and_slide(Vector2.ZERO)
 		sprite.play("idle_" + anim_direction)
+		
+	if not retreating and not attack_in_progress and cooldown.is_stopped():
+		_on_AttackCooldown_timeout()
 
 
 func _on_animation_finished():
@@ -138,6 +146,7 @@ func take_damage(amount):
 
 
 func _on_AttackCooldown_timeout():
+	print("Cooldown started")
 	if not player or not is_instance_valid(player) or not alive:
 		return
 
@@ -163,7 +172,7 @@ func transform():
 	if has_node("DadThemePlayer"):
 		$DadThemePlayer.stop()
 
-	# Wait almost to the end (e.g. 1.3 seconds into 1.5 second animation)
+	# Wait for animation to finish
 	yield(get_tree().create_timer(1.3), "timeout")
 
 	# Spawn second boss just before animation ends
@@ -174,6 +183,11 @@ func transform():
 	# Wait the rest of the animation before cleaning up
 	yield(get_tree().create_timer(0.2), "timeout")
 
+	var dropped_body = UnconsciousDadScene.instance()
+	get_parent().add_child(dropped_body)
+	dropped_body.global_position = global_position
+
+	print("Transform complete, spawning unconscious dad")
 	queue_free()
 
 
@@ -201,6 +215,8 @@ func play_cutscene():
 	get_tree().get_root().add_child(cutscene)
 
 func _on_cutscene_finished():
+	retreating = false
+	animation_locked = false
 	start_battle()
 	
 func _exit_tree():
