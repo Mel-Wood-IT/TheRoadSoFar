@@ -10,7 +10,14 @@ var pages_found := {}
 var score = 0
 # Track score per level
 var score_per_level = {}
-
+# Track Journal Score
+var journal_score = 0
+# Track skull Score
+var skull_score = 0
+# Track min boss score
+var abaddon_score = 0
+# Track boss score
+var azazel_score = 0
 # Max amount of pages to collect
 const MAX_PAGES := 3
 # Max amount of skulls to collect
@@ -40,6 +47,23 @@ func add_score(value = 1):
 	score_per_level[level_name] += value
 	
 	update_hud()
+	
+func journal_score(value = 20):
+	# Add to total score
+	journal_score += value
+
+func skull_score(value = 25):
+	# Add to journal score
+	skull_score += value
+
+func abaddon_score(value = 50):
+	# add to score
+	abaddon_score += value
+	
+func azazel_score(value = 100):
+	# add to score
+	azazel_score += value
+	
 
 func add_page():
 	var level_name = get_tree().current_scene.name

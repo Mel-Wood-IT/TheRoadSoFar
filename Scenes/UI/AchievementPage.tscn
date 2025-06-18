@@ -87,6 +87,7 @@ margin_left = 475.0
 margin_top = 109.0
 margin_right = 525.0
 margin_bottom = 222.0
+rect_pivot_offset = Vector2( -601, -70 )
 
 [node name="Score1" type="Label" parent="VBoxContainer2"]
 margin_right = 50.0
@@ -123,5 +124,15 @@ margin_left = -225.0
 margin_top = -42.0
 margin_right = 225.0
 margin_bottom = 41.0
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="."]
+margin_left = 251.0
+margin_top = 253.0
+margin_right = 399.0
+margin_bottom = 279.0
+
+[node name="Total" type="Label" parent="VBoxContainer3"]
+margin_right = 148.0
+margin_bottom = 14.0
 
 [connection signal="pressed" from="Screenshot2025-05-30153156/MainMenuBtn" to="." method="_on_MainMenuBtn_pressed"]
