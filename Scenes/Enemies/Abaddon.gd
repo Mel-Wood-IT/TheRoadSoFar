@@ -7,19 +7,20 @@ export (int) var health = 100
 # On ready variables
 onready var sprite = $AnimatedSprite
 onready var death_anim = $Death
-onready var boss_theme = $BossThemePlayer
+onready var boss_theme = $MiniBossThemePlayer
 onready var attack_timer = $AttackTimer
 onready var spawn_points = [$SpawnPoint1, $SpawnPoint2, $SpawnPoint3, $SpawnPoint4]
 
 
 var cutscene_played = false
 var cutscene_skipped = false
-var abbadon_alive = true
 
 
 # Ready func that loads boss theme, code behind cut scene spawning, detection radius and, some anims
 func _ready():
-	$BossThemePlayer.stop()
+	# Reset health on level reload
+	health = 75  
+	$MiniBossThemePlayer.stop()
 	
 	if Global.cutscene_abaddon_finished:
 		print("Returned from cutscene, starting battle...")
@@ -53,7 +54,9 @@ func _on_cutscene_finished():
 
 # Function for what to do when the battle starts like play music and set up attack timer
 func start_battle():
-	$BossThemePlayer.play()
+	print("STARTING BATTLE...")
+	$MiniBossThemePlayer.play()
+
 	$AttackTimer.start()
 	sprite.play("Idle")
 
@@ -98,8 +101,9 @@ func die():
 	if not Global.abaddon_alive:
 		return
 	Global.abaddon_alive = false
+	Global.mini_boss_killed = true
 	$AttackTimer.stop()
-	$BossThemePlayer.stop()
+	$MiniBossThemePlayer.stop()
 	sprite.hide()
 	death_anim.show()
 
@@ -115,7 +119,3 @@ func die():
 	$DeathSound.stop()
 
 	queue_free()
-
-
-
-

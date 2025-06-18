@@ -77,6 +77,6 @@ func die():
 	anim.play("Death")
 	$BossBatDeath.stream.loop = false
 	$BossBatDeath.play()
-	Global.add_score(1)
+	Global.add_score(5)
 	yield(anim, "animation_finished")
 	queue_free()

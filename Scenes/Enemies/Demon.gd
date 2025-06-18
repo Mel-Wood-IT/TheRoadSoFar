@@ -123,12 +123,9 @@ func die():
 	anim.play("death_" + anim_direction)
 	$DemonDeath.stream.loop = false
 	$DemonDeath.play()
-	Global.add_score(2)
+	Global.add_score(20)
 	yield(anim, "animation_finished")
 
 	anim.hide()  
-	$Exorcism.show()
-	$Exorcism.play("exorcism")
-	yield($Exorcism, "animation_finished")
 
 	queue_free()

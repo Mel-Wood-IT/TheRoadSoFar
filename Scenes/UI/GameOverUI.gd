@@ -3,9 +3,6 @@ extends Control
 # Restart the level if the player wants to keep trying
 func _on_RestartBtn_pressed():
 	get_tree().paused = false
-	# Remove global flags
-	# Global.cutscene_abaddon_finished = false
-	# Global.abaddon_alive = true
 	Global.reset_level()
 	var current_scene_path = get_tree().current_scene.filename
 	get_tree().change_scene(current_scene_path)
