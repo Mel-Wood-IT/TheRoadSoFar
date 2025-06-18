@@ -4,7 +4,7 @@ extends KinematicBody2D
 export (int) var speed = 110
 export (int) var health = 20
 export (int) var attack_range = 24
-export (int) var damage = 5
+export (int) var damage = 10
 export (int) var attack_buffer = 4
 
 # Internal state

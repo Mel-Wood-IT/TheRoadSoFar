@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://TileSets/ForestDecoration.tres" type="TileSet" id=1]
 [ext_resource path="res://TileSets/ForestFloor.tres" type="TileSet" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://Scenes/Enemies/Bat.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/Enemies/Abaddon.tscn" type="PackedScene" id=16]
 [ext_resource path="res://TileSets/footprints.png" type="Texture" id=17]
+[ext_resource path="res://Scenes/Enemies/Demon.tscn" type="PackedScene" id=18]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 110 )
@@ -164,6 +165,24 @@ position = Vector2( -1224, 136 )
 
 [node name="Bat2" parent="YSort/Enemies" instance=ExtResource( 15 )]
 position = Vector2( -920, -408 )
+
+[node name="Bat12" parent="YSort/Enemies" instance=ExtResource( 15 )]
+position = Vector2( -1053, 409 )
+
+[node name="Bat14" parent="YSort/Enemies" instance=ExtResource( 15 )]
+position = Vector2( -125, 461 )
+
+[node name="Bat13" parent="YSort/Enemies" instance=ExtResource( 15 )]
+position = Vector2( -600, 480 )
+
+[node name="Demon" parent="YSort/Enemies" instance=ExtResource( 18 )]
+position = Vector2( 844, -326 )
+
+[node name="Demon2" parent="YSort/Enemies" instance=ExtResource( 18 )]
+position = Vector2( 1251, 502 )
+
+[node name="Demon3" parent="YSort/Enemies" instance=ExtResource( 18 )]
+position = Vector2( 1158, 568 )
 
 [node name="Abaddon" parent="YSort/Enemies" instance=ExtResource( 16 )]
 position = Vector2( 135, -306 )
