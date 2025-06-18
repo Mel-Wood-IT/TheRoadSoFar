@@ -101,6 +101,7 @@ func die():
 	if not Global.abaddon_alive:
 		return
 	Global.abaddon_alive = false
+	Global.mini_boss_killed = true
 	$AttackTimer.stop()
 	$MiniBossThemePlayer.stop()
 	sprite.hide()
