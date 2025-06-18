@@ -4,17 +4,13 @@ var UnconsciousDadScene = preload("res://Scenes/Enemies/UnconsciousDad.tscn")
 
 # Exported settings
 export (int) var speed = 100
-<<<<<<< HEAD
-export (int) var health = 75
-=======
 export (int) var health = 100
->>>>>>> 86592b2e79505145543b5318801efd41fee578c6
 export (int) var attack_range = 24
 export (int) var damage = 10
 export (int) var attack_buffer = 4
 export (int) var transform_stage = 10
 
-# Internal state
+# variables
 var player = null
 var alive = true
 var anim_direction = "down"

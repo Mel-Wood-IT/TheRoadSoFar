@@ -107,6 +107,7 @@ func reset_level():
 	update_pages()
 	update_hud()
 
+# how many points per skull you collect
 func award_skull_bonus():
 	var skull_count = skull_found.size()
 	add_score(skull_count * 20)
